@@ -1,0 +1,826 @@
+/* clear existing styles */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    box-sizing: border-box;
+    overflow-x: hidden;  
+
+
+}
+
+/* fonts are */
+/*  font-family: 'Lora', serif;
+    font-family: 'Montserrat', sans-serif; */
+
+/* nav bar */
+header {
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    background-color:#ffffff ;
+    font-size: 1.2em;
+    font-family: 'Lora', serif;
+}
+
+header div {
+    width: 80vw;
+    padding: 1em;
+}
+
+header div p {
+    float: left;
+    color: rgb(204,173,56);
+}
+
+header div ul {
+    float: right;
+}
+
+header div ul li {
+    display: inline;
+    margin: 0px 10px;
+    list-style-type: none;
+}
+
+header div ul li a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: rgb(175, 171, 171);
+}
+
+header div ul li a:hover {
+    color: rgb(59,56,56);
+}
+
+header div ul li a:active {
+    color: rgb(59,56,56);
+}
+
+.activeLink {
+    color: rgb(59,56,56);
+}
+
+/* Footer */
+footer {
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+    padding: 2em;
+    text-align: center;
+    background-color: #ffffff;
+    line-height: 0.3em;
+    font-family: 'Lora', serif;
+}
+
+.gold {
+    color: rgb(204,173,56);
+}
+
+
+/* sections */
+
+section {
+    background-color: rgb(244,244,244);
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+}
+
+/* Grid Section */
+
+.gridFirst {
+    margin-top: 2em;
+    /* margin-bottom: 2em; */
+    width: 80vw;
+    /* padding: 1em; */
+    display: grid;
+
+
+    grid-template:
+      'Post1 Post1 Post1 Post1 Post1 Post2 Post3 '
+      'Post1 Post1 Post1 Post1 Post1 Post2 Post3'
+      'Post4 Post4 Post4 Post4 Post4 Post5 Post5';
+    grid-gap: 2em;
+    padding-bottom: 2em;
+
+  
+}
+
+.gridFeatured {
+    margin-top: 2em;
+    /* margin-bottom: 2em; */
+    width: 80vw;
+    /* padding: 1em; */
+    display: grid;
+
+
+    grid-template:
+      'FeaturedPost1 FeaturedPost1 FeaturedPost2 FeaturedPost2 FeaturedPost2 FeaturedPost2 FeaturedPost2'
+      'FeaturedPost3 FeaturedPost3 FeaturedPost3 FeaturedPost3 FeaturedPost3 FeaturedPost4 FeaturedPost4';
+      
+
+;
+    grid-gap: 2em;
+    padding-bottom: 2em;
+
+  
+}
+
+.gridMorePosts {
+    margin-top: 2em;
+    /* margin-bottom: 2em; */
+    width: 80vw;
+    /* padding: 1em; */
+    display: grid;
+
+
+    grid-template:
+      'Post7 Post6 Post6 Post6 Post6 Post6 Post8 '
+      'Post7 Post6 Post6 Post6 Post6 Post6 Post8';
+    grid-gap: 2em;
+    padding-bottom: 2em;
+
+  
+}
+
+#FeaturedPost1 {grid-area: FeaturedPost1}
+#FeaturedPost2 {grid-area: FeaturedPost2}
+#FeaturedPost3 {grid-area: FeaturedPost3}
+#FeaturedPost4 {grid-area: FeaturedPost4}
+
+
+#Post1 {grid-area: Post1}
+#Post2 {grid-area: Post2}
+#Post3 {grid-area: Post3}
+#Post4 {grid-area: Post4}
+#Post5 {grid-area: Post5}
+#Post6 {grid-area: Post6}
+#Post7 {grid-area: Post7}
+#Post8 {grid-area: Post8}
+
+/* Card 1 */
+
+.Card1 {
+    padding: 0.75em;
+    background-color: #ffffff;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    font-family: 'Montserrat', sans-serif;
+    height: 30em;
+
+}
+
+.Card1Image {
+    background-color: rgb(244,244,244);
+    width: 100%;
+    /* height: 40em; */
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+
+    align-items: center;
+}
+
+.Card1Content {
+    font-size: 1em;
+    display: grid;
+    grid-template-rows: 95% 5%;
+    justify-content: center;
+    padding: 1.25em;
+    margin: 0;
+    padding-right: 0.25em;
+}
+
+.Card1Top {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+.Card1Bottom {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.Card1Link {
+    text-decoration: none;
+    color: rgb(73,100,81);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.Card1Date {
+    color: rgb(118,113,113);
+    width: 100%;
+    margin: 0;
+}
+
+.Card1Title {
+    font-size: 2em;
+    color: #000000;
+    width: 100%;
+    margin: 0.5em 0;
+}
+
+.Card1Text {
+    color: #000000;
+    width: 100%;
+    margin: 1.5em 0;
+}
+
+.Card1ImageStyle {
+    height: 100%;
+}
+
+/* Card 2 */
+
+.Card2 {
+    padding: 0.75em;
+    background-color: #ffffff;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.Card2Image {
+    background-color: rgb(244,244,244);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+
+    align-items: center;
+}
+
+.Card2ImageStyle {
+    height: 100%;
+}
+
+.Card2Content {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+.Card2Date {
+    margin: 0;
+    margin-top: 0.5em;
+    color: rgb(118,113,113);
+}
+
+.Card2Title {
+    font-size: 1.3em;
+    width: 100%;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.Card2Link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.Card2Top {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.Card2Bottom {
+    padding: 0.5em;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* Card 3 */
+
+.Card3 {
+    padding: 0.75em;
+    background-color: #ffffff;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.Card3Image {
+    background-color: rgb(244,244,244);
+    width: 100%;
+    /* height: 15em; */
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+
+    align-items: center;
+}
+
+.Card3Content {
+    font-size: 1em;
+    display: grid;
+    grid-template-rows: 70% 10%;
+    justify-content: center;
+    padding: 1.25em;
+    margin: 0;
+    padding-right: 0.25em;
+    padding-bottom: 0.2em;
+    height: 15em;
+}
+
+.Card3Top {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+.Card3Bottom {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.Card3Link {
+    text-decoration: none;
+    color: rgb(73,100,81);
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+.Card3Date {
+    color: rgb(118,113,113);
+    width: 100%;
+    margin: 0;
+    font-size: 0.85em;
+}
+
+.Card3Title {
+    font-size: 1.35em;
+    color: #000000;
+    width: 100%;
+    margin: 0.5em 0;
+}
+
+.Card3Text {
+    color: #000000;
+    width: 100%;
+    margin: 1.5em 0;
+    font-size: 0.85em;
+}
+
+.Card3ImageStyle {
+    height: 100%;
+}
+
+/* Labels */
+
+.Label {
+    background-color: #ffffff;
+    color: rgb(73,100,81);
+    padding: 0.5em;
+    font-size: 4em;
+    text-align: center;
+}
+
+.Latest {
+    font-size: 9em;
+    writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    position: absolute;
+    top: 2em;
+    left: 0.1em;
+    color: rgb(204,173,56);
+    padding: 0;
+    margin:0;
+}
+
+.More {
+    font-size: 9em;
+    writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    position: absolute;
+    top: 12em;
+    right: 0.1em;
+    color: rgb(204,173,56);
+    padding: 0;
+    margin:0;
+}
+
+/* Post Page CSS */
+
+.imageContainer {
+    width: 100vw;
+    height: 50em;
+    background-color: rgb(244,244,244);
+    overflow: hidden;
+}
+
+.postImage {
+    width: 100%;
+}
+
+.article {
+    padding: 3em;
+    width: 80vw;
+    background-color: #ffffff;
+    margin: -30em 0;
+    margin-bottom: 3em;
+    transition: 0.5s;
+}
+
+.Category {
+    background-color:  rgb(204,173,56);
+    padding: 0.75em;
+    color: #ffffff;
+    width: fit-content;
+    font-size: 1.5em;
+    margin: 0;
+    transition: 0.5s;
+}
+
+.PostTitle {
+    font-size: 4em;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.postText {
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    margin-top: 2.5em;
+}
+
+.postText img {
+    width: 100%;
+    height: auto;
+}
+
+.author {
+    display: grid;
+    width: 20vw;
+    grid-template-columns: 6em auto;
+    margin: 0;
+    margin-top: 2.5em;
+}
+
+.profilePicture {
+    width: 5em;
+    height: 5em;
+    background-color: rgb(244,244,244);
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.name {
+    font-size: 1.5em;
+    color: rgb(204,173,56);
+    margin: 0;
+    margin-top: 0.5em;
+    width: fit-content;
+}
+
+.date {
+    font-size: 1em;
+    color: rgb(118,113,113);
+    margin: 0;
+    width: fit-content;
+}
+
+.info {
+   width: 100%;
+   /* display: grid;
+   align-items: center; */
+
+}
+
+.PostImage {
+    width: 100%;
+}
+
+/* loading screen */
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244, 244, 244);
+    z-index: 999;
+}
+
+.loading {
+    width: 40vw;
+    height: 20vh;
+    color: rgb(204,173,56);
+    background-color: #ffffff;
+    font-size: 2em;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Coming soon pages */
+
+.comingSoonContainer {
+    height: 80vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244, 244, 244);
+    background-image: url('https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.comingSoonContainer2 {
+    height: 80vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244, 244, 244);
+    background-image: url('https://images.unsplash.com/photo-1490100667990-4fced8021649?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+
+
+.comingSoon {
+    color: rgb(204,173,56);
+    background-color: #ffffff;
+    padding: 2em;
+}
+
+/* Responsive Homepage */
+
+@media only screen and (max-width: 1450px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        font-size: 12px;
+    }
+    .Latest {
+        display: none
+    }
+    .More {
+        display: none
+    }   
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+        font-size: 11px;
+    }
+    .gridFirst {
+        width:  95vw;
+    }
+    .gridFeatured {
+        width:  95vw;
+    }
+    .gridMorePosts{
+        width:  95vw;
+    }
+    header div {
+        width: 97vw;
+    }
+    .Card3Text {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+    /* Grid Section */
+    
+    .gridFirst {
+        margin-top: 2em;
+        /* margin-bottom: 2em; */
+        width: 80vw;
+        /* padding: 1em; */
+        display: grid;
+    
+    
+        grid-template:
+          'Post1 Post1'
+          'Post2 Post3'
+          'Post4 Post4'
+          'Post5 Post5';
+        grid-gap: 2em;
+        padding-bottom: 2em;
+    
+      
+    }
+    
+    .gridFeatured {
+        margin-top: 2em;
+        /* margin-bottom: 2em; */
+        width: 80vw;
+        /* padding: 1em; */
+        display: grid;
+    
+    
+        grid-template:
+          'FeaturedPost1'
+          'FeaturedPost2'
+          'FeaturedPost3'
+          'FeaturedPost4';
+          
+    
+    ;
+        grid-gap: 2em;
+        padding-bottom: 2em;
+    
+      
+    }
+    
+    .gridMorePosts {
+        margin-top: 2em;
+        /* margin-bottom: 2em; */
+        width: 80vw;
+        /* padding: 1em; */
+        display: grid;
+    
+    
+        grid-template:
+          'Post6 Post6'
+          'Post7 Post8';
+        grid-gap: 2em;
+        padding-bottom: 2em;
+    
+      
+    }
+    .Card2ImageStyle {
+        width: 100%;
+        height: auto;
+    }
+    .gridFirst {
+        width:  95vw;
+        margin-top: 1.5em;
+        grid-gap: 1.5em;
+    }
+    .gridFeatured {
+        width:  95vw;
+        margin-top: 1.5em;
+        grid-gap: 1.5em;
+    }
+    .gridMorePosts{
+        width:  95vw;
+        margin-top: 1.5em;
+        grid-gap: 1.5em;
+    }
+    header div {
+        width: 97vw;
+    }
+}
+
+
+@media only screen and (max-width: 470px) {
+    .Card2Top {
+        display: none;
+    }
+    .Card1Text {
+        display: none;
+    }
+    .gridFirst {
+        padding-bottom: 1.5em;
+    }
+
+}
+
+/* Responsive Post Page + About Page */
+
+@media only screen and (max-width: 992px) {
+    .article {
+        width: 95vw;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    /* Post Page CSS */
+
+.article {
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+.Category {
+    padding: 0.70em;
+    font-size: 1.3em;
+}
+
+.PostTitle {
+    font-size: 3em;
+    margin-top: 0.5em;
+}
+
+.postText {
+    font-size: 1.1em;
+}
+
+.author {
+    width: 50vw;
+    grid-template-columns: 5em auto;
+}
+
+.profilePicture {
+    width: 4em;
+    height: 4em;
+}
+
+.name {
+    font-size: 1.5em;
+    color: rgb(204,173,56);
+    margin: 0;
+    margin-top: 0.5em;
+    width: fit-content;
+}
+
+.date {
+    font-size: 1em;
+    color: rgb(118,113,113);
+    margin: 0;
+    width: fit-content;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+    .Category {
+        padding: 0.65em;
+        font-size: 1em;
+    }
+    .PostTitle {
+        font-size: 2.5em;
+        margin-top: 0.3em;
+    }
+
+    .profilePicture {
+        width: 3em;
+        height: 3em;
+    }
+    
+    .name {
+        font-size: 1.25em;
+        color: rgb(204,173,56);
+        margin: 0;
+        margin-top: 0.5em;
+        width: fit-content;
+    }
+    
+    .date {
+        font-size: 0.75em;
+        color: rgb(118,113,113);
+        margin: 0;
+        width: fit-content;
+    }
+    .author {
+        width: 50vw;
+        grid-template-columns: 4em auto;
+    }
+    .author {
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .PostTitle {
+        font-size: 2em;
+        margin-top: 0.3em;
+    }
+
+    /* .article {
+        margin: -40em 0;
+    } */
+
+
+}
