@@ -118,8 +118,8 @@
         // Post content
         var newDate1 = new Date(state.posts[0].date);
 
-        document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
-        // document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].alt_text;
+        // document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
+        document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].alt_text;
         document.getElementById("PostAuthorImage").src = state.posts[0]._embedded.author[0].avatar_urls[96];
         document.getElementById("PostAuthor").innerHTML = state.posts[0]._embedded.author[0].name;
         document.getElementById("PostCategory").innerHTML = state.posts[0]._embedded['wp:term'][0][0].name;

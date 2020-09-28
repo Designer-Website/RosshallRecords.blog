@@ -297,7 +297,7 @@
     // Post 2
     var newDate2 = new Date(state.posts[1].date);
 
-    document.getElementById("Post2Image").src = state.posts[1]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("Post2Image").src = state.posts[1]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("Post2Title").innerHTML = state.posts[1].title.rendered;
     // document.getElementById("Post2Text").innerHTML = state.posts[0].excerpt.rendered;
     document.getElementById("Post2Date").innerHTML = monthNames[newDate2.getMonth()] + ' ' + newDate2.getDate();
@@ -306,7 +306,7 @@
     // Post 3
     var newDate3 = new Date(state.posts[2].date);
 
-    document.getElementById("Post3Image").src = state.posts[2]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("Post3Image").src = state.posts[2]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("Post3Title").innerHTML = state.posts[2].title.rendered;
     // document.getElementById("Post3Text").innerHTML = state.posts[0].excerpt.rendered;
     document.getElementById("Post3Date").innerHTML = monthNames[newDate3.getMonth()] + ' ' + newDate3.getDate();
@@ -315,7 +315,7 @@
     // Post 4
     var newDate4 = new Date(state.posts[3].date);
 
-    document.getElementById("Post4Image").src = state.posts[3]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("Post4Image").src = state.posts[3]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("Post4Title").innerHTML = state.posts[3].title.rendered;
     document.getElementById("Post4Text").innerHTML = state.posts[3].excerpt.rendered;
     document.getElementById("Post4Date").innerHTML = monthNames[newDate4.getMonth()] + ' ' + newDate4.getDate();
@@ -324,7 +324,7 @@
     // Post 5
     var newDate5 = new Date(state.posts[4].date);
 
-    document.getElementById("Post5Image").src = state.posts[4]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("Post5Image").src = state.posts[4]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("Post5Title").innerHTML = state.posts[4].title.rendered;
     document.getElementById("Post5Text").innerHTML = state.posts[4].excerpt.rendered;
     document.getElementById("Post5Date").innerHTML = monthNames[newDate5.getMonth()] + ' ' + newDate5.getDate();
@@ -333,7 +333,7 @@
     // Post 6
     var newDate6 = new Date(state.posts[5].date);
 
-    document.getElementById("Post6Image").src = state.posts[5]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("Post6Image").src = state.posts[5]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("Post6Title").innerHTML = state.posts[5].title.rendered;
     document.getElementById("Post6Text").innerHTML = state.posts[5].excerpt.rendered;
     document.getElementById("Post6Date").innerHTML = monthNames[newDate6.getMonth()] + ' ' + newDate6.getDate();
@@ -342,7 +342,7 @@
     // Post 7
     var newDate7 = new Date(state.posts[6].date);
 
-    document.getElementById("Post7Image").src = state.posts[6]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("Post7Image").src = state.posts[6]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("Post7Title").innerHTML = state.posts[6].title.rendered;
     // document.getElementById("Post3Text").innerHTML = state.posts[0].excerpt.rendered;
     document.getElementById("Post7Date").innerHTML = monthNames[newDate7.getMonth()] + ' ' + newDate7.getDate();
@@ -351,7 +351,7 @@
     // Post 5
     var newDate8 = new Date(state.posts[7].date);
 
-    document.getElementById("Post8Image").src = state.posts[7]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("Post8Image").src = state.posts[7]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("Post8Title").innerHTML = state.posts[7].title.rendered;
     // document.getElementById("Post3Text").innerHTML = state.posts[0].excerpt.rendered;
     document.getElementById("Post8Date").innerHTML = monthNames[newDate8.getMonth()] + ' ' + newDate8.getDate();
@@ -421,7 +421,7 @@
     // Post 1
     var newDate11 = new Date(state2.posts[0].date);
 
-    document.getElementById("FeaturedPost1Image").src = state2.posts[0]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("FeaturedPost1Image").src = state2.posts[0]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("FeaturedPost1Title").innerHTML = state2.posts[0].title.rendered;
     document.getElementById("FeaturedPost1Text").innerHTML = state2.posts[0].excerpt.rendered;
     document.getElementById("FeaturedPost1Date").innerHTML = monthNames[newDate11.getMonth()] + ' ' + newDate11.getDate();
@@ -430,7 +430,7 @@
     // Post 2
     var newDate22 = new Date(state2.posts[1].date);
 
-    document.getElementById("FeaturedPost2Image").src = state2.posts[1]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("FeaturedPost2Image").src = state2.posts[1]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("FeaturedPost2Title").innerHTML = state2.posts[1].title.rendered;
     document.getElementById("FeaturedPost2Text").innerHTML = state2.posts[1].excerpt.rendered;
     document.getElementById("FeaturedPost2Date").innerHTML = monthNames[newDate22.getMonth()] + ' ' + newDate22.getDate();
@@ -439,7 +439,7 @@
     // Post 3
     var newDate33 = new Date(state2.posts[2].date);
 
-    document.getElementById("FeaturedPost3Image").src = state2.posts[2]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("FeaturedPost3Image").src = state2.posts[2]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("FeaturedPost3Title").innerHTML = state2.posts[2].title.rendered;
     document.getElementById("FeaturedPost3Text").innerHTML = state2.posts[2].excerpt.rendered;
     document.getElementById("FeaturedPost3Date").innerHTML = monthNames[newDate33.getMonth()] + ' ' + newDate33.getDate();
@@ -448,7 +448,7 @@
     // Post 4
     var newDate44 = new Date(state2.posts[3].date);
 
-    document.getElementById("FeaturedPost4Image").src = state2.posts[3]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("FeaturedPost4Image").src = state2.posts[3]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("FeaturedPost4Title").innerHTML = state2.posts[3].title.rendered;
     document.getElementById("FeaturedPost4Text").innerHTML = state2.posts[3].excerpt.rendered;
     document.getElementById("FeaturedPost4Date").innerHTML = monthNames[newDate44.getMonth()] + ' ' + newDate44.getDate();
