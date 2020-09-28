@@ -285,9 +285,10 @@
     "July", "August", "September", "October", "November", "December" ];
 
     // Post 1
+    // getting featured images by source_url document.getElementById("Post1Image").src = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
     var newDate1 = new Date(state.posts[0].date);
 
-    document.getElementById("Post1Image").src = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
+    document.getElementById("Post1Image").src = state.posts[0]._embedded['wp:featuredmedia'][0].alt_text;
     document.getElementById("Post1Title").innerHTML = state.posts[0].title.rendered;
     document.getElementById("Post1Text").innerHTML = state.posts[0].excerpt.rendered;
     document.getElementById("Post1Date").innerHTML = monthNames[newDate1.getMonth()] + ' ' + newDate1.getDate();
