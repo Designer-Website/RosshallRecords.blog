@@ -50,6 +50,10 @@ header div ul li {
     list-style-type: none;
 }
 
+.noMargin {
+    margin: 0px 0px;
+}
+
 header div ul li a {
     text-decoration: none;
     transition: 0.3s;
@@ -187,7 +191,7 @@ section {
     overflow: hidden;
     display: grid;
 
-    align-items: center;
+    place-items: center;
 }
 
 .Card1Content {
@@ -205,6 +209,7 @@ section {
     width: 100%;
     overflow: hidden;
     margin: 0;
+
 }
 .Card1Bottom {
     height: 100%;
@@ -263,7 +268,7 @@ section {
     overflow: hidden;
     display: grid;
 
-    align-items: center;
+    place-items: center;
 }
 
 .Card2ImageStyle {
@@ -329,7 +334,7 @@ section {
     overflow: hidden;
     display: grid;
 
-    align-items: center;
+    place-items: center;
 }
 
 .Card3Content {
