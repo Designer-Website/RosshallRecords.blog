@@ -284,15 +284,16 @@ section {
 
 .Card2Image {
     background-color: rgb(244,244,244);
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     overflow: hidden;
     display: grid;
 
-    place-items: center;
+    justify-items: center;
 }
 
 .Card2ImageStyle {
+
     height: 100%;
 }
 
@@ -606,34 +607,46 @@ section {
 .VidContainer {
     display: flex;
     /* justify-content: center; */
-    height: 100%;
+    /* height: 40em; */
     width: 100%;
+    /* overflow: hidden; */
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 
 .video {
     width: 100%;
+
 }
 
 .c-video {
     width: 100%;
-    max-width: 900px;
-    position: relative;
-    overflow: hidden;
+    flex: 1 1 600px;
+    /* position: relative; */
+    /* overflow: hidden; */
 }
 
-.c-video:hover .controls {
+/* .c-video:hover .controls {
     transform: translateY(0) ;    
+} */
+
+video {
+    margin: 0;
 }
 
 .controls {
     display: flex;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
     flex-wrap: wrap;
     background-color: #ffffff;
-    transform: translateY(100%) translateY(-0.5em);
+    /* transform: translateY(100%) translateY(-0.5em); */
     transition: all .2s;
+    margin: 0;
+    /* grid-template-columns: 60% 30%; */
+
 }
 
 .buttons {
@@ -690,9 +703,10 @@ section {
     width: 100%;
     
     /* max-width: 400px; */
-    height: 35em;
-    overflow-y: scroll;
+
+    /* overflow-y: scroll; */
     overflow-x: hidden;
+    flex: 1 1 350px;
     
 }
 
@@ -702,18 +716,32 @@ section {
     border: 0;
     border-bottom: 3px solid rgb(244,244,244);
     padding: 1.2em;
+    margin:0;
+    margin-left: 2em;
+
+
 }
 
-.selection h1 {
+.firstS {
+    margin-top: 0;
+}
+
+.sh1 {
     font-size: 1.2em;
     color: rgb(175, 171, 171);
     cursor: pointer;
     transition: .3s;
 }
 
-.selection h1:hover {
-    color: rgb(59,56,56)
+.sh1:hover {
+    color: rgb(59,56,56);
 }
+
+.grey {
+    color: rgb(59,56,56);
+}
+
+
 
 /* Responsive Homepage */
 
@@ -747,6 +775,10 @@ section {
     }
     .gridMorePosts{
         width:  95vw;
+    }
+    .gridVideos{
+        width:  95vw;
+        grid-gap: 0;
     }
     header div {
         width: 97vw;
@@ -820,8 +852,8 @@ section {
       
     }
     .Card2ImageStyle {
-        width: 100%;
-        height: auto;
+        height: 120%;
+        width: auto;
     }
     .gridFirst {
         width:  95vw;
@@ -963,5 +995,17 @@ section {
         margin: -40em 0;
     } */
 
+
+}
+
+/* responsive how to page */
+
+@media only screen and (max-width: 1219px) {
+    .selection {
+        margin-left: 0;
+    }
+    .firstS {
+        margin-top: 2em;
+    }
 
 }

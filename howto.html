@@ -25,10 +25,10 @@
 
     <!-- <div class="loader" id="loader"><div class="loading"><p> Loading...</p></div></div> -->
 
-    <section class="morePadding">
+    <section>
         <div class="gridVideos">
 
-            <div class="VidContainer" id="Video">
+            <div class="VidContainer" >
                 <div class="c-video">
                     <video class="video" src="HowTo1.mp4" playsinline autoplay muted></video>
                     <div class="controls">
@@ -40,45 +40,45 @@
                         </div>
                     </div>
                 </div>
+                <div class="Videos" >
+                    <div class="selection firstS">
+                        <h1 id="HowTo1.mp4" onclick="playVid(this)" class="sh1" style="color: rgb(59,59,59);">Create a post : How to get onto glow blogs</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="HowTo2.mp4" onclick="playVid(this)" class="sh1">Create a post : How to create a post</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="HowTo3.mp4" onclick="playVid(this)" class="sh1">Create a post : How to add text and customise it</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="HowTo4.mp4" onclick="playVid(this)" class="sh1" >Create a post : How to add images to a post (Method 1)</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="HowTo5.mp4" onclick="playVid(this)" class="sh1">Create a post : How to add images to a post (Method 2)</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="HowTo6.mp4" onclick="playVid(this)" class="sh1">Create a post : How to add links to a post</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="HowTo7.mp4" onclick="playVid(this)" class="sh1">Create a post : How to add an excerpt</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="HowTo8.mp4" onclick="playVid(this)" class="sh1">Create a post : How to assign a category</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="HowTo9.mp4" onclick="playVid(this)" class="sh1">Create a post : How to add a featured image (Method 1)</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="HowTo10.mp4" onclick="playVid(this)" class="sh1">Create a post : How to add a featured image (Method 2)</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="HowTo11.mp4" onclick="playVid(this)" class="sh1">Create a post : Finish by save to pending</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="HowTo12.mp4" onclick="playVid(this)" class="sh1">Role of an editor : How to publish pending posts</h1>
+                    </div>
             </div>
             
-            <div class="Videos" id="Select">
-                <div class="selection">
-                    <h1 id="HowTo1.mp4" onclick="playVid(this.id)">Create a post : How to get onto glow blogs</h1>
-                </div>
-                <div class="selection">
-                    <h1 id="HowTo2.mp4" onclick="playVid(this.id)">Create a post : How to create a post</h1>
-                </div>
-                <div class="selection">
-                    <h1 id="HowTo3.mp4" onclick="playVid(this.id)">Create a post : How to add text and customise it</h1>
-                </div>
-                <div class="selection">
-                    <h1 id="HowTo4.mp4" onclick="playVid(this.id)">Create a post : How to add images to a post (Method 1)</h1>
-                </div>
-                <div class="selection">
-                    <h1 id="HowTo5.mp4" onclick="playVid(this.id)">Create a post : How to add images to a post (Method 2)</h1>
-                </div>
-                <div class="selection">
-                    <h1 id="HowTo6.mp4" onclick="playVid(this.id)">Create a post : How to add links to a post</h1>
-                </div>
-                <div class="selection">
-                    <h1 id="HowTo7.mp4" onclick="playVid(this.id)">Create a post : How to add an excerpt</h1>
-                </div>
-                <div class="selection">
-                    <h1 id="HowTo8.mp4" onclick="playVid(this.id)">Create a post : How to assign a category</h1>
-                </div>
-                <div class="selection">
-                    <h1 id="HowTo9.mp4" onclick="playVid(this.id)">Create a post : How to add a featured image (Method 1)</h1>
-                </div>
-                <div class="selection">
-                    <h1 id="HowTo10.mp4" onclick="playVid(this.id)">Create a post : How to add a featured image (Method 2)</h1>
-                </div>
-                <div class="selection">
-                    <h1 id="HowTo11.mp4" onclick="playVid(this.id)">Create a post : Finish by save to pending</h1>
-                </div>
-                <div class="selection">
-                    <h1 id="HowTo12.mp4" onclick="playVid(this.id)">Role of an editor : How to publish pending posts</h1>
-                </div>
 
             </div>
             
@@ -89,9 +89,14 @@
         let video = document.querySelector('.video')
         let juice = document.querySelector('.gold-juice')
         let btn = document.getElementById('play-pause')
+        let LastActive = document.getElementById('HowTo1.mp4')
 
         function playVid(url) {
-            video.src = url
+            video.src = url.id
+            LastActive.style.color = 'rgb(171,171,171)';
+            url.style.color = 'rgb(59,56,56)';
+            LastActive = url
+
         }
 
         function togglePlayPause() {
