@@ -21,6 +21,15 @@ body {
     font-family: 'Montserrat', sans-serif; */
 
 /* nav bar */
+
+.infoHeadline {
+    background-color: rgb(204,173,56);
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+}
+
 header {
     width: 100vw;
     display: grid;

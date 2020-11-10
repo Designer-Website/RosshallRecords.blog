@@ -47,7 +47,7 @@
     </section>
 
 
-    <footer><p class="gold">Rosshall Records 2020</p><p>Rosshall Academy 131 Crookston Road, Glasgow G52 3PD</p><p>Email: RosshallRecords@NeedsAnEmail.sch.uk</p></footer>
+    <footer><p class="gold">Rosshall Records 2020</p><p>Rosshall Academy 131 Crookston Road, Glasgow G52 3PD</p><p>Email: Email will be provided soon</p></footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js" integrity="sha256-lrZTgsdM1iVdRigETFOU8u8/BmLX1ysQ8bzrULbuVFU="
     crossorigin="anonymous"></script>
@@ -118,14 +118,17 @@
         // Post content
         var newDate1 = new Date(state.posts[0].date);
 
-        // document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
-        document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].alt_text;
-        document.getElementById("PostAuthorImage").src = state.posts[0]._embedded.author[0].avatar_urls[96];
+        document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
+        // document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].alt_text;
+
         document.getElementById("PostAuthor").innerHTML = state.posts[0]._embedded.author[0].name;
         document.getElementById("PostCategory").innerHTML = state.posts[0]._embedded['wp:term'][0][0].name;
         document.getElementById("PostTitle").innerHTML = state.posts[0].title.rendered;
         document.getElementById("PostText").innerHTML = state.posts[0].content.rendered;
         document.getElementById("PostDate").innerHTML = monthNames[newDate1.getMonth()] + ' ' + newDate1.getDate() + ' ' + newDate1.getFullYear();
+
+        // uf avatar not showing it is due to an avatar image not being set
+        document.getElementById("PostAuthorImage").src = state.posts[0]._embedded.author[0].simple_local_avatar[96];
 
         // document.getElementById("loader").style.display = "none";
 

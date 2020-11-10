@@ -17,21 +17,116 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="activeLink">About</a></li>
-                <li><a href="search.html" class="noMargin">Search</a></li>
+                <li><a href="search.html">Search</a></li>
             </ul>
         </div>
     </header>
 
     <!-- <div class="loader" id="loader"><div class="loading"><p> Loading...</p></div></div> -->
 
-    <section class="comingSoonContainer">
-        <div class="comingSoon">
-          <P>This page is coming soon!</P>
+    <div class="imageContainer">
+        <img id="PostImage" src="https://images.unsplash.com/photo-1529905270444-b5e32acc3bdd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" class="postImage">
+    </div>
+
+    <section>
+        <div class="article">
+            <p class="Category" id="PostCategory"></p>
+            <h1 class="PostTitle" id="PostTitle"></h1>
+            <div class="author">
+                <div class="profilePicture">
+                    <img id="PostAuthorImage" class="PostImage" src="https://images.unsplash.com/photo-1514926239779-5d5019ec302b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="">
+                </div>
+                <div class="info">
+                    <p class="name" id="PostAuthor"></p>
+                    <p class="date" id="PostDate"></p>
+                </div>
+            </div>
+            <div class="postText" id="PostText">
+            </div>
         </div>
     </section>
 
 
-    <footer><p class="gold">Rosshall Records 2020</p><p>Rosshall Academy 131 Crookston Road, Glasgow G52 3PD</p><p>Email: RosshallRecords@NeedsAnEmail.sch.uk</p></footer>
+    <footer><p class="gold">Rosshall Records 2020</p><p>Rosshall Academy 131 Crookston Road, Glasgow G52 3PD</p><p>Email: Email will be provided soon</p></footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js" integrity="sha256-lrZTgsdM1iVdRigETFOU8u8/BmLX1ysQ8bzrULbuVFU="
+    crossorigin="anonymous"></script>
+
+  <script>
+
+    let postId = 120;
+
+    let state = {
+      posts: [],
+      baseUrl: 'https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/posts',
+      perPage: '/' + postId + '?_embed'
+    //   wpFetchHeaders: {
+    //     headers: {
+    //       'Access-Control-Allow-Origin': '*',
+    //       'Access-Control-Expose-Headers': 'x-wp-total'
+    //     }
+    //   }
+    }
+
+    // console.log(postId)
+
+    async function getNumPosts() {
+      const { headers } = await axios(`${state.baseUrl}${state.perPage}`)
+      return headers['x-wp-totalpages']
+    }
+
+    async function fetchPosts(numPages) {
+      const posts = []
+      let page = 1
+
+    //   for (let page = 1; page <= numPages; page += 1) {
+        const post = axios.get(`${state.baseUrl}${state.perPage}`)
+        posts.push(post)
+    //   }
+
+      await axios.all(posts).then((response) => {
+        const postData = response.map(res => res.data)
+        state.posts = postData.flat()
+      }).catch(e => console.log('error fetching posts: ', e))
+
+      return true
+    }
+
+    state.posts = getNumPosts()
+      .then(numPosts => fetchPosts(numPosts))
+      .then((data) => {
+        // console.log('data ', state)
+
+
+        // console.log(state.posts[0])
+
+    
+        var monthNames = [ "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December" ];
+
+        // Post content
+        var newDate1 = new Date(state.posts[0].date);
+
+        document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
+        // document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].alt_text;
+
+        document.getElementById("PostAuthor").innerHTML = state.posts[0]._embedded.author[0].name;
+        document.getElementById("PostCategory").innerHTML = state.posts[0]._embedded['wp:term'][0][0].name;
+        document.getElementById("PostTitle").innerHTML = state.posts[0].title.rendered;
+        document.getElementById("PostText").innerHTML = state.posts[0].content.rendered;
+        document.getElementById("PostDate").innerHTML = monthNames[newDate1.getMonth()] + ' ' + newDate1.getDate() + ' ' + newDate1.getFullYear();
+
+        // uf avatar not showing it is due to an avatar image not being set
+        document.getElementById("PostAuthorImage").src = state.posts[0]._embedded.author[0].simple_local_avatar[96];
+
+        // document.getElementById("loader").style.display = "none";
+
+
+      })
+
+
+
+  </script>
 
 </body>
 </html>
