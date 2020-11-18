@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="icon.png">
     <link rel="apple-touch-icon" href="icon.png">
+
+    <!-- Social Media Optimization -->
+    <meta property="og:title" content="" id="ogTitle">
+    <meta property="og:description" content="" id="ogDesc">
+    <meta property="og:image" content="" id="ogImage">
+    <meta property="og:url" content="" id="ogUrl">
 </head>
 <body>
 
@@ -141,6 +147,21 @@
         const strippedString1 = originalString1.replace(/(<([^>]+)>)/gi,"");
         // console.log(strippedString)
         document.getElementById("titleP").innerHTML = strippedString1 + " - Rosshall Records";
+
+
+        // Social Media Optimization
+        const originalString3 = state.posts[0].title.rendered;
+        const strippedString3 = originalString3.replace(/(<([^>]+)>)/gi,"");
+        // console.log(strippedString)
+        document.getElementById("ogTitle").innerHTML = strippedString3;
+
+        const originalString2 = state.posts[0].excerpt.rendered;
+        const strippedString2 = originalString2.replace(/(<([^>]+)>)/gi,"");
+        // console.log(strippedString)
+        document.getElementById("ogDesc").innerHTML = strippedString2;
+
+        document.getElementById("ogImage").innerHTML = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
+        document.getElementById("ogUrl").innerHTML = window.location.href;
 
       })
 
