@@ -153,15 +153,15 @@
         const originalString3 = state.posts[0].title.rendered;
         const strippedString3 = originalString3.replace(/(<([^>]+)>)/gi,"");
         // console.log(strippedString)
-        document.getElementById("ogTitle").innerHTML = strippedString3;
+        document.getElementById("ogTitle").content = strippedString3;
 
         const originalString2 = state.posts[0].excerpt.rendered;
         const strippedString2 = originalString2.replace(/(<([^>]+)>)/gi,"");
         // console.log(strippedString)
-        document.getElementById("ogDesc").innerHTML = strippedString2;
+        document.getElementById("ogDesc").content = strippedString2;
 
-        document.getElementById("ogImage").innerHTML = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
-        document.getElementById("ogUrl").innerHTML = window.location.href;
+        document.getElementById("ogImage").content = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
+        document.getElementById("ogUrl").content = window.location.href;
 
       })
 
