@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosshall Records</title>
+    <title>About Us - Rosshall Records</title>
+    <meta name="description" content="" id="desc">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="icon.png">
@@ -114,13 +115,17 @@
         document.getElementById("PostCategory").innerHTML = state.posts[0]._embedded['wp:term'][0][0].name;
         document.getElementById("PostTitle").innerHTML = state.posts[0].title.rendered;
         document.getElementById("PostText").innerHTML = state.posts[0].content.rendered;
+
         document.getElementById("PostDate").innerHTML = monthNames[newDate1.getMonth()] + ' ' + newDate1.getDate() + ' ' + newDate1.getFullYear();
 
         // uf avatar not showing it is due to an avatar image not being set
         document.getElementById("PostAuthorImage").src = state.posts[0]._embedded.author[0].simple_local_avatar[96];
 
         // document.getElementById("loader").style.display = "none";
-
+        const originalString = state.posts[0].content.rendered;
+        const strippedString = originalString.replace(/(<([^>]+)>)/gi,"");
+        // console.log(strippedString)
+        document.getElementById("desc").content = strippedString;
 
       })
 

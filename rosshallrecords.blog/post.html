@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosshall Records</title>
+    <title id="titleP">Rosshall Records</title>
+    <meta name="description" content="" id="desc">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="icon.png">
@@ -131,7 +132,15 @@
         document.getElementById("PostAuthorImage").src = state.posts[0]._embedded.author[0].simple_local_avatar[96];
 
         // document.getElementById("loader").style.display = "none";
+        const originalString = state.posts[0].excerpt.rendered;
+        const strippedString = originalString.replace(/(<([^>]+)>)/gi,"");
+        // console.log(strippedString)
+        document.getElementById("desc").innerHTML = strippedString;
 
+        const originalString1 = state.posts[0].title.rendered;
+        const strippedString1 = originalString1.replace(/(<([^>]+)>)/gi,"");
+        // console.log(strippedString)
+        document.getElementById("titleP").innerHTML = strippedString1 + " - Rosshall Records";
 
       })
 
