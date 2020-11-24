@@ -19,7 +19,7 @@ body {
 
     background-image: url('./CircleOfLight.jpg');
     /* parallax */
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -201,7 +201,7 @@ body {
     position: relative;
     background-image: url('./LineOfLight.jpg');
     /* parallax */
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
