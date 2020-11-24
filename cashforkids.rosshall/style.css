@@ -1,0 +1,696 @@
+/* font-family: 'Kalam', cursive;
+font-family: 'Open Sans Condensed', sans-serif; */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(22,28,36);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    
+}
+
+/* Circle of light section */
+
+.CircleOfLight {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('./CircleOfLight.jpg');
+    /* parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    display: grid;
+    place-items: center;
+    /* padding: 5em; */
+}
+
+.CircleOfLight header {
+    position: absolute;
+    top: 4vh;
+    width: clamp(85vw, 5vw, 90vw);
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(0.6em,2vw,0.9em);
+    box-sizing: border-box;
+}
+
+.CircleOfLight main {
+    display: grid;
+    place-items: center;
+    width: clamp(85vw, 5vw, 90vw);
+}
+
+.CircleOfLight main h1 {
+    font-size: clamp(4em, 5vw, 6.5em);
+    font-family: 'Kalam', cursive;
+    font-weight: 100;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2em;
+}
+.CircleOfLight main p {
+    /* font-size: 1.4em; */
+    font-size: clamp(0.7em, 2vw, 1.6em);
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    margin-top: 0.8em;
+}
+
+.btnContainer {
+    margin-top: 2em;
+}
+
+.Donate {
+    padding-top: clamp(0.5em,2vw,0.6em);
+    padding-bottom: clamp(0.5em,2vw,0.6em);
+    padding-right: clamp(1.1em,2vw,1.8em);
+    padding-left: clamp(1.1em,2vw,1.8em);
+    font-size: clamp(0.6em,2vw,0.9em);
+    border: 0.11vw solid white;
+    border-radius: 3.2em;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.LearnMore {
+    padding-top: clamp(0.5em,2vw,0.6em);
+    padding-bottom: clamp(0.5em,2vw,0.6em);
+    padding-right: clamp(1.1em,2vw,1.8em);
+    padding-left: clamp(1.1em,2vw,1.8em);
+    font-size: clamp(0.6em,2vw,0.9em);
+    border: 0.11vw solid white;
+    border-radius: 3.2em;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 1em;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.Donate:hover {
+    border-radius: 3.2em;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.LearnMore:hover {
+    border-radius: 3.2em;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+/* green section */
+
+.green {
+    margin-top: clamp(1em, 5vw, 3em);
+    width: 100vw;
+    height: 50vh;
+    background-color: rgb(24, 64, 61);
+    padding-bottom: 3em;
+    padding-top: clamp(1em, 5vw, 3em);
+    padding-right: 0;
+    padding-left: 0;
+
+}
+
+.imageBackgroundGreen {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    background-image: url('./Christmas.jpg');
+    background-size: cover;
+    /* background-attachment: fixed; */ 
+
+}
+
+/* .imageBackgroundGreenOpacity {
+    opacity: 0.93;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100%;
+    background-color: rgb(24, 64, 61);
+    z-index: 1;
+} */
+
+.left {
+    width: 42.5vw;
+    height: 100%;
+    float: left;
+    padding-left: 5vw;
+    padding-right: 2.5vw;
+    z-index: 10;
+
+}
+
+.right {
+    width: 42.5vw;
+    height: 100%;
+    float: right;
+    padding-right: 5vw;
+    padding-left: 2.5vw;
+    z-index: 10;
+    padding-top: 2.5vh;
+}
+
+.right h2 {
+    font-size: clamp(2em, 4vw, 3em);
+    font-family: 'Kalam', cursive;
+    font-weight: 100;
+
+}
+
+.right p {
+    font-size: clamp(0.7em, 1.8vw, 1.2em);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+
+}
+
+.videoContainer {
+    width: 42.5vw;
+    height: 100%;
+    background-color: rgb(16, 42, 40);
+}
+
+.playPause {
+    
+}
+
+/* Line of Lights section */
+
+.LineOfLights {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url('./LineOfLight.jpg');
+    /* parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+
+    /* padding: 5em; */
+}
+
+.textContainer {
+    position: absolute;
+    display: grid;
+    place-items: left;
+    left: 7vw;
+    top: 9vh;
+    width: 37.5vw;
+}
+
+.textContainer h2 {
+    font-size: clamp(2em, 4vw, 3em);
+    font-family: 'Kalam', cursive;
+    font-weight: 100;
+    text-align: left;
+}
+
+.textContainer p {
+    font-size: clamp(0.7em, 1.8vw, 1.2em);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    text-align: left;
+}
+
+/* Santa section */
+
+.Santa {
+    width: 100vw;
+    height: 50em;
+    position: relative;
+    background-image: url('./Santa.jpg');
+    /* parallax */
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    display: grid;
+    /* padding: 5em; */
+}
+
+.rightText {
+    width: 40vw;
+    height: 100%;
+    background-color: rgb(16,42,40);
+    opacity: 0.91;
+    text-align: left;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: grid;
+    place-items: top;
+    padding-left: 7em;
+    padding-right: 7em;
+}
+
+.rightText div h2 {
+    font-size: clamp(2em, 4vw, 3em);
+    font-family: 'Kalam', cursive;
+    font-weight: 100;
+    text-align: left;
+    margin: 0;
+    margin-top: 2em;
+}
+
+.rightText div p {
+    font-size: clamp(0.7em, 1.8vw, 1.2em);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    text-align: left;
+    margin: 0;
+    margin-top: 1.2em;
+}
+
+/* Hope section */
+
+.Hope {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url('./Hope.jpg');
+    /* parallax */
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    margin-top: 3em;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+}
+
+.hopeContainer {
+    width: 75vw;
+    padding: 5vw;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    position: absolute;
+    top: 2vh;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+.hopeContainer h1 {
+    font-size: clamp(3em, 5vw, 4.5em);
+    font-family: 'Kalam', cursive;
+    font-weight: 100;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2em;
+}
+
+.hopeContainer p {
+    font-size: clamp(0.7em, 1.7vw, 1.2em);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    text-align: left;
+    margin: 0;
+    margin-top: 1.2em;
+    text-align: center;
+}
+
+.align {
+    place-items: center;
+    width: 100%;
+    height: 20%;
+    display: grid;
+    align-items: center;
+}
+
+.align a {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    padding-right: 1.9em;
+    padding-left: 1.9em;
+    font-size: 1em;
+    border: 0.11vw solid white;
+    border-radius: 3.2em;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    transition: 0.5s;
+    text-align: center;
+    margin-top: 1.2em;
+    width: fit-content;
+}
+
+/* Footer section */
+
+footer {
+    width: 100vw;
+    height: 20vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-color: rgb(22,28,36);
+    padding: 0vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+footer p {
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    margin: 0;
+    margin-top: 0.2em;
+    text-align: center;
+}
+
+footer div a {
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    margin: 0;
+    margin-top: 0.2em;
+    text-align: center;
+    color: white;
+    text-emphasis: none;
+    text-decoration: none;
+    display: inline;
+}
+
+.linkContainer {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    place-content: center;
+    margin-top: 1.2em;
+}
+
+.logoContainer {
+    width: 20vh;
+    height: 20vh;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+}
+
+.triangle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.triangle::before {
+    content: '';
+	display: block;  
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-top: 0px solid transparent;
+	border-right: 0px solid transparent;
+	border-bottom: 30vh solid white;
+	border-left: 30vh solid transparent;
+}
+
+/* .logo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 5vh;
+} */
+
+.triangle img {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    bottom: 5vh;
+    right: 5vh;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 1000px) {
+    /* Circle of light section */
+    /* Clamps for font and etc */
+    
+    /* Green section */
+
+    .green {
+        height: 65vh;   
+        /* text-align: center; */
+    }
+
+    .left {
+        width: 86vw;
+        height: 50%;
+        float: left;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        z-index: 10;
+    
+    }
+
+    .videoContainer {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(16, 42, 40);
+        margin: 0;
+    }
+    
+    .right {
+        width: 86vw;
+        height: 50%;
+        float: right;
+        padding-right: 7vw;
+        padding-left: 7vw;
+        z-index: 10;
+        padding-top: 2.5vh;
+    }
+
+    /* Line of light section */
+    .textContainer {
+        top: 3vh;
+        width: 60vw;
+        text-align: center;
+    }
+
+    /* Santa */
+    .Santa {
+        width: 100vw;
+        height: 70vh;
+    }
+    .rightText {
+        width: 40vw;
+
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    /* hope */
+
+    .hopeContainer {
+        top: 3vh;
+    }
+
+    .Hope {
+        width: 100vw;
+        height: 90vh;
+    }
+    
+
+    /* footer */
+    .logoContainer {
+        width: 20vh;
+        height: 20vh;
+    }
+
+    .triangle img {
+        width: 3.2em;
+        height: 3.2em;
+        position: absolute;
+        bottom: 2.5vh;
+        right: 2.5vh;
+    }
+    
+    .triangle::before {
+        content: '';
+        display: block;  
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-top: 0px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 20vh solid white;
+        border-left: 20vh solid transparent;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    /* Circle of light section */
+    /* Clamps for font and etc */
+    
+    /* Green section */
+
+    .green {
+        height: 65vh;   
+        text-align: center;
+    }
+
+    .left {
+        width: 86vw;
+        height: 50%;
+        float: left;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        z-index: 10;
+    
+    }
+
+    .videoContainer {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(16, 42, 40);
+        margin: 0;
+    }
+    
+    .right {
+        width: 86vw;
+        height: 50%;
+        float: right;
+        padding-right: 7vw;
+        padding-left: 7vw;
+        z-index: 10;
+        padding-top: 2.5vh;
+    }
+
+    /* Line of light section */
+    .textContainer {
+        top: 3vh;
+        width: 60vw;
+        text-align: center;
+    }
+
+
+    .LineOfLights {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        background-image: url('./LineOfLight.jpg');
+        /* parallax */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        position: relative;
+        display: grid;
+       align-items: center;
+    
+        /* padding: 5em; */
+    }
+    
+    .textContainer {
+        position: absolute;
+        display: grid;
+        place-items: center;
+        top: 2vh;
+        width: 86vw;
+        left: 50%;
+        transform: translate(-50%,0%);
+    }
+    
+    .textContainer h2 {
+        font-size: clamp(2em, 4vw, 3em);
+        font-family: 'Kalam', cursive;
+        font-weight: 100;
+        text-align: center;
+    }
+    
+    .textContainer p {
+        font-size: clamp(0.7em, 1.8vw, 1.2em);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+        text-align: center;
+    }
+    /* Santa */
+    .Santa {
+        width: 100vw;
+        height: 70vh;
+    }
+    .rightText {
+        width: 40vw;
+
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    /* hope */
+
+    .hopeContainer {
+        top: 3vh;
+    }
+
+    .Hope {
+        width: 100vw;
+        height: 90vh;
+    }
+    
+
+    /* footer */
+    .logoContainer {
+        width: 20vh;
+        height: 20vh;
+    }
+
+    .triangle img {
+        width: 3.2em;
+        height: 3.2em;
+        position: absolute;
+        bottom: 2.5vh;
+        right: 2.5vh;
+    }
+    
+    .triangle::before {
+        content: '';
+        display: block;  
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-top: 0px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 20vh solid white;
+        border-left: 20vh solid transparent;
+    }
+}
+
+

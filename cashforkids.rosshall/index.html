@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website to advertise the charity Cash For Kids">
+    <title>Cash For Kids - Rosshall Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="CircleOfLight" aria-label="Picture of Christmas lights aranged in a circle. Creates a glowy atmoshpere.">
+        <header>
+            <p style="float: left;">Cash For Kids</p>
+            <p style="float: right;">Rosshall Academy</p>
+        </header>
+        <main>
+            <h1>Share a little magic this <br> Christmas.</h1>
+            <p>Not all kids get a Christmas. You can change that.</p>
+            <div class="btnContainer">
+                <a class="Donate" href="https://www.cashforkidsgive.co.uk/donate/cash-for-kids-mission-christmas-2020-donations/?amount=50">Donate Now</a>
+                <a class="LearnMore" href="#learnmore">Learn More</a>
+            </div>
+        </main>
+    </section>
+    <Section class="green" id="learnmore">
+        <div class="imageBackgroundGreen">
+            <div class="left">
+                <div class="videoContainer">
+                    <video src=""></video>
+                    <button class="playPause">play</button>
+                </div>
+            </div>
+            <div class="right">
+                <h2>2020 has had its ups and downs</h2>
+                <p>With all that has happened this year, there will be some kids who don’t even get a Christmas this year as well. You can change this. You can give these kids a Christmas the long for.</p>
+                <p>Cash for kids are determined to help these kids get a Christmas but they need your help. Your donations will bring the magic of Christmas to reality for thousands of kids.</p>
+            </div>
+            <!-- <div class="imageBackgroundGreenOpacity"></div> -->
+        </div>
+    </Section>
+    <section class="LineOfLights">
+        <div class="textContainer">
+            <h2>Cash for kids: Mission Christmas</h2>
+            <p>Cash for Kids is a charity which gives grants to struggling children across the UK who need it. Cash for kids work with other organisations to provide support, hot meals and warm clothes to these families. They believe that ‘all children should be able to express their individuality, achieve their potential and live life to the full.’ </p>
+            <p>In 2019, Cash for Kids raised around £20 million and supported over 1 million families and children. 2020 has changed everything. As families unexpectedly face poverty, more and more children could be waking up on Christmas Day without anything under the tree. Donate to Cash for kids: Mission Christmas to save Christmas for many kids</p>
+        </div>
+    </section>
+    <section class="Santa">
+        <div class="rightText">
+            <div>
+                <h2>You can be a Santa</h2>
+                <p>1 in  3 children go to bed without a hot meal, can’t afford warm clothes and are living in homes without heating. From 2018 to 2019 30% of children were living in poverty. Meaning 4.2 million children living without things we take for granted.</p>
+                <p>These kids have gone through more than any child should. They suffer a fate which they did not bring on themselves. They endure the pain of the consequences of other people’s actions/ Why should they miss out making childhood memories? Why should they suffer?</p>
+                <p>Christmas is a magical period, it changes us, makes us kinder to one another. Donate to this noble cause in the magical spirit of Christmas. Be a ‘Secret Santa’ and help many children create those magical memories with their families.</p>
+            </div>
+        </div>
+    </section>
+    <section class="Hope">
+        <div class="hopeContainer">
+            <h1>Give them hope</h1>
+            <p>Hope is a powerful thing. These kids go through tough lives, they endure so much. They need help from others. They need hope of a better future that they can strive to achieve. Christmas is magical, it brings out the good in all of us. When you donate to these kids, it shows them that people care, that their lives matter and that’s enough to fuel their hope of a better future. Donate now. Show them that they are not alone, show them that they matter. Show them the magic of Christmas!</p>
+            <div class="align">
+                <a href="https://www.cashforkidsgive.co.uk/donate/cash-for-kids-mission-christmas-2020-donations/?amount=50">Donate Now</a>
+            </div>  
+        </div>
+    </section>
+    <footer>
+        <div class="footerText">
+            <p>This website was made by Rosshall Academy’s Digital Ambassadors</p>
+            <p>This website was made for a competition, the company’s links are down below.</p>
+            <div class="linkContainer">
+                <a href="https://www.adobe.com/">Adobe |  </a>
+                <a href="https://cashforkids.org.uk/">Cash For Kids </a>
+                <a href="https://dresscode.org.uk/"> | dressCode</a>
+            </div>
+        </div>
+        <div class="logoContainer">
+            <div class="triangle">
+                    <img src="./LogoDA.jpg" alt="Rosshall Academy's Digital Ambassadors' Logo">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+        });
+        } // End if
+    });
+    });
+    </script>
+</body>
+</html>
