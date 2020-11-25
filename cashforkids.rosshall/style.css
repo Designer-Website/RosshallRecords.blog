@@ -117,7 +117,7 @@ body {
 .green {
     margin-top: clamp(1em, 5vw, 3em);
     width: 100vw;
-    height: 50vh;
+    height: clamp(15em, 40vw, 30em);
     background-color: rgb(24, 64, 61);
     padding-bottom: 3em;
     padding-top: clamp(1em, 5vw, 3em);
@@ -170,14 +170,14 @@ body {
 }
 
 .right h2 {
-    font-size: clamp(2em, 4vw, 3em);
+    font-size: clamp(2em, 3.4vw, 3em);
     font-family: 'Kalam', cursive;
     font-weight: 100;
 
 }
 
 .right p {
-    font-size: clamp(0.7em, 1.8vw, 1.2em);
+    font-size: clamp(0.7em, 1.3vw, 1.2em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
 
@@ -221,14 +221,14 @@ body {
 }
 
 .textContainer h2 {
-    font-size: clamp(2em, 4vw, 3em);
+    font-size: clamp(2em, 3.4vw, 3em);
     font-family: 'Kalam', cursive;
     font-weight: 100;
     text-align: left;
 }
 
 .textContainer p {
-    font-size: clamp(0.7em, 1.8vw, 1.2em);
+    font-size: clamp(0.7em, 1.3vw, 1.2em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: left;
@@ -238,7 +238,7 @@ body {
 
 .Santa {
     width: 100vw;
-    height: 50em;
+    height: clamp(15em, 55vw, 45em);
     position: relative;
     background-image: url('./Santa.jpg');
     /* parallax */
@@ -267,7 +267,7 @@ body {
 }
 
 .rightText div h2 {
-    font-size: clamp(2em, 4vw, 3em);
+    font-size: clamp(2em, 3.4vw, 3em);
     font-family: 'Kalam', cursive;
     font-weight: 100;
     text-align: left;
@@ -276,7 +276,7 @@ body {
 }
 
 .rightText div p {
-    font-size: clamp(0.7em, 1.8vw, 1.2em);
+    font-size: clamp(0.7em, 1.3vw, 1.2em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: left;
@@ -310,7 +310,7 @@ body {
     display: grid;
     align-items: center;
     position: absolute;
-    top: 2vh;
+    top: 5vh;
     left: 50%;
     transform: translate(-50%,0%);
 }
@@ -325,7 +325,7 @@ body {
 }
 
 .hopeContainer p {
-    font-size: clamp(0.7em, 1.7vw, 1.2em);
+    font-size: clamp(0.7em, 1.5vw, 1.2em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: left;
@@ -364,7 +364,7 @@ body {
 
 footer {
     width: 100vw;
-    height: 20vh;
+    height: clamp(7.5em, 20vw, 15em);
     position: relative;
     display: grid;
     place-items: center;
@@ -375,7 +375,7 @@ footer {
 }
 
 footer p {
-    font-size: 1em;
+    font-size: clamp(0.7em, 1.3vw, 1em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: center;
@@ -385,7 +385,7 @@ footer p {
 }
 
 footer div a {
-    font-size: 1em;
+    font-size: clamp(0.7em, 1.3vw, 1em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: center;
@@ -462,6 +462,16 @@ footer div a {
 
     .green {
         height: 65vh;   
+
+        margin-top: clamp(1em, 5vw, 3em);
+        width: 100vw;
+
+        background-color: rgb(24, 64, 61);
+        padding-bottom: 3em;
+        padding-top: clamp(1em, 5vw, 3em);
+        padding-right: 0;
+        padding-left: 0;
+
         /* text-align: center; */
     }
 
@@ -489,20 +499,37 @@ footer div a {
         padding-right: 7vw;
         padding-left: 7vw;
         z-index: 10;
-        padding-top: 2.5vh;
+        padding-top: 1em;
     }
+
+    /* .right h2 {
+        font-size: clamp(2em, 3vw, 3em);
+        font-family: 'Kalam', cursive;
+        font-weight: 100;
+    
+    }
+    
+    .right p {
+        font-size: clamp(0.7em, 1.2vw, 1.2em);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+    
+    } */
 
     /* Line of light section */
     .textContainer {
-        top: 3vh;
+        top: 10vh;
         width: 60vw;
         text-align: center;
+    }
+    .LineOfLights {
+        height: 65vh;
     }
 
     /* Santa */
     .Santa {
         width: 100vw;
-        height: 70vh;
+        height: 50vh;
     }
     .rightText {
         width: 40vw;
@@ -514,7 +541,7 @@ footer div a {
     /* hope */
 
     .hopeContainer {
-        top: 3vh;
+        top: 10vh;
     }
 
     .Hope {
@@ -553,7 +580,7 @@ footer div a {
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
     /* Circle of light section */
     /* Clamps for font and etc */
     
@@ -592,20 +619,16 @@ footer div a {
     }
 
     /* Line of light section */
-    .textContainer {
-        top: 3vh;
-        width: 60vw;
-        text-align: center;
-    }
+
 
 
     .LineOfLights {
         width: 100vw;
-        height: 100vh;
+        height: 60vh;
         position: relative;
         background-image: url('./LineOfLight.jpg');
         /* parallax */
-        background-attachment: fixed;
+        /* background-attachment: fixed; */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -621,7 +644,7 @@ footer div a {
         position: absolute;
         display: grid;
         place-items: center;
-        top: 2vh;
+        top: 10vh;
         width: 86vw;
         left: 50%;
         transform: translate(-50%,0%);
@@ -643,19 +666,37 @@ footer div a {
     /* Santa */
     .Santa {
         width: 100vw;
-        height: 70vh;
+        height: 40vh;
+        position: relative;
     }
     .rightText {
-        width: 40vw;
-
+        width: 80vw;
+        position: absolute;
         padding-left: 4em;
         padding-right: 4em;
+        left: 50%;
+        transform: translate(-50%,0%);
+        display: grid;
+        place-items: center;
+        text-align: center;
     }
+    
+    .rightText div h2 {
+
+        margin-top: -1em;
+        text-align: center;
+    }
+    .rightText div p {
+
+        text-align: center;
+    }
+
+
 
     /* hope */
 
     .hopeContainer {
-        top: 3vh;
+        top: 10vh;
     }
 
     .Hope {
