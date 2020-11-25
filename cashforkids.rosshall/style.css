@@ -37,7 +37,7 @@ body {
     padding-left: 5vw;
     padding-right: 5vw;
     font-family: 'Open Sans', sans-serif;
-    font-size: clamp(0.6em,2vw,0.9em);
+    font-size: clamp(0.8em,2vw,0.9em);
     box-sizing: border-box;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 .CircleOfLight main p {
     /* font-size: 1.4em; */
-    font-size: clamp(0.7em, 2vw, 1.6em);
+    font-size: clamp(0.8em, 2vw, 1.6em);
     font-family: 'Kalam', cursive;
     text-align: center;
     margin-top: 0.8em;
@@ -177,7 +177,7 @@ body {
 }
 
 .right p {
-    font-size: clamp(0.7em, 1.3vw, 1.2em);
+    font-size: clamp(0.8em, 1.3vw, 1.2em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
 
@@ -228,7 +228,7 @@ body {
 }
 
 .textContainer p {
-    font-size: clamp(0.7em, 1.3vw, 1.2em);
+    font-size: clamp(0.8em, 1.3vw, 1.2em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: left;
@@ -276,7 +276,7 @@ body {
 }
 
 .rightText div p {
-    font-size: clamp(0.7em, 1.3vw, 1.2em);
+    font-size: clamp(0.8em, 1.3vw, 1.2em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: left;
@@ -325,7 +325,7 @@ body {
 }
 
 .hopeContainer p {
-    font-size: clamp(0.7em, 1.5vw, 1.2em);
+    font-size: clamp(0.8em, 1.5vw, 1.2em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: left;
@@ -343,8 +343,8 @@ body {
 }
 
 .align a {
-    padding-top: 0.7em;
-    padding-bottom: 0.7em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
     padding-right: 1.9em;
     padding-left: 1.9em;
     font-size: 1em;
@@ -375,7 +375,7 @@ footer {
 }
 
 footer p {
-    font-size: clamp(0.7em, 1.3vw, 1em);
+    font-size: clamp(0.8em, 1.3vw, 1em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: center;
@@ -385,7 +385,7 @@ footer p {
 }
 
 footer div a {
-    font-size: clamp(0.7em, 1.3vw, 1em);
+    font-size: clamp(0.8em, 1.3vw, 1em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: center;
@@ -510,7 +510,7 @@ footer div a {
     }
     
     .right p {
-        font-size: clamp(0.7em, 1.2vw, 1.2em);
+        font-size: clamp(0.8em, 1.2vw, 1.2em);
         font-family: 'Open Sans', sans-serif;
         font-weight: 100;
     
@@ -658,7 +658,7 @@ footer div a {
     }
     
     .textContainer p {
-        font-size: clamp(0.7em, 1.8vw, 1.2em);
+        font-size: clamp(0.8em, 1.8vw, 1.2em);
         font-family: 'Open Sans', sans-serif;
         font-weight: 100;
         text-align: center;
