@@ -670,10 +670,10 @@ footer div a {
         position: relative;
     }
     .rightText {
-        width: 80vw;
+        width: 100%;
         position: absolute;
-        padding-left: 4em;
-        padding-right: 4em;
+        padding-left: 0em;
+        padding-right: 0em;
         left: 50%;
         transform: translate(-50%,0%);
         display: grid;
@@ -681,14 +681,16 @@ footer div a {
         text-align: center;
     }
     
-    .rightText div h2 {
-
-        margin-top: -1em;
+    .rightText div h2 {  
         text-align: center;
+        width: 90%;
+        margin: auto;
     }
     .rightText div p {
-
+        width: 90%;
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
@@ -737,8 +739,13 @@ footer div a {
 @media only screen and (max-width: 500px) {
 
     .green {
-        height: 90vh;   
+        height: 75vh;   
         text-align: center;
+    }
+
+    .left {
+        width: 86vw;
+        height: 30%;
     }
 
     .LineOfLights {
@@ -748,7 +755,7 @@ footer div a {
 
     .Santa {
         width: 100vw;
-        height: 90vh;
+        height: 75vh;
         position: relative;
     }
 
