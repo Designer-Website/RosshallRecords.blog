@@ -375,7 +375,7 @@ footer {
 }
 
 footer p {
-    font-size: clamp(0.8em, 1.3vw, 1em);
+    font-size: clamp(0.7em, 1.3vw, 1em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: center;
@@ -385,7 +385,7 @@ footer p {
 }
 
 footer div a {
-    font-size: clamp(0.8em, 1.3vw, 1em);
+    font-size: clamp(0.7em, 1.3vw, 1em);
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-align: center;
@@ -737,8 +737,23 @@ footer div a {
 @media only screen and (max-width: 500px) {
 
     .green {
-        height: 75vh;   
+        height: 90vh;   
         text-align: center;
+    }
+
+    .LineOfLights {
+        width: 100vw;
+        height: 90vh;
+    }
+
+    .Santa {
+        width: 100vw;
+        height: 90vh;
+        position: relative;
+    }
+
+    .logoContainer {
+        display: none;
     }
     
 }
