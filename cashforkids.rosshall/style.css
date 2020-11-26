@@ -44,7 +44,7 @@ body {
 .CircleOfLight main {
     display: grid;
     place-items: center;
-    width: clamp(85vw, 5vw, 90vw);
+    width: clamp(80vw, 5vw, 90vw);
 }
 
 .CircleOfLight main h1 {
@@ -733,5 +733,15 @@ footer div a {
         border-left: 20vh solid transparent;
     }
 }
+
+@media only screen and (max-width: 500px) {
+
+    .green {
+        height: 75vh;   
+        text-align: center;
+    }
+    
+}
+
 
 
