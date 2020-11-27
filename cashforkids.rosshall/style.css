@@ -188,6 +188,14 @@ body {
     height: 100%;
     background-color: rgb(16, 42, 40);
     position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.video {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(16, 42, 40)
 }
 
 .playPause {
@@ -618,6 +626,7 @@ footer div a {
         padding-left: 7vw;
         padding-right: 7vw;
         z-index: 10;
+        margin-top: 4vw;
     
     }
 
@@ -766,6 +775,7 @@ footer div a {
     .left {
         width: 86vw;
         height: 30%;
+        margin-top: 4vw;
     }
 
     .LineOfLights {
