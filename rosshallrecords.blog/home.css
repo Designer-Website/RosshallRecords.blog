@@ -765,6 +765,7 @@ to {
 .primary {
     display: grid;
     height: fit-content;
+    height: intrinsic;
     max-width: 90em;
     /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
     grid-template-columns: 1fr 1fr 1fr;
@@ -809,6 +810,8 @@ to {
 .imageSectionLong p {
     width: fit-content;
     height: fit-content;
+    height: intrinsic;
+    width: intrinsic;
     padding: 1.1em;
     font-size: 1.1em;
     background-color: rgb(204,173,56);
@@ -884,6 +887,8 @@ to {
 .imageSection p {
     width: fit-content;
     height: fit-content;
+    height: intrinsic;
+    width: intrinsic;
     padding: 1em;
     font-size: 0.9em;
     background-color: rgb(204,173,56);
@@ -957,6 +962,7 @@ to {
 .featured {
     display: grid;
     height: fit-content;
+    height: intrinsic;
     max-width: 90em;
     /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
     grid-template-columns: 1fr 1fr 1fr;
@@ -1017,6 +1023,7 @@ to {
 .schoolNews {
     display: grid;
     height: fit-content;
+    height: intrinsic;
     max-width: 90em;
     /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
     grid-template-columns: 1fr;
@@ -1134,6 +1141,7 @@ to {
       width: 100%;
       max-width: 90em;
       height: fit-content;
+      height: intrinsic;
       grid-template-columns: 1fr;
       grid-template-rows: 0.02fr 1fr;
       padding:1.5em;
@@ -1166,17 +1174,20 @@ to {
   }
   .textContainer {
     height: fit-content;
+    height: intrinsic;
   }
   .textContainer h2 {
     font-size: 2em;
     margin:0;
     height: fit-content;
+    height: intrinsic;
     margin-bottom: 0.25em;
   }
   .textContainer p {
       font-size: 1.5em;
       margin:0;
       height: fit-content;
+      height: intrinsic;
       margin-top: 0.25em;
   }
   form {
@@ -1264,6 +1275,7 @@ to {
 .writers {
     display: grid;
     height: fit-content;
+    height: intrinsic;
     max-width: 90em;
     /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
     grid-template-columns: 1fr;
@@ -1330,10 +1342,12 @@ to {
 }
 .centerContainer {
     height: fit-content;
+    height: intrinsic;
     width: 100%;
 }
 .authorTitle {
     height: fit-content;
+    height: intrinsic;
     margin-bottom: 1em;
 }
 .authorTitle h2 {
@@ -1347,6 +1361,7 @@ to {
 }
 .authorLink {
     height: fit-content;
+    height: intrinsic;
     margin-top: 1em;
     display: grid;
     grid-template-columns: 60% 40%;
@@ -1387,6 +1402,7 @@ to {
     grid-template-columns: 1fr;
     padding: 1.5em;
     height: fit-content;
+    height: intrinsic;
     gap: 1.5em;
     padding:1.5em;
 }
@@ -1638,8 +1654,9 @@ to {
         padding: 0.8em;
     }
     .heroContent {
-        width: 80vw;
+        width: 80%;
         height: fit-content;
+        height: intrinsic;
         padding: 2em;
     }
     .slideshow-container {
