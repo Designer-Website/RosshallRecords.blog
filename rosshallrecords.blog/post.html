@@ -3,64 +3,476 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="titleP">Rosshall Records</title>
-    <meta name="description" content="" id="desc">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="post.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    
+    <meta name="google-site-verification" content="lmerKW-R7h3uB9fsfRbRCf9-673ie-ulrGZ4Te8q1Oo" />
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap" rel="stylesheet">
+    
+    <title id="title">Rosshall Records - Homepage</title>
+    <link id="link" rel="canonical" href="">
+    <meta id="og" property="og:url" content="">
+    <meta id="tw" property="twitter:url" content="">
+    <meta id="pageDesc" name="description" content="Our amazing young writers from Rosshall post their works for you to see. Read about all sorts of topics from political issues to creative, fictional stories.">
+    <meta id="key" name="keywords" content="rosshall records, article,">
+
     <link rel="shortcut icon" href="icon.png">
     <link rel="apple-touch-icon" href="icon.png">
-
-    <!-- Social Media Optimization -->
-    <meta property="og:title" content="" id="ogTitle">
-    <meta property="og:description" content="" id="ogDesc">
-    <meta property="og:image" content="" id="ogImage">
-    <meta property="og:url" content="" id="ogUrl">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
-    <header>
-        <div>
-            <p>Rosshall Records</p>
+    <header id="WebNav">
+        <div id="nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="search.html">Search</a></li>
+                <li><a href="index.html" class="goldLink">Rosshall Records</a></li>
+                <li><a href="index.html" class="activeLink">Home</a></li>
+                <li><a href="post.html?cat=12&id=120&p=we-are-rosshall-records-this-is-what-were-about">About</a></li>
+                <li><a href="search.html" class="noMargin">Search</a></li>
             </ul>
         </div>
     </header>
-
-    <!-- <div class="loader" id="loader"><div class="loading"><p> Loading...</p></div></div> -->
-
-    <div class="imageContainer">
-        <img id="PostImage" src="https://images.unsplash.com/photo-1529905270444-b5e32acc3bdd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" class="postImage">
-    </div>
-
-    <section>
-        <div class="article">
-            <p class="Category" id="PostCategory"></p>
-            <h1 class="PostTitle" id="PostTitle"></h1>
-            <div class="author">
-                <div class="profilePicture">
-                    <img id="PostAuthorImage" class="PostImage" src="https://images.unsplash.com/photo-1514926239779-5d5019ec302b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="">
-                </div>
-                <div class="info">
-                    <p class="name" id="PostAuthor"></p>
-                    <p class="date" id="PostDate"></p>
-                </div>
-            </div>
-            <div class="postText" id="PostText">
-            </div>
+    <main id="WebHero">
+        <!-- <div class="heroContent">
+            <h1>Rosshall Records</h1>
+            <p><strong>Where creativity has no boundaries</strong></p>
         </div>
-    </section>
+        <div class="scrollContainer">
+            <div class="arrowContainer">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>
+        </div> -->
+    </main>
+    <style>
+        .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  margin: 0;
+  margin-right: 3px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
 
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-share-alt {
+  background: rgb(204,173,56);
+  color: white;
+  border: none;
+  outline: none;
+}
 
-    <footer><p class="gold">Rosshall Records 2020</p><p>Rosshall Academy 131 Crookston Road, Glasgow G52 3PD</p><p>Email: Email will be provided soon</p></footer>
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  border: none;
+  outline: none;
+}
+.fa-whatsapp {
+  background: #25d366;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script id="socialBtns">
+        function copyURL() {
+        var copyText = document.createElement('input');
+        copyText.id = 'Delete'
+        copyText.value = window.location.href
+        document.getElementById('mainContent').appendChild(copyText)
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        $("#success").fadeIn( 300 ).delay( 1500 ).fadeOut( 400 );
+        document.getElementById('Delete').remove()
+        }
+        const facebookBtn = document.querySelector(".facebook-btn");
+const twitterBtn = document.querySelector(".twitter-btn");
+const pinterestBtn = document.querySelector(".pinterest-btn");
+const linkedinBtn = document.querySelector(".linkedin-btn");
+const whatsappBtn = document.querySelector(".whatsapp-btn");
+
+function linkTo(socialMedia) {
+  const pinterestImg = document.querySelector(".pinterest-img");
+
+  let postUrl = encodeURI(document.location.href);
+  let postTitle = encodeURI(document.getElementById('title').innerHTML);
+  let postImg = encodeURI(document.getElementById('postImageA'.src));
+  if (socialMedia == 'twitter') {
+      window.location = `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+  } else if (socialMedia == 'whatsapp') {
+    window.location = `https://wa.me/?text=${postTitle} ${postUrl}`
+  }
+}
+    </script>
+    <div class="success" id="success">Link Copied</div>
+    <section id="WebContent">
+        <section id="pageContent">
+            <div class="placeHolder"></div>
+            
+            <section id="mainContent" class="Article">
+                <div class="articleTop">
+                    <h2 class="articleH">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, quia eaque sunt</h1>
+                    <div class="lineContainer">
+                        <div class="Line"></div>
+                    </div>
+                    <div class="stats">
+                        <p>You are reading an article about <strong>category</strong>, written by <strong>Author Name</strong> on <strong>long date</strong></p>
+                    </div>
+                </div>
+                <div class="articleImageContainer">
+                    <img src="./simon-matzinger-twukN12EN7c-unsplash.jpg" alt="" id="postImageA">
+                    <!-- <p id="caption">The image caption</p> -->
+                </div>
+                <div class="articleExcerpt">
+                    <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus esse, quibusdam natus voluptates quae iure nemo itaque praesentium, unde dignissimos ducimus. Delectus obcaecati unde repellendus praesentium, minima ullam necessitatibus impedit!</strong>
+                </div>
+                <div class="articleContent">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js" integrity="sha256-lrZTgsdM1iVdRigETFOU8u8/BmLX1ysQ8bzrULbuVFU="
-    crossorigin="anonymous"></script>
+                </div>
+                <div class="shareButton"><button onclick="copyURL()" class="fa fa-share-alt"></button><button onclick="linkTo('whatsapp')" href="#" class="fa fa-whatsapp"></button><button onclick="linkTo('twitter')" class="fa fa-twitter"></button></div>
+            </section>
+            <section id="recommended">
+                 
+                <section class="primary">
+                    <div class="card" id="post1">
+                        <div class="imageSection">
+                            <img src="simon-matzinger-twukN12EN7c-unsplash.jpg" alt="a colourful mountain scene">
+                            <p class="imageLabel">Recommended</p>
+                        </div>
+                        <div class="contentSection">
+                            <a><strong> </strong></a>
+                            <p class="excerpt"> </p>
+                            <div class="bottom">
+                                <div class="line"></div>
+                                <div class="writtenBy">
+                                    <p class="authorInfo"><strong> </strong> writing about <strong>The Environment</strong></p>
+                                    <p class="date">  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card" id="post2">
+                        <div class="imageSection">
+                            <img src="simon-matzinger-twukN12EN7c-unsplash.jpg" alt="a colourful mountain scene">
+                            <p class="imageLabel">Recommended</p>
+                        </div>
+                        <div class="contentSection">
+                            <a><strong> </strong></a>
+                            <p class="excerpt"> </p>
+                            <div class="bottom">
+                                <div class="line"></div>
+                                <div class="writtenBy">
+                                    <p class="authorInfo"><strong> </strong> writing about <strong>The Environment</strong></p>
+                                    <p class="date">  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </section>
+                <section class="featured">
 
-  <script>
+                    <div class="card" id="featuredPost1">
+                        <!-- <div class="goldGloss"></div> -->
+                        <div class="imageSection">
+                            <img src="simon-matzinger-twukN12EN7c-unsplash.jpg" alt="a colourful mountain scene">
+                            <p class="imageLabel shiny">Featured</p>
+                        </div>
+                        <div class="contentSection">
+                            <a><strong> </strong></a>
+                            <p class="excerpt"> </p>
+                            <div class="bottom">
+                                <div class="line"></div>
+                                <div class="writtenBy">
+                                    <p class="authorInfo"><strong> </strong> writing about <strong>  </strong></p>
+                                    <p class="date">  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+            
+                    <div class="card" id="featuredPost2">
+                        <!-- <div class="goldGloss"></div> -->
+                        <div class="imageSection">
+                            <img src="simon-matzinger-twukN12EN7c-unsplash.jpg" alt="a colourful mountain scene">
+                            <p class="imageLabel shiny">Featured</p>
+                        </div>
+                        <div class="contentSection">
+                            <a><strong> </strong></a>
+                            <p class="excerpt"> </p>
+                            <div class="bottom">
+                                <div class="line"></div>
+                                <div class="writtenBy">
+                                    <p class="authorInfo"><strong> </strong> writing about <strong>  </strong></p>
+                                    <p class="date">  </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </section>
+                <section class="joinSection">
+                    <div class="labelSection">
+                        <p>Do you like what we do?</p>
+                        <h2>Get Involved</h2>
+                    </div>
+        <div class="formContainer">
+                        <div class="formText">
+                            <div class="textContainer">
+                                <h2>There is a writer inside everyone</h2>
+                                <p>Join us and discover the creative potential you have within you</p>
+                            </div>
+                        </div>
+                        <form action="https://docs.google.com/forms/d/e/1FAIpQLSdSelpKTBaigxRvctoydqLzvk9Fs9j1fgJZpBQGTv6OjKlpSg/formResponse" method="post">
+                            <label for="name">Your Name <input type="text" id="name" name="entry.846402411"  placeholder="..."></label>  
+                            <label for="email">Your Email <input required type="text" id="email" name="entry.224984652"  placeholder="..."></label>
+                            <label for="year" id="years"><select id="year"  name="entry.1450060921"><option value="S1">S1</option><option value="S2">S2</option><option value="S3">S3</option><option value="S4">S4</option><option value="S5">S5</option><option value="S6">S6</option><option value="I am a Teacher">I am a Teacher</option></select><input type="submit" value="Submit" id="submit" class="submit"></label> 
+                        </form>
+        
+        
+                    </div>
+                </section>
+                <script id="dateTime">
+                    function duration(date) {
+                        var a = date;
+                        var b = new Date();
+                        var milliseconds = ((new Date(b)) - (new Date(a)));
+                        
+                        var minutes = milliseconds / (60000);
+                        var hours = minutes / 60
+                        var days = hours / 25
+                        var weeks = days / 7
+                        var months = weeks / 4
+                        var years = months / 12
+                        
+                        if (minutes > 60) {
+                            if (hours > 24){
+                                if (days > 7) {
+                                    if (weeks > 4) {
+                                        if (months > 12) {
+                                            var num = Math.round(years)
+                                            if (num == 1) {
+                                                return num + " year ago"
+                                            }
+                                            return num + " years ago"
+                                        } else {
+                                            var num = Math.round(months)
+                                            if (num == 1) {
+                                                return num + " month ago"
+                                            }
+                                            return num + " months ago"
+                                        }
+                                    } else {
+                        
+                                        var num = Math.round(weeks)
+                                            if (num == 1) {
+                                                return num + " week ago"
+                                            }
+                                            return num + " weeks ago"
+                                    }
+                                } else {
+                                    var num = Math.round(days)
+                                            if (num == 1) {
+                                                return num + " day ago"
+                                            }
+                                            return num + " days ago"
+                            }
+                            } else {
+                                var num = Math.round(hours)
+                                            if (num == 1) { 
+                                                return num + " hour ago"
+                                            }
+                                            return num + " hours ago"
+                        
+                            }
+                        } else {
+                            var num = Math.round(minutes)
+                                            if (num == 1) {
+                                                return num + " minute ago"
+                                            }
+                                            return num + " minutes ago"
+                        }
+                    }
+                </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js" integrity="sha256-lrZTgsdM1iVdRigETFOU8u8/BmLX1ysQ8bzrULbuVFU="
+                crossorigin="anonymous"></script>
+                <script id="SearchVariables">
+                    var postArray = []
+                    var authorsArray = []
+                    var searchTitles = []
+                    var categories = []
+                    var state8
+                </script>
+                <script id="PrimaryPostsScript">
+                    function getThisCategory(urlParam) {
+                    let state = {
+                      posts: [],
+                      baseUrl: 'https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/posts',
+                      perPage: urlParam
+                    } 
+                    async function getNumPosts() {
+                      const { headers } = await axios(`${state.baseUrl}${state.perPage}`,)
+                      return headers['x-wp-totalpages']
+                    }
+                    async function fetchPosts(numPages) {
+                      const posts = []
+                      for (let page = 1; page <= numPages; page += 1) {
+                        const post = axios.get(`${state.baseUrl}${state.perPage}&page=${page}`, state.wpFetchHeaders)
+                        posts.push(post)
+                      }
+                      await axios.all(posts).then((response) => {
+                        const postData = response.map(res => res.data)
+                        state.posts = postData.flat()
+                      }).catch(e => console.log('error fetching posts: ', e))
+                      return true
+                    }
+                
+                    state.posts = getNumPosts()
+                      .then(numPosts => fetchPosts(numPosts))
+                      .then((data) => {
+                        // console.log('data ', state)
+                        // console.log(state.posts[0])
+                    var monthNames = [ "January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December" ];
+        
+                    var postIndex = 0;
+                    var postPrimary = [
+                        "post1","post2"
+                    ];
+                    if (state.posts.length > 1) {
+                    for (postIndex = 0; postIndex < postPrimary.length; postIndex++) {
 
+                        postArray.push({'id':state.posts[postIndex].id,'category':state.posts[postIndex]._embedded['wp:term'][0][0].id,'title':state.posts[postIndex].title.rendered,'slug':state.posts[postIndex].slug})
+                        searchTitles.push(state.posts[postIndex].title.rendered +' -Post')
+                        var postContainer = document.getElementById(postPrimary[postIndex])
+                        // post image
+                        postContainer.children[0].children[0].src = state.posts[postIndex]._embedded['wp:featuredmedia'][0].source_url
+                        // console.log(state.posts[postIndex]._embedded['wp:featuredmedia'])
+                        // post title
+                        postContainer.children[1].children[0].innerHTML = state.posts[postIndex].title.rendered
+                        postContainer.children[1].children[0].href= 'post.html' + '?cat=' + state.posts[postIndex]._embedded['wp:term'][0][0].id + '&id=' + state.posts[postIndex].id + '&p=' + state.posts[0].slug;
+                        // post excerpt
+                        postContainer.children[1].children[1].innerHTML = state.posts[postIndex].excerpt.rendered
+                        // post author
+                        postContainer.children[1].children[2].children[1].children[0].children[0].innerHTML = state.posts[postIndex]._embedded.author[0].name;
+                        // post date
+                        postContainer.children[1].children[2].children[1].children[1].innerHTML = duration(state.posts[postIndex].date);              
+                        // post category
+                        postContainer.children[1].children[2].children[1].children[0].children[1].innerHTML = state.posts[postIndex]._embedded['wp:term'][0][0].name;
+                        // postContainer.children[0].children[1].innerHTML = state.posts[postIndex]._embedded['wp:term'][0][0].name;
+                        }
+                    } else {
+                        postArray.push({'id':state.posts[0].id,'category':state.posts[0]._embedded['wp:term'][0][0].id,'title':state.posts[0].title.rendered,'slug':state.posts[0].slug})
+                        searchTitles.push(state.posts[0].title.rendered +' -Post')
+                        var postContainer = document.getElementById(postPrimary[0])
+                        // post image
+                        postContainer.children[0].children[0].src = state.posts[0]._embedded['wp:featuredmedia'][0].source_url
+                        // console.log(state.posts[0]._embedded['wp:featuredmedia'])
+                        // post title
+                        postContainer.children[1].children[0].innerHTML = state.posts[0].title.rendered
+                        postContainer.children[1].children[0].href= 'post.html' + '?cat=' + state.posts[0]._embedded['wp:term'][0][0].id + '&id=' + state.posts[0].id + '&p=' + state.posts[0].slug;
+                        // post excerpt
+                        postContainer.children[1].children[1].innerHTML = state.posts[0].excerpt.rendered
+                        // post author
+                        postContainer.children[1].children[2].children[1].children[0].children[0].innerHTML = state.posts[0]._embedded.author[0].name;
+                        // post date
+                        postContainer.children[1].children[2].children[1].children[1].innerHTML = duration(state.posts[0].date);              
+                        // post category
+                        postContainer.children[1].children[2].children[1].children[0].children[1].innerHTML = state.posts[0]._embedded['wp:term'][0][0].name;
+                   
+                    }
+                })
+                
+                    }
+                
+                
+                  </script>
+                <script id="FeaturedScript">
+                let state2 = {
+                    posts: [],
+              baseUrl: 'https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/posts',
+              perPage: '?_embed&tags=9'
+            //   To find out tag id use this rest endpoint on browser https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/tags
+            }
+            async function getNumPosts2() {
+              const { headers } = await axios(`${state2.baseUrl}${state2.perPage}`,)
+              return headers['x-wp-totalpages']
+            }
+            async function fetchPosts2(numPages) {
+              const posts = []
+              for (let page = 1; page <= numPages; page += 1) {
+                const post = axios.get(`${state2.baseUrl}${state2.perPage}&page=${page}`, state2.wpFetchHeaders)
+                posts.push(post)
+              }
+              await axios.all(posts).then((response) => {
+                const postData = response.map(res => res.data)
+                state2.posts = postData.flat()
+              }).catch(e => console.log('error fetching posts: ', e))
+              return true
+            }
+            state2.posts = getNumPosts2()
+              .then(numPosts => fetchPosts2(numPosts))
+              .then((data) => {
+                var monthNames = [ "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December" ];
+        
+                var postIndexF = 0;
+                var postFeatured = [
+                    "featuredPost1","featuredPost2"
+                ];
+                for (postIndexF = 0; postIndexF < postFeatured.length; postIndexF++) {
+                    var postContainer = document.getElementById(postFeatured[postIndexF])
+                    // post image
+                    postContainer.children[0].children[0].src = state2.posts[postIndexF]._embedded['wp:featuredmedia'][0].source_url
+                    // post title
+                    // console.log(postContainer.children[0])
+                    postContainer.children[1].children[0].innerHTML = state2.posts[postIndexF].title.rendered
+                    postContainer.children[1].children[0].href= 'post.html' + '?cat=' + state2.posts[postIndexF]._embedded['wp:term'][0][0].id + '&id=' + state2.posts[postIndexF].id + '&p=' + state2.posts[0].slug;
+                    // post excerpt
+                    postContainer.children[1].children[1].innerHTML = state2.posts[postIndexF].excerpt.rendered
+                    // post author
+                    postContainer.children[1].children[2].children[1].children[0].children[0].innerHTML = state2.posts[postIndexF]._embedded.author[0].name;
+                    // post date
+                    postContainer.children[1].children[2].children[1].children[1].innerHTML = duration(state2.posts[postIndexF].date);                
+                    // post category
+                    postContainer.children[1].children[2].children[1].children[0].children[1].innerHTML = state2.posts[postIndexF]._embedded['wp:term'][0][0].name;
+                }})
+            
+            
+            
+            
+                </script>
+            <script id="getPost">
+
+function GetURLCatParameter(sParam) {
+        let sPageURL = window.location.search.substring(1);
+        let sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++) {
+            let sParameterName = sURLVariables[i].split('=')
+            console.log(sParameterName)
+            // return(sParameterName)
+            if (sParameterName[0] == sParam) {
+                getThisCategory('?_embed&categories=' + sParameterName[1])
+
+            }
+        }
+
+    }
     function GetURLParameter(sParam) {
         let sPageURL = window.location.search.substring(1);
         let sURLVariables = sPageURL.split('&');
@@ -72,7 +484,7 @@
         }
     }
 
-    let postId = GetURLParameter('postId');
+    let postId = GetURLParameter('id');
 
     let state = {
       posts: [],
@@ -113,61 +525,97 @@
     state.posts = getNumPosts()
       .then(numPosts => fetchPosts(numPosts))
       .then((data) => {
-        // console.log('data ', state)
+                // console.log('data ', state8)
+                // console.log(state8.posts[0])
+            var monthNames = [ "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December" ];
+
+            var i = 0;
+            console.log('fine here')
 
 
-        // console.log(state.posts[0])
+   
+                    var postContainer = document.getElementById("mainContent")
+                // post image
+           
+                // console.log(postContainer.children[0].children[0])
+                postContainer.children[1].children[0].src = state.posts[0]._embedded['wp:featuredmedia'][0].source_url
+                postContainer.children[1].children[0].alt_text = state.posts[0]._embedded['wp:featuredmedia'][0].alt_text
+                var caption = document.createElement('div')
+
+                caption.innerHTML = state.posts[0]._embedded['wp:featuredmedia'][0].caption.rendered
+                postContainer.children[1].appendChild(caption)
+                if (caption.children[0]) {
+                    caption.children[0].id = ('caption')
+
+                }
+                
+                
+                // post title
+                postContainer.children[0].children[0].innerHTML = state.posts[0].title.rendered
+                // postContainer.children[1].children[0].href= 'post.html' + '?cat=' + state8.posts[i]._embedded['wp:term'][0][0].id + '&id=' + state8.posts[i].id + '&p=' + state8.posts[0].slug;
+                // post excerpt
+                postContainer.children[2].children[0].innerHTML = state.posts[0].excerpt.rendered
+                // post author
+                postContainer.children[0].children[2].children[0].children[1].innerHTML = state.posts[0]._embedded.author[0].name;
+                // post date
+                var newDate1 = new Date(state.posts[0].date);
+                postContainer.children[0].children[2].children[0].children[2].innerHTML = newDate1.getDate() + ' ' + monthNames[newDate1.getMonth()] + ' ' + newDate1.getFullYear();;   
+                // console.log(state.posts[0]._embedded['wp:featuredmedia'])           
+                // post category
+                postContainer.children[0].children[2].children[0].children[0].innerHTML = state.posts[0]._embedded['wp:term'][0][0].name;
+                // postContainer.children[0].children[1].innerHTML = state8.posts[i]._embedded['wp:term'][0][0].name;
+                // post content
+                postContainer.children[3].innerHTML = state.posts[0].content.rendered
+                document.getElementById('WebHero').style.backgroundImage = 'url(' + state.posts[0]._embedded['wp:featuredmedia'][0].source_url + ')'
+                document.getElementById('title').innerHTML = state.posts[0].title.rendered
+                document.getElementById('link').href = document.location.href
+                document.getElementById('og').content = document.location.href
+                document.getElementById('tw').content = document.location.href
+                document.getElementById('pageDesc').content = postContainer.children[2].children[0].children[0].innerHTML
+                document.getElementById('key').content = "rosshall records, article, " + state.posts[0]._embedded['wp:term'][0][0].name;
+                GetURLCatParameter('cat');
+
+
+        })
+
 
     
-        var monthNames = [ "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December" ];
 
-        // Post content
-        var newDate1 = new Date(state.posts[0].date);
+    
 
-        document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
-        // document.getElementById("PostImage").src = state.posts[0]._embedded['wp:featuredmedia'][0].alt_text;
-
-        document.getElementById("PostAuthor").innerHTML = state.posts[0]._embedded.author[0].name;
-        document.getElementById("PostCategory").innerHTML = state.posts[0]._embedded['wp:term'][0][0].name;
-        document.getElementById("PostTitle").innerHTML = state.posts[0].title.rendered;
-        document.getElementById("PostText").innerHTML = state.posts[0].content.rendered;
-        document.getElementById("PostDate").innerHTML = monthNames[newDate1.getMonth()] + ' ' + newDate1.getDate() + ' ' + newDate1.getFullYear();
-
-        // uf avatar not showing it is due to an avatar image not being set
-        document.getElementById("PostAuthorImage").src = state.posts[0]._embedded.author[0].simple_local_avatar[96];
-
-        // document.getElementById("loader").style.display = "none";
-        const originalString = state.posts[0].excerpt.rendered;
-        const strippedString = originalString.replace(/(<([^>]+)>)/gi,"");
-        // console.log(strippedString)
-        document.getElementById("desc").innerHTML = strippedString;
-
-        const originalString1 = state.posts[0].title.rendered;
-        const strippedString1 = originalString1.replace(/(<([^>]+)>)/gi,"");
-        // console.log(strippedString)
-        document.getElementById("titleP").innerHTML = strippedString1 + " - Rosshall Records";
+    
 
 
-        // Social Media Optimization
-        const originalString3 = state.posts[0].title.rendered;
-        const strippedString3 = originalString3.replace(/(<([^>]+)>)/gi,"");
-        // console.log(strippedString)
-        document.getElementById("ogTitle").content = strippedString3;
-
-        const originalString2 = state.posts[0].excerpt.rendered;
-        const strippedString2 = originalString2.replace(/(<([^>]+)>)/gi,"");
-        // console.log(strippedString)
-        document.getElementById("ogDesc").content = strippedString2;
-
-        document.getElementById("ogImage").content = state.posts[0]._embedded['wp:featuredmedia'][0].source_url;
-        document.getElementById("ogUrl").content = window.location.href;
-
-      })
+            </script>
+               
+    
+            </section>
+            <div class="placeholder"></div>
+        </section>
 
 
 
-  </script>
-
+    </section>
+    <footer id="WebFoot">
+        <div class="footerWrapper">
+            <div class="TitleSlogan">
+                <h2>Rosshall Records</h2>
+                <p>Where creativity has no boundaries</p>
+            </div>
+            <div class="lineLabel" id="footerLabel">
+                <!-- <div class="footerLineText">Useful Links</div> -->
+                <div class="FooterLine"></div>
+            </div>
+            <div class="links">
+                <a href="index.html">Homepage</a>
+                <a href="post.html?cat=12&id=120&p=we-are-rosshall-records-this-is-what-were-about">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="search.html">Search</a>
+                <a href="index.html#writers">Our Writers</a>
+                <a href="index.html#latest">Latest Stories</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

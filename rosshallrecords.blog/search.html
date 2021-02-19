@@ -3,36 +3,691 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search - Rosshall Records</title>
-    <meta name="description" content="Find the article you are looking for or discover by filtering through our categories">
-    <link rel="stylesheet" href="style.css">
+    <title>Search</title>
+    <link rel="stylesheet" href="search.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Our amazing young writers from Rosshall post their works for you to see. Read about all sorts of topics from political issues to creative, fictional stories.">
+
+    <meta name="google-site-verification" content="lmerKW-R7h3uB9fsfRbRCf9-673ie-ulrGZ4Te8q1Oo" />
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap" rel="stylesheet">
+
+    <meta name="description" content="Search articles from a variety of categories written by students at Rosshall Academy. Rosshall Records is the hub for creativity and journalism at Rosshall Academy">
+    <meta name="keywords" content="rosshall records, rosshall academy, rosshall, blog, articles, search">
+    <meta name="theme-color" content="rgba(204,173,56,0.98)">
+    <meta property="og:image" content="icon.png">
+     <link rel="canonical" id="link" href="">
+     <script>document.getElementById('link').href = document.location.href</script>
+
     <link rel="shortcut icon" href="icon.png">
     <link rel="apple-touch-icon" href="icon.png">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-
-    <header>
-        <div>
-            <p>Rosshall Records</p>
+    <header id="WebNav">
+        <div id="nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="search.html" class="activeLink noMargin">Search</a></li>
+                <li><a href="index.html" class="activeLink">Home</a></li>
+                <li><a href="post.html?cat=12&id=120&p=we-are-rosshall-records-this-is-what-were-about">About</a></li>
+                <li><a href="index.html#writers" class="noMargin">Our Writers</a></li>
             </ul>
         </div>
     </header>
-
-    <!-- <div class="loader" id="loader"><div class="loading"><p> Loading...</p></div></div> -->
-
-    <section class="comingSoonContainer2">
-        <div class="comingSoon">
-          <P>This page is coming soon!</P>
+    <main id="WebHero">
+        <div class="heroContent">
+            <h1>Rosshall Records</h1>
+            <p><strong>Where creativity has no boundaries</strong></p>
         </div>
+        <div class="scrollContainer">
+            <div class="arrowContainer">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>
+        </div>
+    </main>
+    <section class="searchContainer">
+        <p><strong>Need to find something specific?</strong></p>
+            <div class="search">
+                <input type="text" value="" id="searchTerm" placeholder="an article, author or category...">
+                <button type="submit" id="searchButton" onclick="breakDownSearch()">Search</button>
+            </div>
+            <div class="suggestionsContainer">
+
+            </div>
+
     </section>
+    <section id="WebContent">
+        <section class="primary">
+            <div class="lineLabel" id="latestLabel">
+                <div class="lineText" id="results">0 Results</div>
+                <div class="Line"></div>
+            </div>
+            <div class="resultsContainer" id="resultsContainer">
+            </div>
+            <template id="resultsTemplate">
+                <div class="card" id="post2">
+                    <div class="imageSection">
+                        <img src="simon-matzinger-twukN12EN7c-unsplash.jpg" alt="a colourful mountain scene">
+                        <p class="imageLabel">Environmental</p>
+                    </div>
+                    <div class="contentSection">
+                        <a><strong>The mountain ranges of DC Comics</strong></a>
+                        <p class="excerpt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit aliquam repudiandae, vitae eius dolores eum odio ipsam ab illum sapiente?</p>
+                        <div class="bottom">
+                            <div class="line"></div>
+                            <div class="writtenBy">
+                                <p class="authorInfo"><strong>Akrit</strong> writing about <strong>Fantasy</strong></p>
+                                <p class="date">1h ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+    
+    
+
+    
+
+    
+
+        </section>
+        <section class="joinSection">
+            <div class="labelSection">
+                <p>Do you like what we do?</p>
+                <h2>Get Involved</h2>
+            </div>
+<div class="formContainer">
+                <div class="formText">
+                    <div class="textContainer">
+                        <h2>There is a writer inside everyone</h2>
+                        <p>Join us and discover the creative potential you have within you</p>
+                    </div>
+                </div>
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSdSelpKTBaigxRvctoydqLzvk9Fs9j1fgJZpBQGTv6OjKlpSg/formResponse" method="post">
+                    <label for="name">Your Name <input type="text" id="name" name="entry.846402411"  placeholder="..."></label>  
+                    <label for="email">Your Email <input required type="text" id="email" name="entry.224984652"  placeholder="..."></label>
+                    <label for="year" id="years"><select id="year"  name="entry.1450060921"><option value="S1">S1</option><option value="S2">S2</option><option value="S3">S3</option><option value="S4">S4</option><option value="S5">S5</option><option value="S6">S6</option><option value="I am a Teacher">I am a Teacher</option></select><input type="submit" value="Submit" id="submit" class="submit"></label> 
+                </form>
 
 
-    <footer><p class="gold">Rosshall Records 2020</p><p>Rosshall Academy 131 Crookston Road, Glasgow G52 3PD</p><p>Email: Email will be provided soon</p></footer>
+            </div>
+        </section>
+        <!-- <section class="writers">
+            <div class="lineLabel" id="writersLabel">
+                <div class="lineText">Our Writers</div>
+                <div class="Line"></div>
+            </div>
+            <div class="authorsContainer" id="authorsContainer">
+                
+                
+            </div>
+            <template id="AuthorTemplate">
+                <div class="authorCard" id="">
+                    <div class="authorProfilePicture">
+                        <div class="imageWrapper">
+                            <img src="./Leaves.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="authorCardContent">
+                        <div class="centerContainer">
+                            <div class="authorTitle">
+                                <h2><strong>Akrit Ghimire</strong></h2>
+                                <p>Administrator</p>
+                            </div>
+                            <div class="line"></div>
+                            <div class="authorLink">
+                                <p>Has written <strong>3</strong> articles</p>
+                                <a href="#"><strong>View Articles &#x1F862;</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            
+            
+        </section> -->
+        <script id="dateTime">
+            function duration(date) {
+                var a = date;
+                var b = new Date();
+                var milliseconds = ((new Date(b)) - (new Date(a)));
+                
+                var minutes = milliseconds / (60000);
+                var hours = minutes / 60
+                var days = hours / 25
+                var weeks = days / 7
+                var months = weeks / 4
+                var years = months / 12
+                
+                if (minutes > 60) {
+                    if (hours > 24){
+                        if (days > 7) {
+                            if (weeks > 4) {
+                                if (months > 12) {
+                                    var num = Math.round(years)
+                                    if (num == 1) {
+                                        return num + " year ago"
+                                    }
+                                    return num + " years ago"
+                                } else {
+                                    var num = Math.round(months)
+                                    if (num == 1) {
+                                        return num + " month ago"
+                                    }
+                                    return num + " months ago"
+                                }
+                            } else {
+                
+                                var num = Math.round(weeks)
+                                    if (num == 1) {
+                                        return num + " week ago"
+                                    }
+                                    return num + " weeks ago"
+                            }
+                        } else {
+                            var num = Math.round(days)
+                                    if (num == 1) {
+                                        return num + " day ago"
+                                    }
+                                    return num + " days ago"
+                    }
+                    } else {
+                        var num = Math.round(hours)
+                                    if (num == 1) { 
+                                        return num + " hour ago"
+                                    }
+                                    return num + " hours ago"
+                
+                    }
+                } else {
+                    var num = Math.round(minutes)
+                                    if (num == 1) {
+                                        return num + " minute ago"
+                                    }
+                                    return num + " minutes ago"
+                }
+            }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js" integrity="sha256-lrZTgsdM1iVdRigETFOU8u8/BmLX1ysQ8bzrULbuVFU="
+        crossorigin="anonymous"></script>
+        <script id="SearchVariables">
+            var postArray = []
+            var authorsArray = []
+            var searchTitles = []
+            var categories = []
+        </script>
+        <script id="PrimaryPostsScript">
 
+            let state = {
+              posts: [],
+              baseUrl: 'https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/posts',
+              perPage: '?_embed'
+            } 
+            async function getNumPosts() {
+              const { headers } = await axios(`${state.baseUrl}${state.perPage}`,)
+              return headers['x-wp-totalpages']
+            }
+            async function fetchPosts(numPages) {
+              const posts = []
+              for (let page = 1; page <= numPages; page += 1) {
+                const post = axios.get(`${state.baseUrl}${state.perPage}&page=${page}`, state.wpFetchHeaders)
+                posts.push(post)
+              }
+              await axios.all(posts).then((response) => {
+                const postData = response.map(res => res.data)
+                state.posts = postData.flat()
+              }).catch(e => console.log('error fetching posts: ', e))
+
+              return true
+            }
+        
+            state.posts = getNumPosts()
+              .then(numPosts => fetchPosts(numPosts))
+              .then((data) => {
+                // console.log('data ', state)
+                // console.log(state.posts[0])
+            var monthNames = [ "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December" ];
+
+            var i = 0;
+            // postArray = state.posts
+            for (i = 0; i < state.posts.length; i++) {
+                postArray.push({'id':state.posts[i].id,'category':state.posts[i]._embedded['wp:term'][0][0].id,'title':state.posts[i].title.rendered,'slug':state.posts[i].slug})
+                searchTitles.push(state.posts[i].title.rendered +' -Post')
+
+            }})
+        
+        
+        
+        
+          </script>
+        <script id="AuthorsScript">
+            function authorSection() {
+            for (i = 0; i < state4.posts.length; i++) { 
+                var author = i
+                var element = document.getElementById(author)
+                console.log(authorsArray)
+                // author name
+                element.children[1].children[0].children[0].children[0].children[0].innerHTML = authorsArray[i].name
+                // // written amount
+                element.children[1].children[0].children[2].children[0].children[0].innerHTML = authorsArray[i].Wlength
+                //  profile picture
+                element.children[0].children[0].children[0].src = authorsArray[i].image
+            }
+        }
+            let state4 = {
+                posts: [],
+                baseUrl: 'https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/users',
+                perPage: '?_embed'
+                //   To find out tag id use this rest endpoint on browser https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/tags
+        }
+        async function getNumPosts4() {
+            // const { headers } = await axios(`${state4.baseUrl}${state4.perPage}`,)
+            const { headers } = await axios(`${state4.baseUrl}`,)
+            return headers['x-wp-totalpages']
+            // return headers
+        }
+
+        async function fetchPosts4(numPages) {
+            const posts = []
+            for (let page = 1; page <= numPages; page += 1) {
+            // const post = axios.get(`${state4.baseUrl}${state4.perPage}&page=${page}`, state4.wpFetchHeaders)
+            const post = axios.get(`${state4.baseUrl}?_embed` , state4.wpFetchHeaders)
+            posts.push(post)
+            }
+            await axios.all(posts).then((response) => {
+            const postData = response.map(res => res.data)
+            state4.posts = postData.flat()
+            }).catch(e => console.log('error fetching posts: ', e))
+            return true
+        }
+
+
+        state4.posts = getNumPosts4()
+        .then(numPosts => fetchPosts4(numPosts)) .then((data) => {
+            var postIndexA = 0;
+            for (postIndexA = 0; postIndexA < state4.posts.length; postIndexA++) {
+
+                var ID = state4.posts[postIndexA].id
+
+                let state5 = {
+                    posts: [],
+                    baseUrl: 'https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/posts',
+                    perPage: '?_embed&author=' + ID 
+                    //   To find out tag id use this rest endpoint on browser https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/tags
+                    }
+                async function getNumPosts5() {
+            const { headers } = await axios(`${state5.baseUrl}${state5.perPage}`,)
+            // const { headers } = await axios(`${state5.baseUrl}`,)
+            return headers['x-wp-totalpages']
+            // return headers
+        }
+                async function fetchPosts5(numPages) {
+            const posts = []
+            for (let page = 1; page <= numPages; page += 1) {
+            const post = axios.get(`${state5.baseUrl}${state5.perPage}&page=${page}`, state5.wpFetchHeaders)
+            // const post = axios.get(`${state5.baseUrl}?_embed` , state5.wpFetchHeaders)
+            posts.push(post)
+            }
+            await axios.all(posts).then((response) => {
+            const postData = response.map(res => res.data)
+            state5.posts = postData.flat()
+            }).catch(e => console.log('error fetching posts: ', e))
+            return true
+        }
+                
+                state5.posts = getNumPosts5()
+                .then(numPosts => fetchPosts5(numPosts))
+                .then((data) => { 
+                    // written articles number
+                        authorsArray.push({'id':state5.posts[0].author,'name':state5.posts[0]._embedded.author[0].name, 'Wlength': state5.posts.length,'image':state5.posts[0]._embedded.author[0].avatar_urls[96]})
+                        searchTitles.push(state5.posts[0]._embedded.author[0].name +' -Author')
+
+                        // if (postIndexA == state4.posts.length) {
+                        //     authorSection()
+                        // }
+
+                    })
+                    var i = 0
+
+                //     var author = postIndexA
+                //     var element = document.getElementById(author)
+                //         var name = state4.posts[postIndexA].name
+                //         var temp = document.getElementById("AuthorTemplate")
+
+                // temp.content.children[0].id = author
+                // var clon = temp.content.cloneNode(true)
+                // var parent = document.getElementById("authorsContainer")
+                // parent.appendChild(clon)
+                    }
+
+                })
+
+        
+        
+        
+            </script>
+
+<script id="categories">
+                let state7 = {
+                posts: [],
+                baseUrl: 'https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/categories',
+                perPage: '?_embed'
+                //   To find out tag id use this rest endpoint on browser https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/tags
+        }
+        async function getNumPosts7() {
+            // const { headers } = await axios(`${state4.baseUrl}${state4.perPage}`,)
+            const { headers } = await axios(`${state7.baseUrl}`,)
+            return headers['x-wp-totalpages']
+            // return headers
+        }
+
+        async function fetchPosts7(numPages) {
+            const posts = []
+            for (let page = 1; page <= numPages; page += 1) {
+            // const post = axios.get(`${state4.baseUrl}${state4.perPage}&page=${page}`, state4.wpFetchHeaders)
+            const post = axios.get(`${state7.baseUrl}?_embed` , state7.wpFetchHeaders)
+            posts.push(post)
+            }
+            await axios.all(posts).then((response) => {
+            const postData = response.map(res => res.data)
+            state7.posts = postData.flat()
+            }).catch(e => console.log('error fetching posts: ', e))
+            return true
+        }
+
+        state7.posts = getNumPosts7()
+        .then(numPosts => fetchPosts7(numPosts)) .then((data) => {
+            var i = 0
+            // categories = state7.posts
+            // console.log(state7.posts[0])
+            for (i = 0; i < state7.posts.length; i++) {
+                categories.push({'id':state7.posts[i].id,'name':state7.posts[i].name,'slug':state7.posts[i].slug})
+                searchTitles.push(state7.posts[i].name +' -Category')
+            }
+        })
+</script>
+
+<script id="searchSuggestions">
+    function autocomplete(inp, arr) {
+      /*the autocomplete function takes two arguments,
+      the text field element and an array of possible autocompleted values:*/
+      var currentFocus;
+      /*execute a function when someone writes in the text field:*/
+      inp.addEventListener("input", function(e) {
+          var a, b, i, val = this.value;
+          /*close any already open lists of autocompleted values*/
+          closeAllLists();
+          if (!val) { return false;}
+          currentFocus = -1;
+          /*create a DIV element that will contain the items (values):*/
+          a = document.createElement("DIV");
+          a.setAttribute("id", this.id + "autocomplete-list");
+          a.setAttribute("class", "autocomplete-items");
+          /*append the DIV element as a child of the autocomplete container:*/
+          this.parentNode.parentNode.children[2].appendChild(a);
+          /*for each item in the array...*/
+          for (i = 0; i < arr.length; i++) {
+            /*check if the item starts with the same letters as the text field value:*/
+            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+              /*create a DIV element for each matching element:*/
+              b = document.createElement("DIV");
+              /*make the matching letters bold:*/
+              b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+              b.innerHTML += arr[i].substr(val.length);
+              /*insert a input field that will hold the current array item's value:*/
+              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+              /*execute a function when someone clicks on the item value (DIV element):*/
+              b.addEventListener("click", function(e) {
+                  /*insert the value for the autocomplete text field:*/
+                  inp.value = this.getElementsByTagName("input")[0].value;
+                  /*close the list of autocompleted values,
+                  (or any other open lists of autocompleted values:*/
+                  closeAllLists();
+              });
+              a.appendChild(b);
+            }
+          }
+      });
+      /*execute a function presses a key on the keyboard:*/
+      inp.addEventListener("keydown", function(e) {
+          var x = document.getElementById(this.id + "autocomplete-list");
+          if (x) x = x.getElementsByTagName("div");
+          if (e.keyCode == 40) {
+            /*If the arrow DOWN key is pressed,
+            increase the currentFocus variable:*/
+            currentFocus++;
+            /*and and make the current item more visible:*/
+            addActive(x);
+          } else if (e.keyCode == 38) { //up
+            /*If the arrow UP key is pressed,
+            decrease the currentFocus variable:*/
+            currentFocus--;
+            /*and and make the current item more visible:*/
+            addActive(x);
+          } else if (e.keyCode == 13) {
+            /*If the ENTER key is pressed, prevent the form from being submitted,*/
+            e.preventDefault();
+            if (currentFocus > -1) {
+              /*and simulate a click on the "active" item:*/
+              if (x) x[currentFocus].click();
+            }
+          }
+      });
+      function addActive(x) {
+        /*a function to classify an item as "active":*/
+        if (!x) return false;
+        /*start by removing the "active" class on all items:*/
+        removeActive(x);
+        if (currentFocus >= x.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = (x.length - 1);
+        /*add class "autocomplete-active":*/
+        x[currentFocus].classList.add("autocomplete-active");
+      }
+      function removeActive(x) {
+        /*a function to remove the "active" class from all autocomplete items:*/
+        for (var i = 0; i < x.length; i++) {
+          x[i].classList.remove("autocomplete-active");
+        }
+      }
+      function closeAllLists(elmnt) {
+        /*close all autocomplete lists in the document,
+        except the one passed as an argument:*/
+        var x = document.getElementsByClassName("autocomplete-items");
+        for (var i = 0; i < x.length; i++) {
+          if (elmnt != x[i] && elmnt != inp) {
+            x[i].parentNode.removeChild(x[i]);
+          }
+        }
+      }
+      /*execute a function when someone clicks in the document:*/
+      document.addEventListener("click", function (e) {
+          closeAllLists(e.target);
+      });
+    }
+    
+    /*An array containing all the country names in the world:*/
+    /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+    autocomplete(document.getElementById("searchTerm"), searchTitles);
+    </script>
+    <script id="SearchScript">
+        function findStuff(array, propertyName, value,type) {
+            for (var i = 0; i < array.length; i++) {
+                if (array[i][propertyName] === value) {
+                    if (type == 'Author') {
+                        place = 'search.html' + '?author=' + array[i].name + '&id=' + array[i].id
+                        return place
+                    } else if (type == 'Post') {
+                        place = 'post.html' + '?cat=' + array[i].category + '&id=' + array[i].id + '&p=' + array[i].slug
+                        return place
+                    } else if (type == 'Category') {
+                        place = 'search.html' + '?category=' + array[i].name + '&id=' + array[i].id
+                        return place
+                    }
+                    return null
+                }
+            }
+            return null;
+        }
+        function breakDownSearch() {
+            var term = document.getElementById("searchTerm").value
+            if (term.search(" -Post") >0) {
+                term = term.split(" -Post")
+                locationL = findStuff(postArray, 'title', term[0],'Post')
+                // console.log(locationL)
+                window.location = locationL
+
+            } else if (term.search(" -Author") >0) {
+                term = term.split(" -Author")
+                locationL = findStuff(authorsArray, 'name', term[0],'Author')
+                // console.log(locationL)
+                window.location = locationL
+            }   else if (term.search(" -Category") >0) {
+                term = term.split(" -Category")
+                locationL = findStuff(categories, 'name', term[0],'Category')
+                // console.log(locationL)
+                window.location = locationL
+            }
+        }
+
+    </script>
+    </section>
+    <script id="searchResults">
+
+
+    function getResults(sTerm) {
+        let state8 = {
+              posts: [],
+              baseUrl: 'https://blogs.glowscotland.org.uk/gc/rosshallrecords/wp-json/wp/v2/posts',
+              perPage: sTerm
+            } 
+            async function getNumPosts8() {
+              const { headers } = await axios(`${state8.baseUrl}${state8.perPage}`,)
+              return headers['x-wp-totalpages']
+            }
+            async function fetchPosts8(numPages) {
+              const posts = []
+              for (let page = 1; page <= numPages; page += 1) {
+                const post = axios.get(`${state8.baseUrl}${state8.perPage}&page=${page}`, state8.wpFetchHeaders)
+                posts.push(post)
+              }
+              await axios.all(posts).then((response) => {
+                const postData = response.map(res => res.data)
+                state8.posts = postData.flat()
+              }).catch(e => console.log('error fetching posts: ', e))
+
+              return true
+            }
+        
+            state8.posts = getNumPosts8()
+              .then(numPosts => fetchPosts8(numPosts))
+              .then((data) => {
+                // console.log('data ', state8)
+                // console.log(state8.posts[0])
+            var monthNames = [ "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December" ];
+
+            var i = 0;
+            document.getElementById('results').innerHTML = state8.posts.length + ' Results'
+            if (state8.posts.length == 1) {
+                document.getElementById('results').innerHTML = state8.posts.length + ' Result'
+            }
+            // postArray = state8.posts
+            for (i = 0; i < state8.posts.length; i++) {
+                console.log(state8.posts)
+                var postNum = 'Result' + i
+                // var name = state8.posts[i].name
+                var temp = document.getElementById("resultsTemplate")
+                temp.content.children[0].id = postNum
+                var clon = temp.content.cloneNode(true)
+                var parent = document.getElementById("resultsContainer")
+                parent.appendChild(clon)
+                var element = document.getElementById('Result' + i)
+                var postContainer = element
+                // post image
+                // console.log(postContainer.children[0].children[0])
+                postContainer.children[0].children[0].src = state8.posts[i]._embedded['wp:featuredmedia'][0].source_url
+                // post title
+                postContainer.children[1].children[0].innerHTML = state8.posts[i].title.rendered
+                postContainer.children[1].children[0].href= 'post.html' + '?cat=' + state8.posts[i]._embedded['wp:term'][0][0].id + '&id=' + state8.posts[i].id + '&p=' + state8.posts[0].slug;
+                // post excerpt
+                postContainer.children[1].children[1].innerHTML = state8.posts[i].excerpt.rendered
+                // post author
+                postContainer.children[1].children[2].children[1].children[0].children[0].innerHTML = state8.posts[i]._embedded.author[0].name;
+                // post date
+                postContainer.children[1].children[2].children[1].children[1].innerHTML = duration(state8.posts[i].date);              
+                // post category
+                postContainer.children[1].children[2].children[1].children[0].children[1].innerHTML = state8.posts[i]._embedded['wp:term'][0][0].name;
+                postContainer.children[0].children[1].innerHTML = state8.posts[i]._embedded['wp:term'][0][0].name;
+
+            }})
+    }
+
+    function CheckURLParameter(number) {
+        let sPageURL = window.location.search.substring(1);
+        let sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++) {
+            let sParameterName = sURLVariables[i].split('=')
+            console.log('sparam ' + sParameterName)
+            return(sParameterName[number])
+            // if (sParameterName[0] == sParam) {
+            //     return sParameterName[1];
+            // }
+        }
+        return null
+    }
+    function GetURLParameter(sParam) {
+        let sPageURL = window.location.search.substring(1);
+        let sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++) {
+            let sParameterName = sURLVariables[i].split('=')
+            // console.log(sParameterName)
+            // return(sParameterName)
+            if (sParameterName[0] == sParam) {
+                return sParameterName[1];
+            }
+        }
+        return null
+    }
+    let checkUrlParam = CheckURLParameter(0);
+    if (checkUrlParam == 'category') {
+        let urlParamID = GetURLParameter('id');
+        // console.log(urlParamID + checkUrlParam + 'category')
+        document.getElementById('searchTerm').value = CheckURLParameter(1) + ' -Category'
+        getResults('?_embed&categories=' + urlParamID)
+    } else if (checkUrlParam == 'author') {
+        let urlParamID = GetURLParameter('id');
+        // console.log(urlParamID + checkUrlParam + 'author')
+        document.getElementById('searchTerm').value = CheckURLParameter(1) + ' -Author'
+        getResults('?_embed&author=' + urlParamID)
+        
+    }
+
+
+
+    </script>
+    <footer id="WebFoot">
+        <div class="footerWrapper">
+            <div class="TitleSlogan">
+                <h2>Rosshall Records</h2>
+                <p>Where creativity has no boundaries</p>
+            </div>
+            <div class="lineLabel" id="footerLabel">
+                <!-- <div class="footerLineText">Useful Links</div> -->
+                <div class="FooterLine"></div>
+            </div>
+            <div class="links">
+                <a href="index.html">Homepage</a>
+                <a href="post.html?cat=12&id=120&p=we-are-rosshall-records-this-is-what-were-about">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="index.html#writers">Our Writers</a>
+                <a href="index.html#featured">Featured Articles</a>
+                <a href="index.html#latest">Latest Stories</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -81,13 +81,6 @@ header div ul li a:active {
     color: rgb(59,56,56);
 }
 
-.hero {
-    height: 90vh;
-    width: 100vw;
-    background-color: purple;
-
-}
-
 /* Footer */
 footer {
     display: grid;
