@@ -1549,12 +1549,6 @@ to {
     .imageSectionLong p {
         display: none;
     }
-    #WebHero {
-        width: 100%;
-        height: 90vh;
-        background-image: url(./Phone.jpg);
-        background-size: auto 100%;
-    }
 
 
     .search {
@@ -1660,6 +1654,7 @@ to {
     #WebHero {
         width: 100%;
         height: 90vh;
+        overflow: hidden;
     }
     #phone {display: block;}
     #tablet {display: none;}
