@@ -1368,19 +1368,25 @@ to {
     margin-top: 0.4em;
 }
 
+#WebHero {position: relative}
+#tablet {position: absolute; left: 0; top: 0; width: auto; height: 100%;display: none;}
+#laptop {position: absolute; left: 0; top: 0; width: auto; height: 100%;display: none;}
+#phone {position: absolute; left: 0; top: 0; width: auto; height: 100%;display: none;}
+
 
 /* Media Queries for Responsive Design */
 
 @media only screen and (max-width:1100px) {
     body {
         font-size: 12px;
+        
     }
     #WebHero {
         width: 100%;
         height: 90vh;
-        background-image: url(./Tablet.jpg);
-        background-size: auto 100%;
     }
+    #tablet {display: block;}
+
 }
 @media only screen and (max-width:950px) {
     .primary {
@@ -1651,6 +1657,12 @@ to {
     .longCardFeatured {
         height: 20em;
     }
+    #WebHero {
+        width: 100%;
+        height: 90vh;
+    }
+    #phone {display: block;}
+    #tablet {display: none;}
 
 }
 
