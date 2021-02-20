@@ -696,7 +696,7 @@ to {
     /* box-shadow: 0px 3px 10px rgba(0,0,0,0.2); */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 30em;
+    height: 35em;
     overflow: hidden;
 }
 .longCard:hover .imageSectionLong img {
@@ -761,7 +761,7 @@ to {
 }
 /* Card Type 2 */
 .card {
-    height: 30em;
+    height: 35em;
     /* min-width: 25em;
     max-width: 30em; */
     position: relative;
@@ -769,6 +769,7 @@ to {
     background-color: #ffffff;
     display: grid;
     grid-template-rows: 60% 40%;
+    transition: 0.5s;
     /* box-shadow: 0px 3px 10px rgba(0,0,0,0.2); */
 }
 
@@ -841,11 +842,13 @@ to {
 .line {
     width: 100%;
     height: 1px;
+    transition: 0.5s;
     background-color: black;
 }
 .writtenBy {
     width: 100%;
     display: grid;
+    transition: 0.5s;
     grid-template-columns: 2fr 1fr;
 }
 .authorInfo {
@@ -853,12 +856,14 @@ to {
     font-size: 0.7em;
     margin-top: 1.5em;
     margin-bottom: 0;
+    transition: 0.5s;
 }
 .date {
     text-align: right;
     font-size: 0.7em;
     margin-top: 1.5em;
     margin-bottom: 0;
+    transition: 0.5s;
 }
 .bottom {
     width: 100%;
@@ -868,13 +873,15 @@ to {
     margin: 0;
     padding: 1.5em;
     background-color: #ffffff;
+    transition: 0.5s;
 }
 
 /* Featured */
 
 .featured {
     display: grid;
-    max-height: 40em;
+    height: auto;
+    overflow: hidden;
     max-width: 90em;
     /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
     grid-template-columns: 1fr 1fr 1fr;
@@ -895,6 +902,7 @@ to {
     /* box-shadow: 0px 3px 10px rgba(0,0,0,0.2); */
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 35em;
 }
 
 .longCardFeatured:hover .imageSectionLong img {
@@ -1371,12 +1379,13 @@ to {
         width: 100%;
         height: 90vh;
         background-image: url(./Tablet.jpg);
+        background-size: auto 100%;
     }
 }
 @media only screen and (max-width:950px) {
     .primary {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.02fr 1fr 1fr;
+        grid-template-rows: 0.02fr auto auto;
         grid-template-areas: "label label"
                              "One One"
                              "Two Three"
@@ -1393,7 +1402,7 @@ to {
         max-width: 65em;
         /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.02fr 1fr;
+        grid-template-rows: 0.02fr auto auto;
         grid-template-areas: "labelF labelF"
                              "OneF TwoF";
         grid-gap: 1.5em;
@@ -1450,7 +1459,7 @@ to {
     }
     .primary {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.02fr 1fr 1fr;
+        grid-template-rows: 0.02fr auto;
         grid-template-areas: "label"
                              "One"
                              "Two"
@@ -1464,7 +1473,7 @@ to {
     .featured {
         /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
         grid-template-columns: 1fr;
-        grid-template-rows: 0.02fr 1fr auto;
+        grid-template-rows: 0.02fr auto auto;
         grid-template-areas: "labelF"
                              "OneF"
                              "TwoF";
@@ -1538,6 +1547,7 @@ to {
         width: 100%;
         height: 90vh;
         background-image: url(./Phone.jpg);
+        background-size: auto 100%;
     }
 
 
@@ -1631,6 +1641,15 @@ to {
     } */
     .joinSection {
         text-align: center;
+    }
+    .card {
+        height: 30em;
+    }
+    .longCard {
+        height: 20em;
+    }
+    .longCardFeatured {
+        height: 20em;
     }
 
 }
