@@ -1,451 +1,3 @@
-/* Complete Css Reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-weight: inherit;
-	font-style: inherit;
-	font-size: 100%;
-	font-family: inherit;
-	vertical-align: baseline;
-}
-/* remember to define focus styles! */
-:focus {
-	outline: 0;
-}
-body {
-	line-height: 1;
-	color: black;
-	background: white;
-}
-ol, ul {
-	list-style: none;
-}
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-	border-collapse: separate;
-	border-spacing: 0;
-}
-caption, th, td {
-	text-align: left;
-	font-weight: normal;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: "";
-}
-blockquote, q {
-	quotes: "" "";
-}
-
-a:link {
-    color: inherit;
-text-decoration: none;
-cursor: pointer;
-line-height: 120%;
-}
-a:visited {
-    color: inherit;
-text-decoration: none;
-cursor:pointer;
-}
-a:link:active {
-    color: inherit;
-}
-a:visited:active {
-    color: inherit;
-}
-address {
-    display: block;
-    font-style: italic;
-}
-area {
-    display: none;
-}
-article {
-    display: block;
-}
-aside {
-    display: block;
-}
-b {
-    font-weight: bold;
-}
-bdo {
-    unicode-bidi: bidi-override;
-}
-blockquote {
-    display: block;
-margin-top: 1em;
-margin-bottom: 1em;
-margin-left: 40px;
-margin-right: 40px;
-}
-body {
-    display: block;
-margin: 8px;
-}
-body:focus {
-    outline: none;
-}
-caption {
-    display: table-caption;
-    text-align: center;
-}
-cite {
-    font-style: italic;
-}
-code {
-    font-family: monospace;
-}
-col {
-    display: table-column;
-}
-colgroup {
-    display: table-column-group
-}
-datalist {
-    display: none;
-}
-dd {
-    display: block;
-    margin-left: 40px;
-}
-del {
-    text-decoration: line-through;
-}
-details {
-    display: block;
-}
-dfn {
-    font-style: italic;
-}
-div {
-    display: block;
-}
-dl {
-    display: block;
-margin-top: 1em;
-margin-bottom: 1em;
-margin-left: 0;
-margin-right: 0;
-}
-dt {
-    display: block;
-}
-em {
-    font-style: italic;
-}
-embed:focus {
-    outline: none;
-}
-fieldset {
-    display: block;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding-top: 0.35em;
-    padding-bottom: 0.625em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    border: 2px groove inherit;
-}
-figcaption {
-    display: block;
-}
-figure {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-footer {
-    display: block;
-}
-form {
-    display: block;
-margin-top: 0em;
-}
-h1 {
-    display: block;
-font-size: 2em;
-margin-top: 0.67em;
-margin-bottom: 0.67em;
-margin-left: 0;
-margin-right: 0;
-font-weight: bold;
-}
-h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-    line-height: 120%;
-}
-h3 {
-    display: block;
-    font-size: 1.17em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-}
-h4 {
-    display: block;
-    margin-top: 1.33em;
-    margin-bottom: 1.33em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-}
-h5 {
-    display: block;
-    font-size: .83em;
-    margin-top: 1.67em;
-    margin-bottom: 1.67em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-}
-h6 {
-    display: block;
-    font-size: .67em;
-    margin-top: 2.33em;
-    margin-bottom: 2.33em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-}
-head {
-    display: none;
-}
-header {
-    display: block;
-}
-hr {
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 1px;
-}
-html {
-    display: block;
-}
-html:focus {
-    outline: none;
-}
-i {
-    font-style: italic;
-}
-iframe:focus {
-    outline: none;
-}
-iframe[seamless] {
-    display: block;
-}
-img {
-    display: inline-block;
-}
-ins {
-    text-decoration: underline;
-}
-kbd {
-    font-family: monospace;
-}
-label {
-    cursor: default;
-}
-legend {
-    display: block;
-    padding-left: 2px;
-    padding-right: 2px;
-    border: none;
-}
-li {
-    display: list-item;
-}
-link {
-    display: none;
-}
-map {
-    display: inline;
-}
-mark {
-    background-color: yellow;
-color: black;
-}
-menu {
-    display: block;
-    list-style-type: disc;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 40px;
-}
-nav {
-    display: block;
-}
-object:focus {
-    outline: none;
-}
-ol {
-    display: block;
-    list-style-type: decimal;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 40px;
-}
-output {
-    display: inline;
-}
-p {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    line-height: 120%;
-}
-param {
-    display: none;
-}
-pre {
-    display: block;
-    font-family: monospace;
-    white-space: pre;
-    margin: 1em 0;
-}
-q {
-    display: inline;
-}
-q::before {
-    content: open-quote;
-}
-q::after {
-    content: close-quote;
-}
-rt {
-    line-height: normal;
-}
-s {
-    text-decoration: line-through;
-}
-samp {
-    font-family: monospace;
-}
-script {
-    display: none;
-}
-section {
-    display: block;
-}
-small {
-    font-size: smaller;
-}
-strike {
-    text-decoration: line-through;
-}
-strong {
-    font-weight: bold;
-}
-style {
-    display: none;
-}
-sub {
-    vertical-align: sub;
-font-size: smaller;
-}
-summary {
-    display: block;
-}
-sup {
-    vertical-align: super;
-    font-size: smaller;
-}
-table {
-    display: table;
-border-collapse: separate;
-border-spacing: 2px;
-border-color: gray;
-}
-tbody {
-    display: table-row-group;
-vertical-align: middle;
-border-color: inherit;
-}
-td {
-    display: table-cell;
-    vertical-align: inherit;
-}
-tfoot {
-    display: table-footer-group;
-    vertical-align: middle;
-    border-color: inherit;
-}
-th {
-    display: table-cell;
-vertical-align: inherit;
-font-weight: bold;
-text-align: center;
-}
-thead {
-    display: table-header-group;
-vertical-align: middle;
-border-color: inherit;
-}
-title {
-    display: none;
-}
-tr {
-    display: table-row;
-vertical-align: inherit;
-border-color: inherit;
-}
-u {
-    text-decoration: underline;
-}
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-top: 1em;
-    margin-bottom: 1 em;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 40px;
-    
-}
-var {
-    font-style: italic;
-}
-
-input[type="search"] {
-    -webkit-appearance: none;
-}
-input[type="text"] {
-    -webkit-appearance: none;
-}
-select {
-    -webkit-appearance: none;
-}
-
 /* Reset Styles */
 html {
     box-sizing: border-box;
@@ -470,7 +22,7 @@ body {
     font-family: 'Montserrat', sans-serif; */
 /* nav bar */
 header {
-    width: 100vw;
+    width: 100%;
     display: grid;
     justify-content: center;
     background-color:#ffffff ;
@@ -482,13 +34,11 @@ header div {
 }
 header div ul {
     padding-left: 0;
-    padding-bottom: 1em;
 }
 header div ul li {
     display: inline;
     margin: 0px 10px;
     list-style-type: none;
-    text-decoration: none;
 }
 header div ul li a {
     text-decoration: none;
@@ -592,7 +142,7 @@ to {
 
 /* Hero Section */
 #WebHero {
-    width: 100vw;
+    width: 100%;
     height: 90vh;
     background-image: url(./Laptop.jpg);
     background-attachment: fixed;
@@ -602,22 +152,26 @@ to {
     display: grid;
     justify-content: center;
     align-items: center;
-    position: relative;
+
 }
 .heroContent {
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
     padding: 3em;
     background-color: rgb(204,173,56);
     background: linear-gradient(rgba(204,173,56,0.6), rgba(204,173,56,0.6)), url(./Leaves.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 100% 100%;
+    /* background-size: cover; */
+    background-size: 200% 100%;
     /* grid-template-columns: 0.5fr 1fr 0.5fr; */
     color: white;
     text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 .heroContent h1 {
     font-size: clamp(50px,5vw,10em);
@@ -633,7 +187,7 @@ to {
 /* search */
 
 .searchContainer {
-    width: 100vw;
+    width: 100%;
     padding: 3em;
     display: grid;
     justify-content: center;
@@ -644,7 +198,7 @@ to {
 .suggestionsContainer {
     display: block;
     width: 100%;
-    height: fit-content;
+    height: auto;
     background-color: rgb(244, 244, 244);
     padding: 0;
     text-align: left;
@@ -700,7 +254,7 @@ to {
     color: rgb(59,56,56);
 }
 #searchButton {
-    width: fit-content;
+    width: auto;
     background-color: rgb(204,173,56);
     color: white;
     cursor: pointer;
@@ -749,7 +303,7 @@ to {
     /* margin-bottom: -0.5em; */
 }
 .lineText {
-    width: fit-content;
+    width: auto;
     padding-right: 1em;
     position: absolute;
     left: 0;
@@ -764,16 +318,17 @@ to {
 /* Card Types */
 .primary {
     display: grid;
-    height: fit-content;
-    height: intrinsic;
+    /* height: fit-content; */
     max-width: 90em;
+    max-height: 80em;
+    overflow: hidden;
     /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.02fr 1fr 1fr;
+    grid-template-rows: 0.02fr auto auto;
     grid-template-areas: "label label label"
                          "One One Two"
                          "Three Four Five";
-    gap: 1.5em;
+    grid-gap: 1.5em;
     padding: 1.5em;
 }
 #latestLabel {grid-area: label;}
@@ -800,18 +355,20 @@ to {
     align-items: center;
     justify-content: center;
     transition: 0.5s;
+    padding-top: 100%;
 }
 .imageSectionLong img {
-    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
     height: 100%;
+    width: auto;
     object-fit: cover;
     transition: 0.5s;
 }
 .imageSectionLong p {
-    width: fit-content;
-    height: fit-content;
-    height: intrinsic;
-    width: intrinsic;
+    width: auto;
+    height: auto;
     padding: 1.1em;
     font-size: 1.1em;
     background-color: rgb(204,173,56);
@@ -885,10 +442,8 @@ to {
     height: 150%;
 } */
 .imageSection p {
-    width: fit-content;
-    height: fit-content;
-    height: intrinsic;
-    width: intrinsic;
+    width: auto;
+    height: auto;
     padding: 1em;
     font-size: 0.9em;
     background-color: rgb(204,173,56);
@@ -961,15 +516,14 @@ to {
 
 .featured {
     display: grid;
-    height: fit-content;
-    height: intrinsic;
+    max-height: 40em;
     max-width: 90em;
     /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.02fr 1fr;
+    grid-template-rows: 0.02fr auto;
     grid-template-areas: "labelF labelF labelF"
                          "OneF OneF TwoF";
-    gap: 1.5em;
+    grid-gap: 1.5em;
     padding: 1.5em;
     padding-top: 0; 
 }
@@ -1022,15 +576,14 @@ to {
 
 .schoolNews {
     display: grid;
-    height: fit-content;
-    height: intrinsic;
+    height: auto;
     max-width: 90em;
     /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
     grid-template-columns: 1fr;
     grid-template-rows: 0.02fr 1fr;
     grid-template-areas: "labelS"
                          "OneS";
-    gap: 0;
+    grid-gap: 0;
     padding: 1.5em;
     padding-top: 0; 
 }
@@ -1140,15 +693,14 @@ to {
   .joinSection {
       width: 100%;
       max-width: 90em;
-      height: fit-content;
-      height: intrinsic;
+      height: auto;
       grid-template-columns: 1fr;
       grid-template-rows: 0.02fr 1fr;
       padding:1.5em;
       padding-top: 0;
-      /* gap: 1.5em; */
+      /* grid-gap: 1.5em; */
       display: grid;
-      gap: 0em;
+      grid-gap: 0em;
   }
   .joinSection:hover .labelSection {
       background-size: 120%;
@@ -1159,7 +711,7 @@ to {
       grid-template-rows: 1fr;
       grid-template-areas: "Text Form";
       padding: 1.5em;
-      gap: 1.5em;
+      grid-gap: 1.5em;
       background-color: white;
       display: grid;
   }
@@ -1173,21 +725,18 @@ to {
       /* padding: 1.5em; */
   }
   .textContainer {
-    height: fit-content;
-    height: intrinsic;
+    height: auto;
   }
   .textContainer h2 {
     font-size: 2em;
     margin:0;
-    height: fit-content;
-    height: intrinsic;
+    height: auto;
     margin-bottom: 0.25em;
   }
   .textContainer p {
       font-size: 1.5em;
       margin:0;
-      height: fit-content;
-      height: intrinsic;
+      height: auto;
       margin-top: 0.25em;
   }
   form {
@@ -1198,7 +747,7 @@ to {
       grid-template-rows: 0.8fr 0.8fr;
       grid-template-areas: "name email"
                             "years years";
-    gap: 1.5em;
+    grid-gap: 1.5em;
       /* grid-template-areas: ""; */
   }
   #name {grid-area: name;}
@@ -1209,7 +758,7 @@ to {
       grid-template-columns: 1fr 1fr;
     grid-template-areas: "year submit";
       width: 100%;
-      gap: 1.5em;
+      grid-gap: 1.5em;
   }
   #year {grid-area: year;margin: 0;}
   #submit {grid-area: submit;}
@@ -1221,7 +770,7 @@ to {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% auto;
     padding: 1.5em;
     transition: 0.5s;
   }
@@ -1274,15 +823,14 @@ to {
 
 .writers {
     display: grid;
-    height: fit-content;
-    height: intrinsic;
+    height: auto;
     max-width: 90em;
     /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
     grid-template-columns: 1fr;
     grid-template-rows: 0.02fr 1fr;
     grid-template-areas: "labelW"
                          "contentW";
-    gap: 1.5em;
+    grid-gap: 1.5em;
     padding: 1.5em;
     padding-top: 0; 
 }
@@ -1293,7 +841,7 @@ to {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 1.5em;
+    grid-gap: 1.5em;
     grid-row-gap: 2.5em;
 }
 .authorCard {
@@ -1341,13 +889,11 @@ to {
     align-items: center;
 }
 .centerContainer {
-    height: fit-content;
-    height: intrinsic;
+    height: auto;
     width: 100%;
 }
 .authorTitle {
-    height: fit-content;
-    height: intrinsic;
+    height: auto;
     margin-bottom: 1em;
 }
 .authorTitle h2 {
@@ -1360,8 +906,7 @@ to {
     margin-top: 0em;
 }
 .authorLink {
-    height: fit-content;
-    height: intrinsic;
+    height: auto;
     margin-top: 1em;
     display: grid;
     grid-template-columns: 60% 40%;
@@ -1386,7 +931,7 @@ to {
 /* Footer Section */
 
 #WebFoot {
-    width: 100vw;
+    width: 100%;
     height: 18em;
     background-color: white;
     display: grid;
@@ -1401,9 +946,8 @@ to {
     display: grid;
     grid-template-columns: 1fr;
     padding: 1.5em;
-    height: fit-content;
-    height: intrinsic;
-    gap: 1.5em;
+    height: auto;
+    grid-gap: 1.5em;
     padding:1.5em;
 }
 
@@ -1428,7 +972,7 @@ to {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 100%;
-    gap: 1.5em;
+    grid-gap: 1.5em;
     text-align: center;
 }
 .links a {
@@ -1466,7 +1010,7 @@ to {
         font-size: 12px;
     }
     #WebHero {
-        width: 100vw;
+        width: 100%;
         height: 90vh;
         background-image: url(./Tablet.jpg);
     }
@@ -1479,9 +1023,10 @@ to {
                              "One One"
                              "Two Three"
                              "Four Five";
-        gap: 1.5em;
+        grid-gap: 1.5em;
         padding: 1.5em;
         max-width: 65em;
+        max-height: 130em;
     }
     .writers {
         max-width: 65em;
@@ -1493,7 +1038,7 @@ to {
         grid-template-rows: 0.02fr 1fr;
         grid-template-areas: "labelF labelF"
                              "OneF TwoF";
-        gap: 1.5em;
+        grid-gap: 1.5em;
         padding: 1.5em;
         padding-top: 0;
     }
@@ -1504,7 +1049,7 @@ to {
         grid-template-rows: 0.02fr 1fr;
         grid-template-areas: "labelS"
                              "OneS";
-        gap: 0;
+        grid-gap: 0;
         padding: 1.5em;
         padding-top: 0;
     }
@@ -1513,7 +1058,7 @@ to {
         grid-template-rows: 0.02fr 1fr;
         padding:1.5em;
         padding-top: 0;
-        /* gap: 1.5em; */
+        /* grid-gap: 1.5em; */
         display: grid;
         max-width: 65em;
     }
@@ -1532,7 +1077,7 @@ to {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        gap: 1.5em;
+        grid-gap: 1.5em;
         grid-row-gap: 2.5em;
     }
 }
@@ -1554,24 +1099,26 @@ to {
                              "Three"
                              "Four"
                              "Five";
-        gap: 1em;
+        grid-gap: 1em;
         padding: 1em;
+        max-height: 160em;
     }
     .featured {
         /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
         grid-template-columns: 1fr;
-        grid-template-rows: 0.02fr 1fr;
+        grid-template-rows: 0.02fr 1fr auto;
         grid-template-areas: "labelF"
                              "OneF"
                              "TwoF";
-        gap: 1em;
+        grid-gap: 1em;
         padding: 1em;
         padding-top: 0;
+        max-height: 150em;
     }
     .joinSection {    
         padding:1em;
         padding-top: 0;
-        /* gap: 1.5em; */
+        /* grid-gap: 1.5em; */
     }
     .formContainer {
         grid-template-columns: 1fr;
@@ -1579,7 +1126,7 @@ to {
         grid-template-areas: "Text"
                              "Form";
         padding: 1.5em;
-        gap: 1.5em;
+        grid-gap: 1.5em;
     }
     .formText {
         display: block;
@@ -1588,18 +1135,18 @@ to {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        gap: 1em;
+        grid-gap: 1em;
         grid-row-gap: 2em;
     }
     .writers {
         padding: 1em;
-    gap: 1em;
+    grid-gap: 1em;
     padding-top: 0em;
     }
 
     #nav {font-size: 0.9em;}
     .schoolNews {
-        gap: 0;
+        grid-gap: 0;
         padding: 1em;
         padding-top: 0;
     }
@@ -1612,6 +1159,7 @@ to {
         /* box-shadow: 0px 3px 10px rgba(0,0,0,0.2); */
         display: grid;
         grid-template-columns: 0.25fr 1.75fr;
+        height: 100%;
     }
     .contentSectionLong {
         padding: 1em;
@@ -1633,10 +1181,11 @@ to {
         max-height: 25em;
     }
     #WebHero {
-        width: 100vw;
+        width: 100%;
         height: 90vh;
         background-image: url(./Phone.jpg);
     }
+
 
     .search {
         width: 90vw;
@@ -1654,9 +1203,8 @@ to {
         padding: 0.8em;
     }
     .heroContent {
-        width: 80%;
-        height: fit-content;
-        height: intrinsic;
+        width: 90%;
+        height: auto;
         padding: 2em;
     }
     .slideshow-container {
@@ -1674,7 +1222,7 @@ to {
     .links {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 1.5em;
+        grid-gap: 1.5em;
         text-align: center;
     }
 
@@ -1721,5 +1269,15 @@ to {
     .authorLink a {
         font-size: 0.8em;
     }
+    /* #WebContent {
+        width: 100vw;
+    }
+    .searchContainer {
+        width: 100vw;
+    } */
+    .joinSection {
+        text-align: center;
+    }
+
 }
 

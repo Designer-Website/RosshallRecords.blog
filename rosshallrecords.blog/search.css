@@ -393,6 +393,7 @@ to {
 /* Card Type 2 */
 .card {
     min-height: 30em;
+    max-height: 60em;
     /* min-width: 25em;
     max-width: 30em; */
     position: relative;
@@ -1104,6 +1105,7 @@ to {
     .joinSection {    
         padding:1em;
         padding-top: 0;
+        text-align: center;
         /* grid-gap: 1.5em; */
     }
     .formContainer {
@@ -1162,7 +1164,6 @@ to {
         display: none;
     }
     .card {
-        min-height: 25em;
         max-height: 25em;
     }
     #WebHero {

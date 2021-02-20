@@ -518,6 +518,7 @@ to {
         height: fit-content;
         padding: 2em;
     }
+    #nav {font-size: 0.9em;}
 
 }
 
