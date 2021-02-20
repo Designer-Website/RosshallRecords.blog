@@ -671,7 +671,8 @@ to {
     display: grid;
     /* height: fit-content; */
     max-width: 90em;
-    max-height: 80em;
+    /* max-height: 80em; */
+    height: auto;
     overflow: hidden;
     /* grid-template-columns: repeat(auto-fit, minmax(19em, 1fr)); */
     grid-template-columns: 1fr 1fr 1fr;
@@ -679,7 +680,7 @@ to {
     grid-template-areas: "label label label"
                          "One One Two"
                          "Three Four Five";
-    grid-gap: 1.5em;
+    gap: 1.5em;
     padding: 1.5em;
 }
 #latestLabel {grid-area: label;}
@@ -695,6 +696,8 @@ to {
     /* box-shadow: 0px 3px 10px rgba(0,0,0,0.2); */
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 30em;
+    overflow: hidden;
 }
 .longCard:hover .imageSectionLong img {
     height: 120%;
@@ -707,6 +710,8 @@ to {
     justify-content: center;
     transition: 0.5s;
     padding-top: 100%;
+    height: 100%;
+    width: 100%;
 }
 .imageSectionLong img {
     position: absolute;
@@ -734,6 +739,8 @@ to {
     padding: 1.5em;
     margin: 0;
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 .contentSectionLong a {
     margin-top: 0;
@@ -754,22 +761,22 @@ to {
 }
 /* Card Type 2 */
 .card {
-    min-height: 30em;
+    height: 30em;
     /* min-width: 25em;
     max-width: 30em; */
     position: relative;
     padding: 0;
     background-color: #ffffff;
+    display: grid;
+    grid-template-rows: 60% 40%;
     /* box-shadow: 0px 3px 10px rgba(0,0,0,0.2); */
 }
-.card:hover .imageSection {
-    height: 40%;
-}
+
 .card:hover .imageSection img {
     height: 120%;
 }
-.card:hover .contentSection {
-    height: 60%;
+.card:hover {
+    grid-template-rows: 40% 60%;
 }
 .card:hover .contentSection .excerpt {
     opacity: 1;
@@ -777,7 +784,7 @@ to {
 .imageSection {
     overflow: hidden;
     position: relative;
-    height: 60%;
+    height: 100%;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -806,7 +813,7 @@ to {
     overflow: hidden;
 }
 .contentSection {
-    height: 40%;
+    height: 100%;
     padding: 1.5em;
     margin: 0;
     position: relative;
@@ -1526,14 +1533,6 @@ to {
     }
     .imageSectionLong p {
         display: none;
-    }
-    .card {
-        min-height: 25em;
-        max-height: 30em;
-    }
-    .longCard {
-        min-height: 25em;
-        max-height: 30em;
     }
     #WebHero {
         width: 100%;
