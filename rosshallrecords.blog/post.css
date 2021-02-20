@@ -1044,9 +1044,16 @@ to {
     #WebHero {
         width: 100vw;
         height: 90vh;
+        background-attachment: scroll;
     }
     #pageContent {
-        grid-template-columns: 0.2fr 1.7fr 0.8fr 0.2fr;
+        grid-template-columns: 1.4fr 0.8fr;
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+
+    }
+    .placeHolder {
+        display: none;
     }
 }
 @media only screen and (max-width:950px) {

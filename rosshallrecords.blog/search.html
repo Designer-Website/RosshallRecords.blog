@@ -521,7 +521,7 @@
                         place = 'search.html' + '?author=' + array[i].name + '&id=' + array[i].id
                         return place
                     } else if (type == 'Post') {
-                        place = 'post.html' + '?cat=' + array[i].category + '&id=' + array[i].id + '&p=' + array[i].slug
+                        place = 'post.html?' + 'id=' + array[i].id + '-' + array[i].slug
                         return place
                     } else if (type == 'Category') {
                         place = 'search.html' + '?category=' + array[i].name + '&id=' + array[i].id
@@ -612,7 +612,7 @@
                 postContainer.children[0].children[0].src = state8.posts[i]._embedded['wp:featuredmedia'][0].source_url
                 // post title
                 postContainer.children[1].children[0].innerHTML = state8.posts[i].title.rendered
-                postContainer.children[1].children[0].href= 'post.html' + '?cat=' + state8.posts[i]._embedded['wp:term'][0][0].id + '&id=' + state8.posts[i].id + '&p=' + state8.posts[0].slug;
+                postContainer.children[1].children[0].href= 'post.html?' + 'id=' + state8.posts[i].id + '-' + state8.posts[0].slug;
                 // post excerpt
                 postContainer.children[1].children[1].innerHTML = state8.posts[i].excerpt.rendered
                 // post author

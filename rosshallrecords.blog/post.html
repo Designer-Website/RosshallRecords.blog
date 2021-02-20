@@ -460,24 +460,14 @@ function linkTo(socialMedia) {
             <script id="getPost">
 
 function GetURLCatParameter(sParam) {
-        let sPageURL = window.location.search.substring(1);
-        let sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++) {
-            let sParameterName = sURLVariables[i].split('=')
-            console.log(sParameterName)
-            // return(sParameterName)
-            if (sParameterName[0] == sParam) {
-                getThisCategory('?_embed&categories=' + sParameterName[1])
-
-            }
-        }
-
-    }
+                getThisCategory('?_embed&categories=' + sParam)
+}
     function GetURLParameter(sParam) {
         let sPageURL = window.location.search.substring(1);
-        let sURLVariables = sPageURL.split('&');
+        let sURLVariables = sPageURL.split('-');
         for (var i = 0; i < sURLVariables.length; i++) {
             let sParameterName = sURLVariables[i].split('=')
+            console.log(sParam + ' and ' + sParameterName[1])
             if (sParameterName[0] == sParam) {
                 return sParameterName[1];
             }
@@ -574,7 +564,7 @@ function GetURLCatParameter(sParam) {
                 document.getElementById('tw').content = document.location.href
                 document.getElementById('pageDesc').content = postContainer.children[2].children[0].children[0].innerHTML
                 document.getElementById('key').content = "rosshall records, article, " + state.posts[0]._embedded['wp:term'][0][0].name;
-                GetURLCatParameter('cat');
+                GetURLCatParameter(state.posts[0]._embedded['wp:term'][0][0].id);
 
 
         })

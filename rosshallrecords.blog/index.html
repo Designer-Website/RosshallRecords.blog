@@ -455,7 +455,7 @@
                 // console.log(state.posts[postIndex]._embedded['wp:featuredmedia'])
                 // post title
                 postContainer.children[1].children[0].innerHTML = state.posts[postIndex].title.rendered
-                postContainer.children[1].children[0].href= 'post.html' + '?cat=' + state.posts[postIndex]._embedded['wp:term'][0][0].id + '&id=' + state.posts[postIndex].id + '&p=' + state.posts[postIndex].slug;
+                postContainer.children[1].children[0].href= 'post.html?' + 'id=' + state.posts[postIndex].id + '-' + state.posts[postIndex].slug;
                 // post excerpt
                 postContainer.children[1].children[1].innerHTML = state.posts[postIndex].excerpt.rendered
                 // post author
@@ -510,7 +510,7 @@
             postContainer.children[0].children[0].src = state2.posts[postIndexF]._embedded['wp:featuredmedia'][0].source_url
             // post title
             postContainer.children[1].children[0].innerHTML = state2.posts[postIndexF].title.rendered
-            postContainer.children[1].children[0].href= 'post.html' + '?cat=' + state2.posts[postIndexF]._embedded['wp:term'][0][0].id + '&id=' + state2.posts[postIndexF].id + '&p=' + state2.posts[0].slug;
+            postContainer.children[1].children[0].href= 'post.html?' +'id=' + state2.posts[postIndexF].id + '-' + state2.posts[0].slug;
             // post excerpt
             postContainer.children[1].children[1].innerHTML = state2.posts[postIndexF].excerpt.rendered
             // post author
@@ -563,7 +563,7 @@
                 // console.log(state3.posts)
                 // post title
                 postContainer.children[0].innerHTML = state3.posts[postIndexS].title.rendered
-                postContainer.children[1].href= 'post.html' + '?cat=' + state3.posts[postIndexS]._embedded['wp:term'][0][0].id + '&id=' + state3.posts[postIndexS].id + '&p=' + state3.posts[0].slug;
+                postContainer.children[1].href= 'post.html?' +'id=' + state3.posts[postIndexS].id + '-' + state3.posts[0].slug;
                 
             }})
             
