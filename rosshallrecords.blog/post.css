@@ -305,8 +305,8 @@ to {
     object-fit: cover;
 }
 .articleImageContainer p {
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
     margin: 0;
     padding: 1em;
     font-size: 1em;
@@ -404,8 +404,8 @@ to {
     transition: 0.5s;
 }
 .imageSectionLong p {
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
     padding: 1.1em;
     font-size: 1.1em;
     background-color: rgb(204,173,56);
@@ -1283,6 +1283,9 @@ to {
         padding-right: 0;
         padding-left: 0;
         /* grid-gap: 1.5em; */
+    }
+    .joinSection {
+        text-align: center;
     }
     .formContainer {
         grid-template-columns: 1fr;
