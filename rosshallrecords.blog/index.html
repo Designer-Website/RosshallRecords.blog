@@ -447,8 +447,8 @@
                 "post1","post2","post3","post4","post5"
             ];
             for (postIndex = 0; postIndex < postPrimary.length; postIndex++) {
-                postArray.push({'id':state.posts[postIndex].id,'category':state.posts[postIndex]._embedded['wp:term'][0][0].id,'title':state.posts[postIndex].title.rendered,'slug':state.posts[postIndex].slug})
-                searchTitles.push(state.posts[postIndex].title.rendered +' -Post')
+                // postArray.push({'id':state.posts[postIndex].id,'category':state.posts[postIndex]._embedded['wp:term'][0][0].id,'title':state.posts[postIndex].title.rendered,'slug':state.posts[postIndex].slug})
+                // searchTitles.push(state.posts[postIndex].title.rendered +' -Post')
                 var postContainer = document.getElementById(postPrimary[postIndex])
                 // post image
                 postContainer.children[0].children[0].src = state.posts[postIndex]._embedded['wp:featuredmedia'][0].source_url
@@ -465,6 +465,16 @@
                 // post category
                 postContainer.children[1].children[2].children[1].children[0].children[1].innerHTML = state.posts[postIndex]._embedded['wp:term'][0][0].name;
                 postContainer.children[0].children[1].innerHTML = state.posts[postIndex]._embedded['wp:term'][0][0].name;
+
+                var e = document.createElement('p')
+                e.innerHTML = state.posts[postIndex].title.rendered
+                e.id = 'temp'
+                document.getElementById('WebNav').append(e)
+                var titleName = e.innerHTML
+                document.getElementById('temp').remove()
+                postArray.push({'id':state.posts[postIndex].id,'category':state.posts[postIndex]._embedded['wp:term'][0][0].id,'title':titleName,'slug':state.posts[postIndex].slug})
+                // console.log(postArray[postIndex].title)
+                searchTitles.push(titleName +' -Post')
             }})
         
         
@@ -864,7 +874,7 @@ for (var i = 0; i < array.length; i++) {
             place = 'search.html' + '?author=' + array[i].name + '&id=' + array[i].id
             return place
         } else if (type == 'Post') {
-            place = 'post.html' + '?cat=' + array[i].category + '&id=' + array[i].id + '&p=' + array[i].slug
+            place = 'post.html' + '?id=' + array[i].id + '-' + array[i].slug
             return place
         } else if (type == 'Category') {
             place = 'search.html' + '?category=' + array[i].name + '&id=' + array[i].id
