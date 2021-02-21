@@ -12,7 +12,7 @@
     <meta name="google-site-verification" content="lmerKW-R7h3uB9fsfRbRCf9-673ie-ulrGZ4Te8q1Oo" />
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap" rel="stylesheet">
     
-    <title id="title">Rosshall Records - Homepage</title>
+    <title id="title">Rosshall Records</title>
     <link id="link" rel="canonical" href="">
     <meta id="og" property="og:url" content="">
     <meta id="tw" property="twitter:url" content="">
@@ -29,7 +29,7 @@
         <div id="nav">
             <ul>
                 <li><a href="index.html" class="goldLink">Rosshall Records</a></li>
-                <li><a href="index.html" class="activeLink">Home</a></li>
+                <li><a href="index.html" class="activeLink" id="hide">Home</a></li>
                 <li><a href="post.html?cat=12&id=120&p=we-are-rosshall-records-this-is-what-were-about">About</a></li>
                 <li><a href="search.html" class="noMargin">Search</a></li>
             </ul>
@@ -241,7 +241,13 @@ function linkTo(socialMedia) {
                         <form action="https://docs.google.com/forms/d/e/1FAIpQLSdSelpKTBaigxRvctoydqLzvk9Fs9j1fgJZpBQGTv6OjKlpSg/formResponse" method="post">
                             <label for="name">Your Name <input type="text" id="name" name="entry.846402411"  placeholder="..."></label>  
                             <label for="email">Your Email <input required type="text" id="email" name="entry.224984652"  placeholder="..."></label>
-                            <label for="year" id="years"><select id="year"  name="entry.1450060921"><option value="S1">S1</option><option value="S2">S2</option><option value="S3">S3</option><option value="S4">S4</option><option value="S5">S5</option><option value="S6">S6</option><option value="I am a Teacher">I am a Teacher</option></select><input type="submit" value="Submit" id="submit" class="submit"></label> 
+                            <label for="year" id="years"><select style="-webkit-appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000D00%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')
+                       ;
+                      background-repeat: no-repeat, repeat;
+                      /* arrow icon position (1em from the right) , then gradient position*/
+                      background-position: right .7em top 50%, 0 0;
+                      /* icon size, then gradient */
+                      background-size: .65em auto, 100%;"  name="entry.1450060921" id="year"  name="entry.1450060921"><option value="S1">S1</option><option value="S2">S2</option><option value="S3">S3</option><option value="S4">S4</option><option value="S5">S5</option><option value="S6">S6</option><option value="I am a Teacher">I am a Teacher</option></select><input type="submit" value="Submit" id="submit" class="submit"></label> 
                         </form>
         
         
@@ -365,7 +371,7 @@ function linkTo(socialMedia) {
                         // console.log(state.posts[postIndex]._embedded['wp:featuredmedia'])
                         // post title
                         postContainer.children[1].children[0].innerHTML = state.posts[postIndex].title.rendered
-                        postContainer.children[1].children[0].href= 'post.html' + '?cat=' + state.posts[postIndex]._embedded['wp:term'][0][0].id + '&id=' + state.posts[postIndex].id + '&p=' + state.posts[0].slug;
+                        postContainer.children[1].children[0].href= 'post.html' + '?id=' + state.posts[postIndex].id + '-' + state.posts[0].slug;
                         // post excerpt
                         postContainer.children[1].children[1].innerHTML = state.posts[postIndex].excerpt.rendered
                         // post author
@@ -385,7 +391,7 @@ function linkTo(socialMedia) {
                         // console.log(state.posts[0]._embedded['wp:featuredmedia'])
                         // post title
                         postContainer.children[1].children[0].innerHTML = state.posts[0].title.rendered
-                        postContainer.children[1].children[0].href= 'post.html' + '?cat=' + state.posts[0]._embedded['wp:term'][0][0].id + '&id=' + state.posts[0].id + '&p=' + state.posts[0].slug;
+                        postContainer.children[1].children[0].href= 'post.html' + '?id=' + state.posts[0].id + '-' + state.posts[0].slug;
                         // post excerpt
                         postContainer.children[1].children[1].innerHTML = state.posts[0].excerpt.rendered
                         // post author
@@ -442,7 +448,7 @@ function linkTo(socialMedia) {
                     // post title
                     // console.log(postContainer.children[0])
                     postContainer.children[1].children[0].innerHTML = state2.posts[postIndexF].title.rendered
-                    postContainer.children[1].children[0].href= 'post.html' + '?cat=' + state2.posts[postIndexF]._embedded['wp:term'][0][0].id + '&id=' + state2.posts[postIndexF].id + '&p=' + state2.posts[0].slug;
+                    postContainer.children[1].children[0].href= 'post.html' + '?id=' + state2.posts[postIndexF].id + '-' + state2.posts[0].slug;
                     // post excerpt
                     postContainer.children[1].children[1].innerHTML = state2.posts[postIndexF].excerpt.rendered
                     // post author

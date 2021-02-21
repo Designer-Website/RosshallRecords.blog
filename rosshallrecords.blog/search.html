@@ -109,7 +109,13 @@
                 <form action="https://docs.google.com/forms/d/e/1FAIpQLSdSelpKTBaigxRvctoydqLzvk9Fs9j1fgJZpBQGTv6OjKlpSg/formResponse" method="post">
                     <label for="name">Your Name <input type="text" id="name" name="entry.846402411"  placeholder="..."></label>  
                     <label for="email">Your Email <input required type="text" id="email" name="entry.224984652"  placeholder="..."></label>
-                    <label for="year" id="years"><select id="year"  name="entry.1450060921"><option value="S1">S1</option><option value="S2">S2</option><option value="S3">S3</option><option value="S4">S4</option><option value="S5">S5</option><option value="S6">S6</option><option value="I am a Teacher">I am a Teacher</option></select><input type="submit" value="Submit" id="submit" class="submit"></label> 
+                    <label for="year" id="years"><select style="-webkit-appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000D00%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')
+                        ;
+                       background-repeat: no-repeat, repeat;
+                       /* arrow icon position (1em from the right) , then gradient position*/
+                       background-position: right .7em top 50%, 0 0;
+                       /* icon size, then gradient */
+                       background-size: .65em auto, 100%;"  name="entry.1450060921" id="year"  name="entry.1450060921"><option value="S1">S1</option><option value="S2">S2</option><option value="S3">S3</option><option value="S4">S4</option><option value="S5">S5</option><option value="S6">S6</option><option value="I am a Teacher">I am a Teacher</option></select><input type="submit" value="Submit" id="submit" class="submit"></label> 
                 </form>
 
 
@@ -255,8 +261,15 @@
             var i = 0;
             // postArray = state.posts
             for (i = 0; i < state.posts.length; i++) {
-                postArray.push({'id':state.posts[i].id,'category':state.posts[i]._embedded['wp:term'][0][0].id,'title':state.posts[i].title.rendered,'slug':state.posts[i].slug})
-                searchTitles.push(state.posts[i].title.rendered +' -Post')
+                var e = document.createElement('p')
+                e.innerHTML = state.posts[i].title.rendered
+                e.id = 'temp'
+                document.getElementById('WebNav').append(e)
+                var titleName = e.innerHTML
+                document.getElementById('temp').remove()
+                postArray.push({'id':state.posts[i].id,'category':state.posts[i]._embedded['wp:term'][0][0].id,'title':titleName,'slug':state.posts[i].slug})
+                console.log(postArray[i].title)
+                searchTitles.push(titleName +' -Post')
 
             }})
         
@@ -521,7 +534,8 @@
                         place = 'search.html' + '?author=' + array[i].name + '&id=' + array[i].id
                         return place
                     } else if (type == 'Post') {
-                        place = 'post.html?' + 'id=' + array[i].id + '-' + array[i].slug
+                        place = 'post.html' + '?id=' + array[i].id + '-' + array[i].slug
+                       
                         return place
                     } else if (type == 'Category') {
                         place = 'search.html' + '?category=' + array[i].name + '&id=' + array[i].id
@@ -537,7 +551,7 @@
             if (term.search(" -Post") >0) {
                 term = term.split(" -Post")
                 locationL = findStuff(postArray, 'title', term[0],'Post')
-                // console.log(locationL)
+ 
                 window.location = locationL
 
             } else if (term.search(" -Author") >0) {

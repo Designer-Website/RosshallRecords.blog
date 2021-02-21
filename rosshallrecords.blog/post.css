@@ -1,4 +1,10 @@
 /* Reset Styles */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+}
 html {
     box-sizing: border-box;
   }
@@ -18,8 +24,8 @@ body {
     position: relative;
 }
 .success {
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -161,7 +167,7 @@ to {
     width: 100vw;
     height: 90vh;
     background-image: url(./Laptop.jpg);
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -176,7 +182,7 @@ to {
     padding: 3em;
     background-color: rgb(204,173,56);
     background: linear-gradient(rgba(204,173,56,0.6), rgba(204,173,56,0.6)), url(./Leaves.jpg);
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -805,7 +811,7 @@ to {
     width: 100%;
     background-color: rgb(200, 200, 200);
     background: linear-gradient(rgba(204,173,56,0.6), rgba(204,173,56,0.6)), url(./Leaves.jpg);
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -1181,6 +1187,9 @@ to {
         padding-right: 1em; 
         padding-left: 1em;
 
+    }
+    #hide {
+        display: none;
     }
 }
 @media only screen and (max-width:550px) {

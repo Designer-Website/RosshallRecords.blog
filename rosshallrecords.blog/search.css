@@ -1,4 +1,10 @@
 /* Reset Styles */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+}
 html {
     box-sizing: border-box;
   }
@@ -145,7 +151,7 @@ to {
     width: 100vw;
     height: 40vh;
     background: linear-gradient(rgba(204,173,56,0.6), rgba(204,173,56,0.6)), url(./Leaves.jpg);;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -293,7 +299,8 @@ to {
     /* margin-bottom: -0.5em; */
 }
 .lineText {
-    width: fit-content;
+    width: auto;
+    height: 25px;
     padding-right: 1em;
     position: absolute;
     left: 0;
@@ -392,23 +399,23 @@ to {
 }
 /* Card Type 2 */
 .card {
-    min-height: 30em;
-    max-height: 60em;
+    height: 35em;
     /* min-width: 25em;
     max-width: 30em; */
     position: relative;
     padding: 0;
     background-color: #ffffff;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    transition: 0.5s;
     /* box-shadow: 0px 3px 10px rgba(0,0,0,0.2); */
 }
-.card:hover .imageSection {
-    height: 40%;
-}
+
 .card:hover .imageSection img {
     height: 120%;
 }
-.card:hover .contentSection {
-    height: 60%;
+.card:hover {
+    grid-template-rows: 40% 60%;
 }
 .card:hover .contentSection .excerpt {
     opacity: 1;
@@ -416,7 +423,7 @@ to {
 .imageSection {
     overflow: hidden;
     position: relative;
-    height: 60%;
+    height: 100%;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -432,8 +439,8 @@ to {
     height: 150%;
 } */
 .imageSection p {
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
     padding: 1em;
     font-size: 0.9em;
     background-color: rgb(204,173,56);
@@ -445,7 +452,7 @@ to {
     overflow: hidden;
 }
 .contentSection {
-    height: 40%;
+    height: 100%;
     padding: 1.5em;
     margin: 0;
     position: relative;
@@ -473,11 +480,13 @@ to {
 .line {
     width: 100%;
     height: 1px;
+    transition: 0.5s;
     background-color: black;
 }
 .writtenBy {
     width: 100%;
     display: grid;
+    transition: 0.5s;
     grid-template-columns: 2fr 1fr;
 }
 .authorInfo {
@@ -485,12 +494,14 @@ to {
     font-size: 0.7em;
     margin-top: 1.5em;
     margin-bottom: 0;
+    transition: 0.5s;
 }
 .date {
     text-align: right;
     font-size: 0.7em;
     margin-top: 1.5em;
     margin-bottom: 0;
+    transition: 0.5s;
 }
 .bottom {
     width: 100%;
@@ -500,6 +511,7 @@ to {
     margin: 0;
     padding: 1.5em;
     background-color: #ffffff;
+    transition: 0.5s;
 }
 
 /* Featured */
@@ -757,7 +769,7 @@ to {
     width: 100%;
     background-color: rgb(200, 200, 200);
     background: linear-gradient(rgba(204,173,56,0.6), rgba(204,173,56,0.6)), url(./Leaves.jpg);
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
