@@ -218,7 +218,8 @@ to {
   .textContainer h2 {
     font-size: 3.5em;
     margin:0;
-    height: fit-content;
+    font-weight: lighter;
+    height: auto;
     /* font-weight: lighter; */
     /* margin-bottom: 0.25em; */
   }
