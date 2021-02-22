@@ -515,7 +515,7 @@ to {
     background-position: center;
     background-repeat: no-repeat;
     /* background-size: cover; */
-    background-size: 200% 100%;
+    background-size: cover;
     /* grid-template-columns: 0.5fr 1fr 0.5fr; */
     color: white;
     text-align: center;
