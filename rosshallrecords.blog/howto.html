@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosshall Records</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="WebNav">
+        <div id="nav">
+            <ul>
+                <li><a href="index.html" class="activeLink">Home</a></li>
+                <li><a href="post.html?id=120-we-are-rosshall-records-this-is-what-were-about">About</a></li>
+                <li><a href="search.html" class="noMargin">Search</a></li>
+            </ul>
+        </div>
+    </header>
+    <main id="WebHero">
+        <div class="heroContent">
+            <h1>Rosshall Records</h1>
+            <p><strong>How to get started</strong></p>
+        </div>
+        <div class="scrollContainer">
+            <div class="arrowContainer">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="infoHeadline">
+        Use the <b>timestamps</b> to find relevant information you are looking for
+    </div>
+
+    <!-- <div class="loader" id="loader"><div class="loading"><p> Loading...</p></div></div> -->
+
+    <section>
+        <div class="gridVideos">
+
+            <div class="VidContainer" >
+                <div class="c-video">
+                    <video class="video" src="RosshallRecordsCreatePosts.mp4" playsinline autoplay muted></video>
+                    <div class="controls">
+                        <div class="gold-bar">
+                            <div class="gold-juice"></div>
+                        </div>
+                        <div class="buttons">
+                            <button id="play-pause"></button>
+                            <button id="mute-unmute"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Videos" >
+                    <div class="selection firstS">
+                        <h1 id="RosshallRecordsCreatePosts1.mp4" onclick="playVid(this,0)" class="sh1" style="color: rgb(59,59,59);">Create a post : How to get onto glow blogs</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsCreatePosts1.mp4" onclick="playVid(this,52)" class="sh1">Create a post : How to create a post</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsCreatePosts1.mp4" onclick="playVid(this,134)" class="sh1">Create a post : How to add text and customise it</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsCreatePosts1.mp4" onclick="playVid(this,176)" class="sh1" >Create a post : How to add images to a post</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsCreatePosts2.mp4" onclick="playVid(this,0)" class="sh1">Create a post : How to add a featured image</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsCreatePosts2.mp4" onclick="playVid(this,80)" class="sh1">Create a post : How to add an excerpt</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsCreatePosts2.mp4" onclick="playVid(this,134)" class="sh1">Create a post : How to add links to a post</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsCreatePosts2.mp4" onclick="playVid(this,172)" class="sh1">Create a post : How to assign a category</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsCreatePosts2.mp4" onclick="playVid(this,193)" class="sh1">Create a post : What it looks like on the web</h1>
+                    </div>
+
+                    <div class="selection">
+                        <h1 id="RosshallRecordsProfiles2.mp4" onclick="playVid(this,0)" class="sh1">Set-up Profile : Get onto the profile page</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsProfiles.mp4" onclick="playVid(this,29)" class="sh1">Set-up Profile : Changing colour scheme</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsProfiles.mp4" onclick="playVid(this,46)" class="sh1">Set-up Profile : Setting your public display name</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsProfiles.mp4" onclick="playVid(this,58)" class="sh1">Set-up Profile : Setting your one-word bio</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsProfiles.mp4" onclick="playVid(this,82)" class="sh1">Set-up Profile : Setting your profile picture</h1>
+                    </div>
+                    <div class="selection">
+                        <h1 id="RosshallRecordsProfiles.mp4" onclick="playVid(this,111)" class="sh1">Set-up Profile : Saving any changes</h1>
+                    </div>
+            </div>
+            
+
+            </div>
+            
+        </div>
+    </section>
+
+    <script>
+        let video = document.querySelector('.video')
+        let juice = document.querySelector('.gold-juice')
+        let btn = document.getElementById('play-pause')
+        let btn2 = document.getElementById('mute-unmute')
+        let LastActive = document.getElementById('RosshallRecordsCreatePosts.mp4')
+
+        function playVid(url,time) {
+            video.src = url.id
+            video.currentTime = time
+            LastActive.style.color = 'rgb(171,171,171)';
+            url.style.color = 'rgb(59,56,56)';
+            LastActive = url
+        }
+        btn.className = 'pause';
+
+        function togglePlayPause() {
+            if(video.paused) {
+                btn.className = 'pause';
+                video.play()
+            }
+            else {
+                btn.className = 'play';
+                video.pause();
+            }
+        }
+        btn2.className = 'unmute';
+
+        function toggleMuteUnmute() {
+            if(video.muted) {
+                btn2.className = 'mute';
+                video.muted = false
+            }
+            else {
+                btn2.className = 'unmute';
+                video.muted = true
+            }
+        }
+
+        btn.onclick = function() {
+            togglePlayPause();
+        }
+        btn2.onclick = function() {
+            toggleMuteUnmute();
+        }
+
+        video.addEventListener('timeupdate', function(){
+            let juicePos = video.currentTime / video.duration;
+            juice.style.width = juicePos * 100 + '%';
+            if(video.ended) {
+                btn.className = 'play';
+            }
+        })
+    </script>
+
+<footer id="WebFoot">
+    <div class="footerWrapper">
+        <div class="TitleSlogan">
+            <h2>Rosshall Records</h2>
+            <p>Where creativity has no boundaries</p>
+        </div>
+        <div class="lineLabel" id="footerLabel">
+            <!-- <div class="footerLineText">Useful Links</div> -->
+            <div class="FooterLine"></div>
+        </div>
+        <div class="links">
+            <a href="index.html">Homepage</a>
+            <a href="post.html?id=120-we-are-rosshall-records-this-is-what-were-about">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="index.html#writers">Our Writers</a>
+            <a href="search.html">Search</a>
+            <a href="index.html#latest">Latest Stories</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
