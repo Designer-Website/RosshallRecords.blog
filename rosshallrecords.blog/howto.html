@@ -47,7 +47,7 @@
 
             <div class="VidContainer" >
                 <div class="c-video">
-                    <video class="video" src="RosshallRecordsCreatePosts.mp4" playsinline autoplay muted></video>
+                    <video class="video" id="video" src="RosshallRecordsCreatePosts1.mp4" playsinline autoplay muted></video>
                     <div class="controls">
                         <div class="gold-bar">
                             <div class="gold-juice"></div>
@@ -114,18 +114,36 @@
     </section>
 
     <script>
-        let video = document.querySelector('.video')
+        let video = document.getElementById('video')
         let juice = document.querySelector('.gold-juice')
         let btn = document.getElementById('play-pause')
         let btn2 = document.getElementById('mute-unmute')
-        let LastActive = document.getElementById('RosshallRecordsCreatePosts.mp4')
+        let LastActive = document.getElementById('RosshallRecordsCreatePosts1.mp4')
 
         function playVid(url,time) {
+            // video.src = url.id
+            // video.currentTime = time
+            // LastActive.style.color = 'rgb(171,171,171)';
+            // url.style.color = 'rgb(59,56,56)';
+            // LastActive = url
             video.src = url.id
-            video.currentTime = time
             LastActive.style.color = 'rgb(171,171,171)';
             url.style.color = 'rgb(59,56,56)';
             LastActive = url
+            video.load()
+            video.pause()
+            video.currentTime = time
+
+            let loadedMetadata
+            loadedMetadata = function(event){
+                video.currentTime = time
+                video.removeEventListener("loadedmetadata", loadedMetadata)
+
+            }
+            if(video.currentTime!== time){
+                video.addEventListener("loadedmetadata", loadedMetadata)
+            }
+            video.play()
         }
         btn.className = 'pause';
 
