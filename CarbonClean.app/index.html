@@ -7,19 +7,95 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div class="developerTools" id="developerTools">
+        <h1 id="DeveloperTitle">Developer Tools</h1>
+        <div class="cssCode" id="cssCode">
+
+<pre>:root {</pre>
+<pre id="main-bg--">        --main-bg: rgb(131,197,190);</pre>
+<pre id="light--">        --light: rgb(237,246,249);</pre>
+<pre id="dark--">        --dark: rgb(0,109,119);</pre>
+<pre id="dark-hover--">        --darkHover: rgb(3, 123, 134);</pre>
+<pre id="text-dark--">        --text-dark: rgb(59,59,59);</pre>
+<pre id="text-semi-light--">        --text-semi-light: rgb(175,171,171);</pre>
+<pre id="text-semi-semi-light--">        --text-semi-semi-light: rgb(216, 216, 216);</pre>
+<pre id="text-light--">        --text-light: rgb(255,255,255);</pre>
+<pre id="alert--">        --alert: rgb(206,232,230);</pre>
+<pre>        --fontSize: 16px;</pre>
+<pre id="lighter--">        --lighter: rgb(169,215,211);</pre>
+<pre>        --radius: 0.8em; </pre>                   
+<pre>    }</pre>
+
+            <p>Css Root Variables</p>
+        </div>
+        <div class="colourSwatchesContainer">
+            <div class="Toggle" onclick="toggle()"><i id="openToggle" class="fa fa-cogs"></i><i style="display: none" id="closeToggle" class="fa fa-close"></i></div>
+            <div class="swatchContainer">
+                <label>main</label>
+                <input class="input-color-picker" type="color" 
+                       data-id="main-bg" id="main-bg" name="Background" >
+            </div>
+            <div class="swatchContainer">
+                <label>light</label>
+                <input class="input-color-picker" type="color" 
+                       data-id="light" id="light" name="Color">
+            </div>
+            <div class="swatchContainer">
+                <label>dark</label>
+                <input class="input-color-picker" type="color" 
+                       data-id="dark" id="dark" name="Color">
+            </div>
+            <div class="swatchContainer">
+                <label>dark hover</label>
+                <input class="input-color-picker" type="color" 
+                       data-id="dark-hover" id="dark-hover" name="Color">
+            </div>
+            <div class="swatchContainer">
+                <label>text-dark</label>
+                <input class="input-color-picker" type="color" 
+                       data-id="text-dark" id="text-dark" name="Color">
+            </div>
+            <div class="swatchContainer">
+                <label>text-light</label>
+                <input class="input-color-picker" type="color" 
+                       data-id="text-light" id="text-light" name="Color">
+            </div>
+            <div class="swatchContainer">
+                <label>text-s-light</label>
+                <input class="input-color-picker" type="color" 
+                       data-id="text-semi-light" id="text-semi-light" name="Color">
+            </div>
+            <div class="swatchContainer">
+                <label>text-s-s-light</label>
+                <input class="input-color-picker" type="color" 
+                       data-id="text-semi-semi-light" id="text-semi-semi-light" name="Color">
+            </div>
+            <div class="swatchContainer">
+                <label>alert</label>
+                <input class="input-color-picker" id="alert" type="color" 
+                       data-id="alert" name="Color">
+            </div>
+            <div class="swatchContainer">
+                <label>lighter</label>
+                <input class="input-color-picker" type="color" 
+                       data-id="lighter" id="lighter" name="Color">
+            </div>
+        </div>
+    </div>
     <Header>This Custom Built Prototype Website Is For Showcasing The Carbon Clean App Idea</Header>
-    <Main>
+    <Main id="bgColor">
         <section id="app">
-            <div class="aboutApp">
+            <div class="aboutAppGeneral">
                 <h1 class="title">Carbon Clean</h1>
 
                 <h2 class="subTitle">General Information</h2>
 
-                <details open>
+                <details class="rellax" data-rellax-speed="7" open>
                     <summary id="dark">About The Problem
                     </summary>
                     <div class="summaryText" id="dark">
@@ -27,36 +103,32 @@
                         </p>
                     </div>
                 </details>
-                <details>
+                <details class="rellax" data-rellax-speed="7">
                     <summary id="lighter">About The App
                     </summary>
                     <div class="summaryText" id="lighter">
-                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
-                        </p>
+                        <p>Knowing that our community has a strong fondness for social media and games, our idea is to create an app that teaches them about climate change and its affects throught various games and quizzes to help them build important habits that will be vital to securing a carbon clean future for our planet.</p>
                     </div>
                 </details>
-                <details>
+                <details class="rellax" data-rellax-speed="7">
                     <summary id="lighter">About The Target User
                     </summary>
                     <div class="summaryText" id="lighter">
-                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
-                        </p>
+                        <p>This of course would be mainly targeted to pupils in secondary schools as we are the future inhabitants of this planet and if we don't learn now how to live a sustainable life then 10 - 20 years later we will be back to square one fighting the climate battle regardless of what ingenious solution the world leaders will come up with in November.</p>
                     </div>
                 </details>
-                <details>
+                <details class="rellax" data-rellax-speed="7">
                     <summary id="lighter">About How It Works
                     </summary>
                     <div class="summaryText" id="lighter">
-                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
-                        </p>
+                        <p>The quizzes and habit goals earn you in-game currency which is used to buy avatars and social icons, this is so they can blast their social media accounts with their progress and ranks. In doing so it will make living a sustainable life a shared goal which teens compete for bragging rights and social status.</p>
                     </div>
                 </details>
-                <details>
+                <details class="rellax" data-rellax-speed="7">
                     <summary id="lighter">About The Team
                     </summary>
                     <div class="summaryText" id="lighter">
-                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
-                        </p>
+                        <p>We are a team of Rosshall Academy's finest tech enthusiasts. As well as entering competitions and showcasing our digital skills such as coding, designing, team leadership, we also help our school community become more acustomed to the digital technology currently available in our school.</p>
                     </div>
                 </details>
 
@@ -64,24 +136,278 @@
             </div>
         </section>
         <Section>
-            <div class="device">
-                <div class="icon-bar">
-                    <a class="dormant" href="news.html"><i class="fa fa-globe"></i></a> 
-                    <a class="dormant" href="quiz.html"><i class="fa fa-gamepad"></i></a> 
-                    <a class="active" href="index.html"><i class="fa fa-home"></i></a> 
-                    <a class="dormant" href="profile.html"><i class="fa fa-user"></i></a>
-                    <a class="dormant" href="stats.html"><i class="fa fa-bar-chart"></i></a> 
+            <div class="device rellax" data-rellax-speed="2">
+                <div class="appPage center" id="homeEmulator">
+                    <div class="icon-bar">
+                        <a class="dormant" href="#newsScreen" onclick="toPage('news')"><i class="fa fa-globe"></i></a> 
+                        <a class="dormant" href="#quizScreen" onclick="toPage('quiz')"><i class="fa fa-gamepad"></i></a> 
+                        <a class="active" href="#homeScreen" onclick="toPage('home')"><i class="fa fa-home"></i></a> 
+                        <a class="dormant" href="#profileScreen" onclick="toPage('profile')"><i class="fa fa-user"></i></a>
+                        <a class="dormant" href="#statsScreen" onclick="toPage('stats')"><i class="fa fa-bar-chart"></i></a> 
+                    </div>
                 </div>
-
+                <div class="appPage right" id="newsEmulator">
+                    <div class="container newsPos">
+                        <p class="newsHeading">What's happening right now</p>
+                        <div class="news newsDark">
+                            <div class="newsTitle">China</div>
+                            <div class="newsText">Greenhouse gas emissions increasing at a rapid rate</div>
+                        </div>
+                        <div class="news newsLight">
+                            <i class="fa fa-warning"></i>
+                            <div class="newsText">Sidney, Australia</div>
+                        </div>
+                        <div class="news newsLight">
+                            <i class="fa fa-warning"></i>
+                            <div class="newsText">London, England</div>
+                        </div>
+                    </div>
+    
+                    <div class="navBar">
+                        <div class="arrowContainer">
+                            <a href="#homeScreen" onclick="toPage('home')"><i class="fa fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    <img src="map.png" alt="" class="background">
+                </div>
+                <div class="appPage right" id="statsEmulator">
+                    <div class="container infoPos">
+                        <div class="info infoDark">
+                            <div class="infoTitle">Average CO2 Emissions</div>
+                            <div class="infoText">0.05t per day</div>
+                        </div>
+                        <div class="info infoLight">
+                            <div class="infoTitle">Your Current Carbon Footprint</div>
+                            <div class="infoText">29.5t per year</div>
+                        </div>
+                        <div class="info infoLight">
+                            <div class="infoTitle">Goal – Walk instead of use the car for a week</div>
+                            <div class="infoText">67% complete</div>
+                            <div class="infoProgress"><div class="infoJuice"></div></div>
+                        </div>
+                    </div>
+                    <div class="positionalContainment3 container">
+                        <div class="carouselContainer">
+                            <p class="goalsTitle">Completed Weekly Goals</p>
+                            <div class="itemContainer">
+                                <div class="goal">
+                                    <div class="goalTitle">Walk instead of using the car for a week</div>
+                                    <div class="goalText">Completed on 26th March</div>
+                                </div>
+                                <div class="goal">
+                                    <div class="goalTitle">Charge my phone during the day </div>
+                                    <div class="goalText">Completed on 10th January</div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="icon-bar">
+                        <a class="dormant" href="#newsScreen" onclick="toPage('news')"><i class="fa fa-globe"></i></a> 
+                        <a class="dormant" href="#quizScreen" onclick="toPage('quiz')"><i class="fa fa-gamepad"></i></a> 
+                        <a class="dormant" href="#homeScreen" onclick="toPage('home')"><i class="fa fa-home"></i></a> 
+                        <a class="dormant" href="#profileScreen" onclick="toPage('profile')"><i class="fa fa-user"></i></a>
+                        <a class="active" href="#statsScreen" onclick="toPage('stats')"><i class="fa fa-bar-chart"></i></a> 
+                    </div>
+                    <div class="navBar">
+                        <div class="bars">
+                                <div class="short"></div>
+                                <div class="long"></div>
+                        </div>
+                        <p class="navTitle">Your Stats</p>
+                    </div>
+                </div>
+                <div class="appPage right" id="profileEmulator">
+                    <div class="container profileGrid">
+                        <div class="ProfileCard">
+                            <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" class="profileImg">
+                            <h1 class="ProfileTitle">Akrit Ghimire</h1>
+                            <p class="ProfileTitle">Glasgow, UK</p>
+                          </div>
+                    </div>
+                    <div class="positionalContainment container">
+                        <div class="carouselContainer">
+                            <p class="carouselTitle">Avatar</p>
+                            <div class="itemContainer">
+                                <div class="item" id="colorMain"><img src="https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGNvbG9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""></div>
+                                <div class="item" id="colorLighter"><img src="https://images.unsplash.com/photo-1534082753658-1dcb40af5719?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGNvbG9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""></div>
+                                <div class="item" id="colorLighter"><img src="https://images.unsplash.com/photo-1533109721025-d1ae7ee7c1e1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvbG9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="carouselContainer">
+                            <p class="carouselTitle">Badges</p>
+                            <div class="itemContainer">
+                                <div class="item" id="colorMain"><i class="fa fa-globe"></i></div>
+                                <div class="item" id="colorLighter"><i class="fa fa-globe"></i></div>
+                                <div class="item" id="colorLighter"><i class="fa fa-globe"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-bar">
+                        <a class="dormant" href="#newsScreen" onclick="toPage('news')"><i class="fa fa-globe"></i></a> 
+                        <a class="dormant" href="#quizScreen" onclick="toPage('quiz')"><i class="fa fa-gamepad"></i></a> 
+                        <a class="dormant" href="#homeScreen" onclick="toPage('home')"><i class="fa fa-home"></i></a> 
+                        <a class="active" href="#profileScreen" onclick="toPage('profile')"><i class="fa fa-user"></i></a>
+                        <a class="dormant" href="#statsScreen" onclick="toPage('stats')"><i class="fa fa-bar-chart"></i></a> 
+                    </div>
+                    <div class="navBar">
+                        <div class="bars">
+                                <div class="short"></div>
+                                <div class="long"></div>
+                        </div>
+                        <div class="shopContainer">
+                            <a href="#shopScreen" onclick="toPage('shop')"><i class="fa fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="appPage right" id="shopEmulator">
+                    <div class="positionalContainment2 container">
+                        <div class="shopTitle">Customize your icon with these</div>
+                        <div class="carouselContainer">
+                            <p class="carouselTitle">Top Picks</p>
+                            <div class="itemContainer">
+                                <div class="item" id="colorMain"><img src="https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGNvbG9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""><div class="price">250$</div></div>
+                                <div class="item" id="colorLighter"><i class="fa fa-globe"></i><div class="price">99$</div></div>
+                                <div class="item" id="colorLighter"><img src="https://images.unsplash.com/photo-1533109721025-d1ae7ee7c1e1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvbG9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""><div class="price">25$</div></div>
+                            </div>
+                        </div>
+                        <div class="carouselContainer">
+                            <p class="carouselTitle">Avatars</p>
+                            <div class="itemContainer">
+                                <div class="item" id="colorMain"><img src="https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGNvbG9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""><div class="price">50$</div></div>
+                                <div class="item" id="colorLighter"><img src="https://images.unsplash.com/photo-1534082753658-1dcb40af5719?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGNvbG9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""><div class="price">75$</div></div>
+                                <div class="item" id="colorLighter"><img src="https://images.unsplash.com/photo-1533109721025-d1ae7ee7c1e1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGNvbG9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""><div class="price">45$</div></div>
+                            </div>
+                        </div>
+                        <div class="carouselContainer">
+                            <p class="carouselTitle">Badges</p>
+                            <div class="itemContainer">
+                                <div class="item" id="colorMain"><i class="fa fa-globe"></i><div class="price">10$</div></div>
+                                <div class="item" id="colorLighter"><i class="fa fa-globe"></i><div class="price">30$</div></div>
+                                <div class="item" id="colorLighter"><i class="fa fa-globe"></i><div class="price">90$</div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="icon-bar">
+                        <a class="dormant" href="news.html"><i class="fa fa-globe"></i></a> 
+                        <a class="dormant" href="quiz.html"><i class="fa fa-gamepad"></i></a> 
+                        <a class="dormant" href="index.html"><i class="fa fa-home"></i></a> 
+                        <a class="dormant" href="profile.html"><i class="fa fa-user"></i></a>
+                        <a class="dormant" href="stats.html"><i class="fa fa-bar-chart"></i></a> 
+                    </div> -->
+                    <div class="navBar">
+                        <div class="coinContainer">
+                            <p class="value">250</p>
+                            <div class="coin">$</div>
+                        </div>
+                        <div class="arrowContainer">
+                            <a href="#profileScreen" onclick="toPage('profile')"><i class="fa fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="appPage right" id="gameEmulator">
+                    <div class="positionalContainment4 container">
+                        <div class="modalTitle">Why is Greta Thunberg famous?</div>
+                        <div class="modalChoice modalLight">
+                            <div class="modalSubTitle">She works at a fast-food restaurant</div>
+                            <div class="modalRadio"></div>
+                        </div>
+                        <div class="modalChoice modalLight">
+                            <div class="modalSubTitle">She climbed Mount Everest in 10 days</div>
+    
+                            <div class="modalRadio"></div>
+                        </div>
+                        <div class="modalChoice modalLight">
+                            <div class="modalSubTitle">She challenges world leaders to take on climate action</div>
+    
+                            <div class="modalRadio"></div>
+                        </div>
+                    </div>
+                    <div class="navBar">
+                        <div class="arrowContainer">
+                            <a href="#quizScreen" onclick="toPage('quiz')"><i class="fa fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1524865291454-215bdc75819e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGJsdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="background">
+                </div>
+                <div class="appPage right" id="modalEmulator">
+                    <div class="positionalContainment4 container">
+                        <div class="modalTitle">What is your goal?</div>
+                        <div class="modalChoice modalDark">
+                            <div class="modalSubTitle">Lose Weight</div>
+                            <div class="modalText">Burn Fat & Gain Muscle</div>
+                            <div class="modalRadio"></div>
+                        </div>
+                        <div class="modalChoice modalLight">
+                            <div class="modalSubTitle">Lose Weight</div>
+                            <div class="modalText">Burn Fat & Gain Muscle</div>
+                            <div class="modalRadio"></div>
+                        </div>
+                        <div class="modalChoice modalLight">
+                            <div class="modalSubTitle">Lose Weight</div>
+                            <div class="modalText">Burn Fat & Gain Muscle</div>
+                            <div class="modalRadio"></div>
+                        </div>
+                    </div>
+                    <div class="navBar2">
+                        <div class="arrowContainer2">
+                            <a href="#"><i class="fa fa-arrow-right"></i></a>
+                        </div>
+                        <div class="progressBar">
+                            <div class="progressBarJuice"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="appPage right" id="quizEmulator">
+                    <div class="container quizPos">
+                        <p class="quizSubTitle">Daily Quizzes</p>
+                        <div class="quiz quizDark" onclick="toPage('game')">
+                            <div class="quizDate">27th March</div>
+                            <div class="quizTitle">Famous Activists</div>
+                        </div>
+                        <div class="quiz quizMain" onclick="toPage('game')">
+                            <div class="quizDate">7th March</div>
+                            <div class="quizTitle">Forest Fire Frenzy</div>
+                        </div>
+                        <p class="quizSubTitle">Top Earning</p>
+                        <div class="quiz quizLight" onclick="toPage('game')">
+                            <div class="quizDate">6th March</div>
+                            <div class="quizTitle">What is Climate Change</div>
+                        </div>
+                        <div class="quiz quizLight" onclick="toPage('game')">
+                            <div class="quizDate">3rd March</div>
+                            <div class="quizTitle">Renewable Energies</div>
+                        </div>
+                        <div class="quiz quizLight" onclick="toPage('game')">
+                            <div class="quizDate">1st March</div>
+                            <div class="quizTitle">Guess the Catastrophe</div>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="icon-bar">
+                        <a class="dormant" href="#newsScreen" onclick="toPage('news')"><i class="fa fa-globe"></i></a> 
+                        <a class="active" href="#quizScreen" onclick="toPage('quiz')"><i class="fa fa-gamepad"></i></a> 
+                        <a class="dormant" href="#homeScreen" onclick="toPage('home')"><i class="fa fa-home"></i></a> 
+                        <a class="dormant" href="#profileScreen" onclick="toPage('profile')"><i class="fa fa-user"></i></a>
+                        <a class="dormant" href="#statsScreen" onclick="toPage('stats')"><i class="fa fa-bar-chart"></i></a> 
+                    </div>
+                    <div class="navBar">
+                        <div class="coinContainer">
+                            <p class="value">250</p>
+                            <div class="coin">$</div>
+                        </div>
+                        <p class="navTitle">Win Credits</p>
+                    </div>
+                </div>
             </div>
         </Section>
         <Section id="screen">
-            <div class="aboutApp">
+            <div class="aboutApp" id="homeInfo">
                 <h1 class="title" style="color: transparent;">Carbon Clean</h1>
 
-                <h2 class="subTitle">Homepage</h2>
+                <h2 class="subTitle">Homepage Features</h2>
 
-                <details open>
+                <details class="rellax" data-rellax-speed="9" open>
                     <summary id="light">About The Problem
                     </summary>
                     <div class="summaryText" id="light">
@@ -89,7 +415,7 @@
                         </p>
                     </div>
                 </details>
-                <details>
+                <details class="rellax" data-rellax-speed="9">
                     <summary id="light">About The Problem
                     </summary>
                     <div class="summaryText" id="light">
@@ -97,7 +423,7 @@
                         </p>
                     </div>
                 </details>
-                <details>
+                <details class="rellax" data-rellax-speed="9">
                     <summary id="light">About The Problem
                     </summary>
                     <div class="summaryText" id="light">
@@ -105,12 +431,263 @@
                         </p>
                     </div>
                 </details>
+            </div>
+            <div class="aboutApp" id="profileInfo">
+                <h1 class="title" style="color: transparent;">Carbon Clean</h1>
 
+                <h2 class="subTitle">Profile Features</h2>
 
+                <details class="rellax" data-rellax-speed="9" open>
+                    <summary id="light">Avatar & Badges
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>Users are able to see their inventory of purchased avatars and badges. From this they are able to select and customize their profile and share it on social media.</p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">Shop
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>The shop button is located top-left of the screen. When users click on this link it will take them to the shop screen.</p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">Edit Details
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>The two bars on the top-right of the screen, when clicked, will open up a modal where they can alter their account details such as changing a password or location</p>
+                    </div>
+                </details>
+            </div>
+            <div class="aboutApp" id="statsInfo">
+                <h1 class="title" style="color: transparent;">Carbon Clean</h1>
+
+                <h2 class="subTitle">Stats Page</h2>
+
+                <details class="rellax" data-rellax-speed="9" open>
+                    <summary id="light">Carbon Footprint Data
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>50% of the screen will show you your carbon footprint data eg. current yearly footprint, improvements highlighted on a graph, etc</p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">Goals
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>50% of the screen will show you your goals data, it will show you your current goal and your progress on it and it will show you your completed goals. By showing you your completed goals it will give you a sense of achievement that will fuel your motivation to continue useing the app.</p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">Edit / Create
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>The two bars, when clicked, will open up a modal where you can re-do your carbon footprint test or create new goals for the week.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="aboutApp" id="quizInfo">
+                <h1 class="title" style="color: transparent;">Carbon Clean</h1>
+
+                <h2 class="subTitle">Quizzes & Games</h2>
+
+                <details class="rellax" data-rellax-speed="9" open>
+                    <summary id="light">Daily Quizzes
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>This sub-section of the screen will display quizzes that have just been released. The daily quizzes will reward you with double the amount of coins you would get from an older quiz. This will help generate consistency of how often users use the app.</p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">Top Earning
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>Quizzes vary in difficulty, the top earning ones will be difficult but will earn you more coins than a standard easy quiz. This amount will never surpass the reward value of a Daily Quiz though.</p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">User's Balance
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>The top right of the screen will show the user's current coin balance</p>
+                    </div>
+                </details>
+            </div>
+            <div class="aboutApp" id="gameInfo">
+                <h1 class="title" style="color: transparent;">Carbon Clean</h1>
+
+                <h2 class="subTitle">Game Page</h2>
+
+                <details class="rellax" data-rellax-speed="9" open>
+                    <summary id="light">Background Image
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>This will show you a relevant image to the quiz being played </p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">Multiple Choice Quiz
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>Currently the only game type is a multiple choice quiz, this game simplicity is so that we have time to work on other areas of the app. Once the core features are implemented, we will come back to the game screen and create different game types to make the game feature more interesting.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="aboutApp" id="shopInfo">
+                <h1 class="title" style="color: transparent;">Carbon Clean</h1>
+
+                <h2 class="subTitle">Shop Page</h2>
+
+                <details class="rellax" data-rellax-speed="9" open>
+                    <summary id="light">Top Picks
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>The top picks section will show a selection of items that the developer team like.</p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">Pricing
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>All the tiles showcasing avatars and badges have a price value on their bottom-right. When the tile is selected it will ask the user for confirmation before purchasing the item. This is so they don't accidently spend their money on an item they do not like.</p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">Coin Balance
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>The top-right of the screen shows the user's current coin balance so they know how much they can spend in the digital shop.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="aboutApp" id="newsInfo">
+                <h1 class="title" style="color: transparent;">Carbon Clean</h1>
+
+                <h2 class="subTitle">Climate News</h2>
+
+                <details class="rellax" data-rellax-speed="9" open>
+                    <summary id="light">Background Map
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>When selected it will minimise the pop-ups so you can explore the planet and find out real time news when you orbit over a country and select it.</p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">Top Headlines
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>When clicking on the location it will pan you to orbit over that specific country, when clicking on the headline text, it will open up a modal with an easy-to-understand news article of the headline.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="aboutApp" id="modalInfo">
+                <h1 class="title" style="color: transparent;">Carbon Clean</h1>
+
+                <h2 class="subTitle">Modal Page</h2>
+
+                <details class="rellax" data-rellax-speed="9" open>
+                    <summary id="light">About The Problem
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
+                        </p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">About The Problem
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
+                        </p>
+                    </div>
+                </details>
+                <details class="rellax" data-rellax-speed="9">
+                    <summary id="light">About The Problem
+                    </summary>
+                    <div class="summaryText" id="light">
+                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
+                        </p>
+                    </div>
+                </details>
             </div>
         </Section>
     </Main>
-    <Section class="videoSection"></Section>
-    <Footer>This Entry For The Apps For Good Competition Is By Rosshall Academy's Digital Ambassadors</Footer>
+    <Section class="videoSection rellax " data-rellax-speed="-2">
+        <div class="c-video rellax" data-rellax-speed="4">
+            <video src="./OurGarden.mov" class="video" id="video"></video>
+            <div class="controls">
+                <div class="orange-bar" id="progress">
+                    <div class="orange-juice" id="progressBar"></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="play-pause"><i class="fa fa-pause" id="pause" style="display: none;"></i><i class="fa fa-play" id="play"></i></button>
+            </div>
+            <div class="details" id="videoDetails">
+                <div class="titleVideo">Placeholder Video</div>
+                <div class="textVideo">'Our Garden' by Akrit Ghimire</div>
+            </div>
+            <script id="videoScript">
+                const video = document.getElementById('video');
+                const progressBar = document.getElementById('progressBar');
+                const progress = document.getElementById('progress')
+                const playPause = document.getElementById('play-pause');
+                const pause = document.getElementById('pause');
+                const play = document.getElementById('play');
+                // progress bar
+                video.addEventListener('timeupdate', () => {
+                    const percentage = (video.currentTime / video.duration) * 100;
+                    progressBar.style.width = `${percentage}%`;
+
+                })
+                // change progress on click
+                progress.addEventListener('click', (e) => {
+                    const progressTime = (e.offsetX / progress.offsetWidth) * video.duration;
+                    video.currentTime = progressTime;
+                })
+                //play and pause button
+                playPause.addEventListener('click', () => {
+                    if (video.paused) {
+                        video.play()
+                        pause.style.display = 'block'
+                        play.style.display = 'none'
+                        document.getElementById('videoDetails').style.opacity = '0'
+                    } else {
+                        video.pause()
+                        pause.style.display = 'none'
+                        play.style.display = 'block'
+                        document.getElementById('videoDetails').style.opacity = '1'
+                    }
+                })
+            </script>
+        </div>
+    </Section>
+    <section class="survey rellax" data-rellax-speed="3">
+        <h1 class="rellax" data-rellax-speed="1.5">Our Market Research</h1>
+        <iframe class="snapiframe rellax" data-rellax-speed="2" onload="this.style.visibility = 'visible';" src="https://forms.office.com/Pages/AnalysisPage.aspx?id=oyzTzM4Wj0KVQTctawUZKU7NOVjwqxdEhUj5VzTS1xxURU1XOEVEVURRNEhaREo5OFBGQ01MNkpNSC4u&AnalyzerToken=21jqSnBmz7auJZoy6nMtZU6djM6Xu8s9"  name="Survey Questions" >Ohhhh No! Your browser does not support iframes.</iframe>
+    </section>
+    <section class="design rellax" data-rellax-speed="3">
+        <h1 class="rellax" data-rellax-speed="0.8">Designing Our App On PowerPoint</h1>
+        <iframe class="snapiframe rellax" data-rellax-speed="1" src="https://glowscotland.sharepoint.com/sites/RosshallDigitalAmbassadors/_layouts/15/Doc.aspx?sourcedoc={53f83801-815a-4fed-95aa-45c445b1d1ff}&amp;action=embedview&amp;wdAr=1.7777777777777777" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+    </section>
+    <Footer class="pitch rellax" data-rellax-speed="-0.5">
+        <h1 class="rellax" data-rellax-speed="2.25">Our Written Pitch</h1>
+        <iframe class="snapiframe rellax" data-rellax-speed="3.5" src="https://glowscotland.sharepoint.com/sites/RosshallDigitalAmbassadors/_layouts/15/Doc.aspx?sourcedoc={b8f7cb90-5baf-4c48-b75f-4fe64d2d8b0a}&amp;action=embedview&amp;wdPrint=0&amp;wdEmbedCode=0" width="476px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> document, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+    
+        <h1 class="rellax" data-rellax-speed="1.9">Check Out Our Recent Project <a href="https://designer-website.github.io/rosshall/cashforkids.rosshall/" target="_blank"><i class="fa fa-external-link"></i></a></h1>
+        <iframe class="snapiframe rellax" scrolling="no" data-rellax-speed="3" src="https://designer-website.github.io/rosshall/cashforkids.rosshall/"></iframe>
+
+        <h1 class="rellax" data-rellax-speed="1">Thank You For Viewing Our Pitch & Prototype</h1>
+        <p class="rellax" data-rellax-speed="0.98">This project has taken countless hours over a span of a few short weeks to complete, we would appreciate any feedback you have, our email is on the application form we sent you.</p>
+    </Footer>
+    <!-- <>This Entry For The Apps For Good Competition Is By Rosshall Academy's Digital Ambassadors</Footer> -->
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+        const rellax = new Rellax('.rellax');
+    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </body>
 </html>
