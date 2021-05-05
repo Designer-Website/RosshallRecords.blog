@@ -145,6 +145,37 @@
                         <a class="dormant" href="#profileScreen" onclick="toPage('profile')"><i class="fa fa-user"></i></a>
                         <a class="dormant" href="#statsScreen" onclick="toPage('stats')"><i class="fa fa-bar-chart"></i></a> 
                     </div>
+                    <div class="navBar">
+                        <div class="coinContainer">
+                            <p class="value">250</p>
+                            <div class="coin">$</div>
+                        </div>
+                        <p class="navTitle">Hello, John</p>
+                    </div>
+                    <div class="container homePos">
+                        <div class="news newsLight2 cursor" onclick="toPage('game')">
+                            <i class="fa fa-warning"></i>
+                            <div class="newsText">Play The Daily Quiz</div>
+                        </div>
+                        <div class="info infoLight">
+                            <div class="infoTitle">Your Current Carbon Footprint</div>
+                            <div class="infoText">29.5t per year</div>
+                        </div>
+                        <div class="info infoLight">
+                            <div class="infoTitle">Goal – Walk instead of use the car for a week</div>
+                            <div class="infoText">67% complete</div>
+                            <div class="infoProgress"><div class="infoJuice"></div></div>
+                        </div>
+                        <div class="news newsDark marginTop cursor" onclick="toPage('modal')">
+                            <div class="newsTitle">Carbon Diary</div>
+                            <div class="newsText">Log Today's Carbon Emissions</div>
+                            <div class="modalRadio RadioColor"></div>
+                        </div>
+                        <div class="news newsLighter marginTop cursor" onclick="toPage('news')">
+                            <div class="newsTitle">Climate News - China</div>
+                            <div class="newsText">Greenhouse gas emissions increasing at a rapid rate</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="appPage right" id="newsEmulator">
                     <div class="container newsPos">
@@ -155,7 +186,7 @@
                         </div>
                         <div class="news newsLight">
                             <i class="fa fa-warning"></i>
-                            <div class="newsText">Sidney, Australia</div>
+                            <div class="newsText">Sydney, Australia</div>
                         </div>
                         <div class="news newsLight">
                             <i class="fa fa-warning"></i>
@@ -220,7 +251,7 @@
                     <div class="container profileGrid">
                         <div class="ProfileCard">
                             <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" class="profileImg">
-                            <h1 class="ProfileTitle">Akrit Ghimire</h1>
+                            <h1 class="ProfileTitle">John Doe</h1>
                             <p class="ProfileTitle">Glasgow, UK</p>
                           </div>
                     </div>
@@ -331,29 +362,57 @@
                 </div>
                 <div class="appPage right" id="modalEmulator">
                     <div class="positionalContainment4 container">
-                        <div class="modalTitle">What is your goal?</div>
+                        <div class="modalTitle">Carbon Question 1?</div>
                         <div class="modalChoice modalDark">
-                            <div class="modalSubTitle">Lose Weight</div>
-                            <div class="modalText">Burn Fat & Gain Muscle</div>
+                            <div class="modalSubTitle">Option 1</div>
+                            <div class="modalText">Option 1 Info</div>
                             <div class="modalRadio"></div>
                         </div>
                         <div class="modalChoice modalLight">
-                            <div class="modalSubTitle">Lose Weight</div>
-                            <div class="modalText">Burn Fat & Gain Muscle</div>
+                            <div class="modalSubTitle">Option 2</div>
+                            <div class="modalText">Option2 Info</div>
                             <div class="modalRadio"></div>
                         </div>
                         <div class="modalChoice modalLight">
-                            <div class="modalSubTitle">Lose Weight</div>
-                            <div class="modalText">Burn Fat & Gain Muscle</div>
+                            <div class="modalSubTitle">Option 3</div>
+                            <div class="modalText">Option 3 Info</div>
                             <div class="modalRadio"></div>
                         </div>
                     </div>
                     <div class="navBar2">
-                        <div class="arrowContainer2">
-                            <a href="#"><i class="fa fa-arrow-right"></i></a>
+                        <div class="arrowContainer2" >
+                            <a href="#"><i class="fa fa-arrow-right cursor" onclick="toPage('modal2')"></i></a>
                         </div>
                         <div class="progressBar">
                             <div class="progressBarJuice"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="appPage right" id="modal2Emulator">
+                    <div class="positionalContainment4 container">
+                        <div class="modalTitle">Carbon Question 2?</div>
+                        <div class="modalChoice modalDark">
+                            <div class="modalSubTitle">Option 1</div>
+                            <div class="modalText">Option 1 Info</div>
+                            <div class="modalRadio"></div>
+                        </div>
+                        <div class="modalChoice modalLight">
+                            <div class="modalSubTitle">Option 2</div>
+                            <div class="modalText">Option2 Info</div>
+                            <div class="modalRadio"></div>
+                        </div>
+                        <div class="modalChoice modalLight">
+                            <div class="modalSubTitle">Option 3</div>
+                            <div class="modalText">Option 3 Info</div>
+                            <div class="modalRadio"></div>
+                        </div>
+                    </div>
+                    <div class="navBar2">
+                        <div class="arrowContainer2" onclick="toPage('home')">
+                            <a href="#"><i class="fa fa-arrow-right"></i></a>
+                        </div>
+                        <div class="progressBar">
+                            <div class="progressBarJuice" style="width: 85%;"></div>
                         </div>
                     </div>
                 </div>
@@ -408,27 +467,24 @@
                 <h2 class="subTitle">Homepage Features</h2>
 
                 <details class="rellax" data-rellax-speed="9" open>
-                    <summary id="light">About The Problem
+                    <summary id="light">Daily Quiz
                     </summary>
                     <div class="summaryText" id="light">
-                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
-                        </p>
+                        <p>The first link on the home page is to the Daily Quiz where users can earn large sums of coins as a reward.</p>
                     </div>
                 </details>
                 <details class="rellax" data-rellax-speed="9">
-                    <summary id="light">About The Problem
+                    <summary id="light">Carbon Diary
                     </summary>
                     <div class="summaryText" id="light">
-                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
-                        </p>
+                        <p>The way the app knows a user has completed a goal, and also the way the app calculates an update to the user's carbon footprint. Users will click the Carbon Diary link which will open up modal pages that ask the user to input data eg. true false statements such as Did you walk today instead of use your car?</p>
                     </div>
                 </details>
                 <details class="rellax" data-rellax-speed="9">
-                    <summary id="light">About The Problem
+                    <summary id="light">General
                     </summary>
                     <div class="summaryText" id="light">
-                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
-                        </p>
+                        <p>In general the homepage displays snippets of other screens all in one place.</p>
                     </div>
                 </details>
             </div>
@@ -586,27 +642,23 @@
                 <h2 class="subTitle">Modal Page</h2>
 
                 <details class="rellax" data-rellax-speed="9" open>
-                    <summary id="light">About The Problem
+                    <summary id="light">About The Page
                     </summary>
                     <div class="summaryText" id="light">
-                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
-                        </p>
+                        <p>This modal is a non-unique page that displays relevant inputs for another 'parent' page. This example consists of a multiple choice input with an arrow to proceed.</p>
                     </div>
                 </details>
-                <details class="rellax" data-rellax-speed="9">
-                    <summary id="light">About The Problem
+            </div>
+            <div class="aboutApp" id="modal2Info">
+                <h1 class="title" style="color: transparent;">Carbon Clean</h1>
+
+                <h2 class="subTitle">Modal Page</h2>
+
+                <details class="rellax" data-rellax-speed="9" open>
+                    <summary id="light">About The Page
                     </summary>
                     <div class="summaryText" id="light">
-                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
-                        </p>
-                    </div>
-                </details>
-                <details class="rellax" data-rellax-speed="9">
-                    <summary id="light">About The Problem
-                    </summary>
-                    <div class="summaryText" id="light">
-                        <p>The problem we have identified is the general lack of awareness about what climate change is and how it affects people’s lives.
-                        </p>
+                        <p>This modal is a non-unique page that displays relevant inputs for another 'parent' page. This example consists of a multiple choice input with an arrow to proceed.</p>
                     </div>
                 </details>
             </div>
@@ -668,11 +720,11 @@
     </section>
     <section class="design rellax" data-rellax-speed="3">
         <h1 class="rellax" data-rellax-speed="0.8">Designing Our App On PowerPoint</h1>
-        <iframe class="snapiframe rellax" data-rellax-speed="1" src="https://glowscotland.sharepoint.com/sites/RosshallDigitalAmbassadors/_layouts/15/Doc.aspx?sourcedoc={53f83801-815a-4fed-95aa-45c445b1d1ff}&amp;action=embedview&amp;wdAr=1.7777777777777777" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+        <embed class="snapiframe rellax" data-rellax-speed="1" src="./CarbonClean.pdf#toolbar=0&navpanes=0"></embed>
     </section>
     <Footer class="pitch rellax" data-rellax-speed="-0.5">
         <h1 class="rellax" data-rellax-speed="2.25">Our Written Pitch</h1>
-        <iframe class="snapiframe rellax" data-rellax-speed="3.5" src="https://glowscotland.sharepoint.com/sites/RosshallDigitalAmbassadors/_layouts/15/Doc.aspx?sourcedoc={b8f7cb90-5baf-4c48-b75f-4fe64d2d8b0a}&amp;action=embedview&amp;wdPrint=0&amp;wdEmbedCode=0" width="476px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> document, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+        <embed class="snapiframe rellax" data-rellax-speed="3.5" src="./CarbonCleanPitch.pdf#toolbar=0&navpanes=0"></embed>
     
         <h1 class="rellax" data-rellax-speed="1.9">Check Out Our Recent Project <a href="https://designer-website.github.io/rosshall/cashforkids.rosshall/" target="_blank"><i class="fa fa-external-link"></i></a></h1>
         <iframe class="snapiframe rellax" scrolling="no" data-rellax-speed="3" src="https://designer-website.github.io/rosshall/cashforkids.rosshall/"></iframe>
