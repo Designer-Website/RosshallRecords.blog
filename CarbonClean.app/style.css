@@ -1372,6 +1372,7 @@ summary::marker {
     transition: 0.5s;
 }
 
+
 /* Responsive */
 @media only screen and (max-width: 1000px) {
     .aboutApp { 
