@@ -673,6 +673,58 @@
     </Main>
     <Section class="videoSection rellax " data-rellax-speed="-2">
         <div class="c-video rellax" data-rellax-speed="4">
+
+
+            <div class="bgimg" id="premiere">
+                <div class="middle">
+                  <h1>Video Premiere In</h1>
+                  <hr>
+                  <p id="demo" style="font-size:30px"></p>
+                </div>
+                <div class="bottomContainer">
+                  <input type="password" placeholder="Override Premiere" name="psw" id="psw" required>
+                  <button type="submit" class="registerbtn" onclick="validate()">Enter</button>
+                </div>
+            </div>
+            <script id="premiereScript">
+                // Set the date we're counting down to
+                var countDownDate = new Date("May 10, 2021 17:00:00").getTime();
+                
+                // Update the count down every 1 second
+                var countdownfunction = setInterval(function() {
+                
+                  // Get todays date and time
+                  var now = new Date().getTime();
+                  
+                  // Find the distance between now an the count down date
+                  var distance = countDownDate - now;
+                  
+                  // Time calculations for days, hours, minutes and seconds
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                  
+                  // Output the result in an element with id="demo"
+                  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                  + minutes + "m " + seconds + "s ";
+                  
+                  // If the count down is over, write some text 
+                  if (distance < 0) {
+                    clearInterval(countdownfunction);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                    document.getElementById('premiere').style.display = 'none'
+                  }
+                }, 1000);
+                
+                function validate() {
+                    if (document.getElementById('psw').value == '2070') {
+                        document.getElementById('premiere').style.display = 'none'
+                    }
+                }
+                </script>
+
+
             <video src="./OurGarden.mov" class="video" id="video"></video>
             <div class="controls">
                 <div class="orange-bar" id="progress">
@@ -724,6 +776,37 @@
     <section class="survey rellax" data-rellax-speed="3">
         <h1 class="rellax" data-rellax-speed="1.5">Our Market Research</h1>
         <iframe class="snapiframe rellax" data-rellax-speed="2" onload="this.style.visibility = 'visible';" src="https://forms.office.com/Pages/AnalysisPage.aspx?id=oyzTzM4Wj0KVQTctawUZKU7NOVjwqxdEhUj5VzTS1xxURU1XOEVEVURRNEhaREo5OFBGQ01MNkpNSC4u&AnalyzerToken=21jqSnBmz7auJZoy6nMtZU6djM6Xu8s9"  name="Survey Questions" >Ohhhh No! Your browser does not support iframes.</iframe>
+    </section>
+    <section class="quotes rellax" data-rellax-speed="3">
+        <h1 class="rellax" data-rellax-speed="0.8">A Few Responses From Our Survey</h1>
+        <div class="quotesArea">
+            <div class="surveyData rightQ rellax" data-rellax-speed="-0.7">
+                <q>get China to stop pumping out greenhouse gasses</q>
+                <p class="author">- How do you think you can help fight against Climate Change?</p>
+            </div>
+            <div class="surveyData rightQ rellax" data-rellax-speed="-0.2">
+                <q>Something that teaches you how to live a life that doesn't damage the planet</q>
+                <p class="author">- What kind of app do you think would help fight climate change?</p>
+            </div>
+            <div class="surveyData rightQ rellax" data-rellax-speed="-0.7">
+                <q>Something that helps you track how much fossil fuels you're using</q>
+                <p class="author">- What kind of app do you think would help fight climate change?</p>
+            </div>
+
+            <div class="surveyData rightQ rellax" data-rellax-speed="-1.2">
+                <q>Learn more about your carbon emissions</q>
+                <p class="author">- How do you think you can help fight against Climate Change?</p>
+            </div>
+            <div class="surveyData rightQ rellax" data-rellax-speed="-0.7">
+                <q>that would show you how much waste/emissions etc are produced in the world/your country</q>
+                <p class="author">- What kind of app do you think would help fight climate change?</p>
+            </div>
+            <div class="surveyData rightQ rellax" data-rellax-speed="-1.2">
+                <q>[something that] tells the 'real' facts</q>
+                <p class="author">- What kind of app do you think would help fight climate change?</p>
+            </div>
+
+        </div>
     </section>
     <section class="design rellax" data-rellax-speed="3">
         <h1 class="rellax" data-rellax-speed="0.8">Designing Our App On PowerPoint</h1>
