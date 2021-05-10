@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div class="InformationMessage" id="messageInfo">
+        <h1 class="infomationText">
+            Please select to view the prototype or the video
+        </h1>
+        <a href="./video.html" class="">Select for Video</a>
+        <a href="#homepage" class="" onclick="hideMessage()"></a>
+    </div>
     <!-- <div id="warningMessage">
         <label for="toggle" class="messageLabel">Toggle</label>
         
@@ -688,7 +695,7 @@
             </div>
             <script id="premiereScript">
                 // Set the date we're counting down to
-                var countDownDate = new Date("May 10, 2021 17:00:00").getTime();
+                var countDownDate = new Date("May 10, 2021 18:00:00").getTime();
                 
                 // Update the count down every 1 second
                 var countdownfunction = setInterval(function() {

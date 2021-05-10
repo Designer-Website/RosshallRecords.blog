@@ -140,3 +140,7 @@ function toggle() {
         toggleBrain = 0  
     }
 }
+
+function hideMessage() {
+  document.getElementById('messageInfo').style.display = "none"
+}
