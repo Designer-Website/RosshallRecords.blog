@@ -145,7 +145,10 @@ function hideMessage() {
   document.getElementById('messageInfo').style.display = "none"
 }
 
-var md = new MobileDetect(window.navigator.userAgent);
-if( md.tablet() || !md.phone() ) {
-  document.getElementById('Body').style.fontSize = '14px'
-}
+// var md = new MobileDetect(window.navigator.userAgent);
+// if( md.tablet() ) {
+//   document.getElementById('Body').style.fontSize = '14px'
+// }
+// if( md.phone() ) {
+//   document.getElementById('Body').style.fontSize = '18px'
+// }

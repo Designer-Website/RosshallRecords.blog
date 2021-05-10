@@ -1519,7 +1519,7 @@ q {font-style: italic; color: var(--text-dark);}
     align-items: center;
 }
 .InformationMessage div {
-    width: 70vw;
+    width: 70%;
     height: auto;
     display: grid;
     justify-content: center;
