@@ -1518,17 +1518,81 @@ q {font-style: italic; color: var(--text-dark);}
     justify-content: center;
     align-items: center;
 }
-.InformationMessage h1 {
+.InformationMessage div {
+    width: 70vw;
+    height: auto;
+    display: grid;
+    justify-content: center;
+}
+.InformationMessage div h1 {
     font-size: 2em;
     color: var(--text-dark);
     margin: 0;
+    text-align: center;
+    margin-bottom: 1em;
 }
-.InformationMessage a {
+.InformationMessage div h2 {
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.importantText {
     color: var(--main-bg);
+}
+.normalText {
+    color: var(--text-dark);
+}
+.InformationMessage div img {
+    width: 5em;
+    height: 5em;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+.special {
+    background-color: var(--lighter);
+}
+.ordinary {
+    background-color: #ececec;
+}
+.InformationMessage div a {
+    color: var(--text-dark);
     font-size: 1em;
     margin: 0;
     text-decoration: none;
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 1em;
+    font-weight: bold;
+    opacity: 1;
+    transition: 0.5s;
 }
+
+.InformationMessage div a:hover {
+    opacity: 0.7;
+}
+
+
+
+.videoContainerhtml {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    display: grid;
+    align-content: center;
+    overflow: scroll;
+}
+.videoContainerhtml video {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 /* Responsive */
 @media only screen and (max-width: 1000px) {
     .aboutApp { 

@@ -144,3 +144,8 @@ function toggle() {
 function hideMessage() {
   document.getElementById('messageInfo').style.display = "none"
 }
+
+var md = new MobileDetect(window.navigator.userAgent);
+if( md.tablet() || !md.phone() ) {
+  document.getElementById('Body').style.fontSize = '14px'
+}
