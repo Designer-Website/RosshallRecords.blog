@@ -317,7 +317,7 @@ Main {
     padding-right: 0;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: auto 40vh auto;
+    grid-template-columns: auto minmax(310px, 40vh) auto;
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px inset, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px inset;
     transition: 0.5s;
@@ -473,6 +473,7 @@ summary::marker {
     padding-left: 0.5em;
     padding-right: 0.5em;
     box-sizing: border-box;
+    z-index: 5;
   } 
   .icon-bar a {
     float: left;
@@ -1288,6 +1289,7 @@ summary::marker {
     overflow: hidden;
     border-radius: var(--radius);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+    z-index: 5;
 }
 .controls {
     display: flex;
@@ -1596,8 +1598,10 @@ q {font-style: italic; color: var(--text-dark);}
     margin-bottom: auto;
 }
 
+
+
 /* Responsive */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
     .aboutApp { 
         display: none;
     }
@@ -1606,6 +1610,9 @@ q {font-style: italic; color: var(--text-dark);}
     }
     footer {
         color: transparent;
+    }
+    body{ 
+        font-size: 14px;
     }
 
 }
@@ -1621,6 +1628,9 @@ q {font-style: italic; color: var(--text-dark);}
         left: 0;
         z-index: 500;
     }
+    body {
+        font-size: 16px;
+    }
     .survey {
         display: none;
     }
@@ -1628,6 +1638,9 @@ q {font-style: italic; color: var(--text-dark);}
         display: none;
     }
     .pitch {
+        display: none;
+    }
+    .quotes {
         display: none;
     }
     .videoSection {
@@ -1642,6 +1655,10 @@ q {font-style: italic; color: var(--text-dark);}
     body {
         grid-template-rows: 100vh;
     
+    }
+    .InformationMessage div {
+        max-width: 90vw;
+
     }
     #app {
         position:fixed;
