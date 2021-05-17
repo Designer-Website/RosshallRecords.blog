@@ -46,6 +46,10 @@ function readOutLoud(message) {
         const finalText = greetings[Math.floor(Math.random() * weather.length)]
         speech.text = finalText
     }
+    if(message.includes('who are you')) {
+        const finalText = 'I am the Akrit Voice Assistant 1.0'
+        speech.text = finalText
+    }
 
 
     window.speechSynthesis.speak(speech)
