@@ -5,9 +5,9 @@ const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogni
 const recognition = new SpeechRecognition();
 
 const greetings = [
-    'im good thank you',
+    'I am good thank you',
     'life is miserable right now',
-    'thou art poo poo'
+    'You are poo poo arjit'
 ];
 const weather = [
     'normal Scottish weather',
@@ -42,7 +42,24 @@ function readOutLoud(message) {
         const finalText = greetings[Math.floor(Math.random() * greetings.length)]
         speech.text = finalText
     }
+    if(message.includes('how is the weather today')) {
+        const finalText = greetings[Math.floor(Math.random() * weather.length)]
+        speech.text = finalText
+    }
+
 
     window.speechSynthesis.speak(speech)
 
 }
+
+// function getLocalStream() {
+//     navigator.mediaDevices.getUserMedia({video: false, audio: true}).then(stream => {
+//         window.localStream = stream;
+//         window.localAudio.srcObject = stream;
+//         window.localAudio.autoPlay = true;
+//     }).catch(err => {
+//         console.log('you have an error' + err)
+//     })
+// }
+
+// getLocalStream();
