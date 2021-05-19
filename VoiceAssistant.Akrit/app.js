@@ -6,7 +6,7 @@ const recognition = new SpeechRecognition();
 
 const greetings = [
     'I am good thank you',
-    'life is miserable right now',
+    'It is amazing to be digitally alive',
     'You are poo poo arjit'
 ];
 const weather = [
@@ -42,7 +42,7 @@ function readOutLoud(message) {
         const finalText = greetings[Math.floor(Math.random() * greetings.length)]
         speech.text = finalText
     }
-    if(message.includes('how is the weather today')) {
+    if(message.includes('what is the weather')) {
         const finalText = greetings[Math.floor(Math.random() * weather.length)]
         speech.text = finalText
     }
@@ -67,3 +67,4 @@ function readOutLoud(message) {
 // }
 
 // getLocalStream();
+

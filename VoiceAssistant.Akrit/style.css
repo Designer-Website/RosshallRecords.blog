@@ -1,0 +1,41 @@
+/* body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+  }
+   */
+  .calltoaction {
+    width: 100%;
+    height: 240px;
+    position: fixed;
+    bottom: 5em;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+  }
+  .calltoaction button {
+	  width: 7em;
+	  height: 7em;
+	  border-radius: 50%;
+	  padding: 2em;
+    background-color: #ac17e2;
+    outline: none;
+    color: white;
+    border: 0;
+	  
+  }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+}
