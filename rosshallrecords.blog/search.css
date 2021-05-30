@@ -306,6 +306,8 @@ to {
     left: 0;
     background-color: rgb(244,244,244);
     /* top: 50%; */
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
 }
 .Line {
     width: 100%;

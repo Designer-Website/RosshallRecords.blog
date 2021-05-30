@@ -1046,6 +1046,49 @@ to {
     margin-top: 0.4em;
 }
 
+.twitterSection {
+    width: 100%;
+    max-width: 90em;
+    height: fit-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.02fr 1fr;
+    padding-top: 1.5em;
+    /* grid-gap: 1.5em; */
+    display: grid;
+    grid-gap: 0em;
+
+}
+.twitterSection:hover .labelSection {
+    background-size: 120%;
+}
+.tweets {
+    width: 100%;
+    height: auto;
+    min-height: 10em;
+    padding: 1.5em;
+    background-color: #fff;
+    position: relative;
+}
+.tweets a {
+    z-index: 2;
+    background-color: #fff;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+.tweets p {
+    z-index: 1;
+}
+.errorText {
+    position: absolute;
+    width: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 0.8em;
+    text-align: center;
+    margin: 0;
+}
 
 /* Media Queries for Responsive Design */
 
